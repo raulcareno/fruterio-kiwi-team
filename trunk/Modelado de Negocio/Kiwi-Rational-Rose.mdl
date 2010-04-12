@@ -1,0 +1,2377 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"4BC24874034B"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"4BC24874034D"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "Proveedor"
+		quid       	"4BC24DCB007E"
+		stereotype 	"Business Actor")
+	    (object Class "Proveedor Productos Importados"
+		quid       	"4BC24DCC016E"
+		stereotype 	"Business Actor"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"4BC24DEC017E"
+			supplier   	"Use Case View::Proveedor"
+			quidu      	"4BC24DCB007E")))
+	    (object Class "Proveedor Materia Prima"
+		quid       	"4BC24DCE0009"
+		stereotype 	"Business Actor"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"4BC24DE80395"
+			supplier   	"Use Case View::Proveedor"
+			quidu      	"4BC24DCB007E")))
+	    (object Class "Cliente"
+		quid       	"4BC24E0801CE"
+		stereotype 	"Business Actor")
+	    (object Class "Empresa de Transporte"
+		quid       	"4BC25A5E03C1"
+		stereotype 	"Business Actor")
+	    (object UseCase "02.Consultar Muestrario"
+		quid       	"4BC249F001E7"
+		stereotype 	"Business Use Case")
+	    (object UseCase "03. Tomar Pedido"
+		quid       	"4BC249F10106"
+		stereotype 	"Business Use Case"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"4BC25563028D"
+			stereotype 	"extend"
+			supplier   	"Use Case View::02.Consultar Muestrario"
+			quidu      	"4BC249F001E7")))
+	    (object UseCase "04. Realizar entrega de Pedido"
+		quid       	"4BC249F200D7"
+		stereotype 	"Business Use Case"
+		visible_modules 	(list dependency_list
+		    (object Dependency_Relationship
+			quid       	"4BC24ADD006E"
+			stereotype 	"include"
+			supplier   	"Use Case View::05. Realizar cobro Pedido"
+			quidu      	"4BC24A1C0183")))
+	    (object UseCase "05. Realizar cobro Pedido"
+		quid       	"4BC24A1C0183"
+		stereotype 	"Business Use Case")
+	    (object UseCase "06. Realizar Devolución de Mercadería del Cliente al Viajante"
+		quid       	"4BC24A1D0036"
+		stereotype 	"Business Use Case")
+	    (object UseCase "07. Modificar Pedido Cliente"
+		quid       	"4BC24A1D01F2"
+		stereotype 	"Business Use Case")
+	    (object UseCase "08. Cancelar Pedido Cliente"
+		quid       	"4BC24A1D03B8"
+		stereotype 	"Business Use Case")
+	    (object UseCase "09. Ingresar Mercadería a Depósito de Productos Terminados"
+		quid       	"4BC24AFC0287"
+		stereotype 	"Business Use Case")
+	    (object UseCase "10. Retirar Mercadería del Depósito de Productos Terminados"
+		quid       	"4BC24AFD0191"
+		stereotype 	"Business Use Case")
+	    (object UseCase "11. Administrar Stock"
+		quid       	"4BC24AFD039F"
+		stereotype 	"Business Use Case")
+	    (object UseCase "12. Confeccionar Pedido"
+		quid       	"4BC24AFE0113"
+		stereotype 	"Business Use Case")
+	    (object UseCase "13. Reorganizar Mercadería"
+		quid       	"4BC24AFE02F3"
+		stereotype 	"Business Use Case")
+	    (object UseCase "14. Administrar pago a Empleado"
+		quid       	"4BC24B6801C2"
+		stereotype 	"Business Use Case")
+	    (object UseCase "15. Administrar empleados"
+		quid       	"4BC24B690067"
+		stereotype 	"Business Use Case")
+	    (object UseCase "16. Administrar asistencia empleados"
+		quid       	"4BC24B69027C"
+		stereotype 	"Business Use Case")
+	    (object UseCase "17. Elaborar informe Clientes"
+		quid       	"4BC24B960022"
+		stereotype 	"Business Use Case")
+	    (object UseCase "18. Elaborar informe Calidad de Producción"
+		quid       	"4BC24B9602A9"
+		stereotype 	"Business Use Case")
+	    (object UseCase "19. Elaborar informe de Ventas"
+		quid       	"4BC24B9700CD"
+		stereotype 	"Business Use Case")
+	    (object UseCase "20. Elaborar informe Calidad de Productos Importados"
+		quid       	"4BC24B9801E5"
+		stereotype 	"Business Use Case")
+	    (object UseCase "21. Elaborar informe de Viajantes"
+		quid       	"4BC24B98039D"
+		stereotype 	"Business Use Case")
+	    (object UseCase "22. Elaborar informe de Estado Financiero"
+		quid       	"4BC24BE301E8"
+		stereotype 	"Business Use Case")
+	    (object UseCase "23. Confeccionar pedido de Productos Importados"
+		quid       	"4BC24C5A00B9"
+		stereotype 	"Business Use Case")
+	    (object UseCase "25. Recibir mercadería importada"
+		quid       	"4BC24C5A0379"
+		stereotype 	"Business Use Case")
+	    (object UseCase "26. Realizar pago a Proveedor"
+		quid       	"4BC24C5B01E8"
+		stereotype 	"Business Use Case")
+	    (object UseCase "27. Administrar Importación"
+		quid       	"4BC24C5C000D"
+		stereotype 	"Business Use Case")
+	    (object UseCase "24. Confeccionar pedido de Materia Prima"
+		quid       	"4BC24C5C027B"
+		stereotype 	"Business Use Case")
+	    (object UseCase "NewUseCase"
+		quid       	"4BC3226303CD"
+		stereotype 	"Business Use Case")
+	    (object Association "$UNNAMED$0"
+		quid       	"4BC24DF50206"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"4BC24DF60308"
+			supplier   	"Use Case View::Proveedor Productos Importados"
+			quidu      	"4BC24DCC016E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"4BC24DF6030B"
+			supplier   	"Use Case View::23. Confeccionar pedido de Productos Importados"
+			quidu      	"4BC24C5A00B9")))
+	    (object Association "$UNNAMED$3"
+		quid       	"4BC24DFA038F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"4BC24DFB0237"
+			supplier   	"Use Case View::Proveedor Materia Prima"
+			quidu      	"4BC24DCE0009"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"4BC24DFB023B"
+			supplier   	"Use Case View::24. Confeccionar pedido de Materia Prima"
+			quidu      	"4BC24C5C027B")))
+	    (object Association "$UNNAMED$6"
+		quid       	"4BC24DFC038B"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"4BC24DFD036A"
+			supplier   	"Use Case View::Proveedor"
+			quidu      	"4BC24DCB007E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"4BC24DFD036F"
+			supplier   	"Use Case View::26. Realizar pago a Proveedor"
+			quidu      	"4BC24C5B01E8")))
+	    (object Association "$UNNAMED$9"
+		quid       	"4BC24E1800CB"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"4BC24E19006F"
+			supplier   	"Use Case View::02.Consultar Muestrario"
+			quidu      	"4BC249F001E7"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"4BC24E190071"
+			supplier   	"Use Case View::Cliente"
+			quidu      	"4BC24E0801CE")))
+	    (object Association "$UNNAMED$12"
+		quid       	"4BC24E1A01AC"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$13"
+			quid       	"4BC24E1B0174"
+			supplier   	"Use Case View::03. Tomar Pedido"
+			quidu      	"4BC249F10106"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$14"
+			quid       	"4BC24E1B0176"
+			supplier   	"Use Case View::Cliente"
+			quidu      	"4BC24E0801CE")))
+	    (object Association "$UNNAMED$15"
+		quid       	"4BC24E1C0067"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$16"
+			quid       	"4BC24E1D01B5"
+			supplier   	"Use Case View::Cliente"
+			quidu      	"4BC24E0801CE"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$17"
+			quid       	"4BC24E1D01BA"
+			supplier   	"Use Case View::04. Realizar entrega de Pedido"
+			quidu      	"4BC249F200D7")))
+	    (object Association "$UNNAMED$18"
+		quid       	"4BC24E1E009C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$19"
+			quid       	"4BC24E1F0003"
+			supplier   	"Use Case View::Cliente"
+			quidu      	"4BC24E0801CE"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$20"
+			quid       	"4BC24E1F000A"
+			supplier   	"Use Case View::05. Realizar cobro Pedido"
+			quidu      	"4BC24A1C0183")))
+	    (object Association "$UNNAMED$21"
+		quid       	"4BC24E20024F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$22"
+			quid       	"4BC24E2101CF"
+			supplier   	"Use Case View::06. Realizar Devolución de Mercadería del Cliente al Viajante"
+			quidu      	"4BC24A1D0036"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$23"
+			quid       	"4BC24E2101D1"
+			supplier   	"Use Case View::Cliente"
+			quidu      	"4BC24E0801CE")))
+	    (object Association "$UNNAMED$24"
+		quid       	"4BC24E220109"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$25"
+			quid       	"4BC24E230011"
+			supplier   	"Use Case View::08. Cancelar Pedido Cliente"
+			quidu      	"4BC24A1D03B8"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$26"
+			quid       	"4BC24E230013"
+			supplier   	"Use Case View::Cliente"
+			quidu      	"4BC24E0801CE")))
+	    (object Association "$UNNAMED$27"
+		quid       	"4BC24E2302CA"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$28"
+			quid       	"4BC24E240340"
+			supplier   	"Use Case View::07. Modificar Pedido Cliente"
+			quidu      	"4BC24A1D01F2"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$29"
+			quid       	"4BC24E240342"
+			supplier   	"Use Case View::Cliente"
+			quidu      	"4BC24E0801CE")))
+	    (object Association "$UNNAMED$30"
+		quid       	"4BC25A9F0366"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$31"
+			quid       	"4BC25AA002BE"
+			supplier   	"Use Case View::25. Recibir mercadería importada"
+			quidu      	"4BC24C5A0379"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$32"
+			quid       	"4BC25AA002C0"
+			supplier   	"Use Case View::Empresa de Transporte"
+			quidu      	"4BC25A5E03C1"))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"4BC2488500AE"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))
+	    (object UseCaseDiagram "Diagrama CU - Negocio"
+		quid       	"4BC249860241"
+		title      	"Diagrama CU - Negocio"
+		zoom       	80
+		max_height 	28350
+		max_width  	21600
+		origin_x   	117
+		origin_y   	860
+		items      	(list diagram_item_list
+		    (object UseCaseView "Use Case View::09. Ingresar Mercadería a Depósito de Productos Terminados" @1
+			location   	(2484, 203)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(2483, 378)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"09. Ingresar Mercadería a Depósito de Productos Terminados")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24AFC0287"
+			width      	306)
+		    (object UseCaseView "Use Case View::10. Retirar Mercadería del Depósito de Productos Terminados" @2
+			location   	(2483, 560)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(2482, 735)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"10. Retirar Mercadería del Depósito de Productos Terminados")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24AFD0191"
+			width      	306)
+		    (object UseCaseView "Use Case View::11. Administrar Stock" @3
+			location   	(2444, 959)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(2443, 1134)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"11. Administrar Stock")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24AFD039F"
+			width      	306)
+		    (object UseCaseView "Use Case View::12. Confeccionar Pedido" @4
+			location   	(2456, 1252)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(2455, 1427)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"12. Confeccionar Pedido")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24AFE0113"
+			width      	306)
+		    (object UseCaseView "Use Case View::13. Reorganizar Mercadería" @5
+			location   	(2403, 1584)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(2402, 1759)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"13. Reorganizar Mercadería")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24AFE02F3"
+			width      	306)
+		    (object UseCaseView "Use Case View::14. Administrar pago a Empleado" @6
+			location   	(3354, 195)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@6
+			    location   	(3353, 370)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"14. Administrar pago a Empleado")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24B6801C2"
+			width      	306)
+		    (object UseCaseView "Use Case View::15. Administrar empleados" @7
+			location   	(3294, 571)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@7
+			    location   	(3293, 746)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"15. Administrar empleados")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24B690067"
+			width      	306)
+		    (object UseCaseView "Use Case View::16. Administrar asistencia empleados" @8
+			location   	(3278, 903)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@8
+			    location   	(3277, 1078)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"16. Administrar asistencia empleados")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24B69027C"
+			width      	306)
+		    (object UseCaseView "Use Case View::17. Elaborar informe Clientes" @9
+			location   	(3148, 1289)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@9
+			    location   	(3147, 1464)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"17. Elaborar informe Clientes")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24B960022"
+			width      	306)
+		    (object UseCaseView "Use Case View::18. Elaborar informe Calidad de Producción" @10
+			location   	(3154, 1644)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(3153, 1819)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"18. Elaborar informe Calidad de Producción")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24B9602A9"
+			width      	306)
+		    (object UseCaseView "Use Case View::19. Elaborar informe de Ventas" @11
+			location   	(2397, 2097)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@11
+			    location   	(2396, 2272)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	
+|19. Elaborar informe de Ventas
+			    )
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24B9700CD"
+			width      	306)
+		    (object UseCaseView "Use Case View::20. Elaborar informe Calidad de Productos Importados" @12
+			location   	(3196, 2105)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@12
+			    location   	(3195, 2280)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"20. Elaborar informe Calidad de Productos Importados")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24B9801E5"
+			width      	306)
+		    (object UseCaseView "Use Case View::21. Elaborar informe de Viajantes" @13
+			location   	(2419, 2506)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@13
+			    location   	(2418, 2681)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"21. Elaborar informe de Viajantes")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24B98039D"
+			width      	306)
+		    (object UseCaseView "Use Case View::22. Elaborar informe de Estado Financiero" @14
+			location   	(3224, 2558)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@14
+			    location   	(3223, 2733)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"22. Elaborar informe de Estado Financiero")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24BE301E8"
+			width      	306)
+		    (object UseCaseView "Use Case View::27. Administrar Importación" @15
+			location   	(2439, 2969)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@15
+			    location   	(2438, 3144)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"27. Administrar Importación")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24C5C000D"
+			width      	306)
+		    (object UseCaseView "Use Case View::23. Confeccionar pedido de Productos Importados" @16
+			location   	(1386, 2162)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@16
+			    location   	(1385, 2337)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"23. Confeccionar pedido de Productos Importados")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24C5A00B9"
+			width      	306)
+		    (object ClassView "Class" "Use Case View::Proveedor Productos Importados" @17
+			ShowCompartmentStereotypes 	TRUE
+			SuppressAttribute 	TRUE
+			SuppressOperation 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(316, 2175)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@17
+			    location   	(315, 2383)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	663
+			    justify    	0
+			    label      	"Proveedor Productos Importados")
+			icon       	"Business Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24DCC016E"
+			width      	202
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @18
+			location   	(824, 2166)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4BC24DF50206"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @19
+				Parent_View 	@18
+				location   	(-704, 102)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24DF60308"
+				client     	@18
+				supplier   	@17
+				vertices   	(list Points
+				    (824, 2166)
+				    (414, 2171))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @20
+				Parent_View 	@18
+				location   	(-704, 102)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24DF6030B"
+				client     	@18
+				supplier   	@16
+				vertices   	(list Points
+				    (824, 2166)
+				    (1234, 2162))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::24. Confeccionar pedido de Materia Prima" @21
+			location   	(867, 3076)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@21
+			    location   	(866, 3251)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"24. Confeccionar pedido de Materia Prima")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24C5C027B"
+			width      	306)
+		    (object ClassView "Class" "Use Case View::Proveedor Materia Prima" @22
+			ShowCompartmentStereotypes 	TRUE
+			SuppressAttribute 	TRUE
+			SuppressOperation 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(261, 3389)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@22
+			    location   	(260, 3597)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	667
+			    justify    	0
+			    label      	"Proveedor Materia Prima")
+			icon       	"Business Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24DCE0009"
+			width      	202
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$3" @23
+			location   	(418, 3306)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4BC24DFA038F"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @24
+				Parent_View 	@23
+				location   	(-828, -66)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24DFB0237"
+				client     	@23
+				supplier   	@22
+				vertices   	(list Points
+				    (418, 3306)
+				    (359, 3336))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @25
+				Parent_View 	@23
+				location   	(-828, -66)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24DFB023B"
+				client     	@23
+				supplier   	@21
+				vertices   	(list Points
+				    (418, 3306)
+				    (477, 3276))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::26. Realizar pago a Proveedor" @26
+			location   	(845, 2699)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@26
+			    location   	(844, 2874)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"26. Realizar pago a Proveedor")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24C5B01E8"
+			width      	306)
+		    (object ClassView "Class" "Use Case View::Proveedor" @27
+			ShowCompartmentStereotypes 	TRUE
+			SuppressAttribute 	TRUE
+			SuppressOperation 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(226, 2784)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@27
+			    location   	(225, 2992)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	659
+			    justify    	0
+			    label      	"Proveedor")
+			icon       	"Business Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24DCB007E"
+			width      	202
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @28
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4BC24DE80395"
+			client     	@22
+			supplier   	@27
+			vertices   	(list Points
+			    (251, 3259)
+			    (236, 3017))
+			line_style 	0)
+		    (object InheritView "" @29
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4BC24DEC017E"
+			client     	@17
+			supplier   	@27
+			vertices   	(list Points
+			    (278, 2408)
+			    (243, 2656))
+			line_style 	0)
+		    (object AssociationViewNew "$UNNAMED$6" @30
+			location   	(508, 2742)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4BC24DFC038B"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @31
+				Parent_View 	@30
+				location   	(-1075, -231)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24DFD036A"
+				client     	@30
+				supplier   	@27
+				vertices   	(list Points
+				    (508, 2742)
+				    (324, 2768))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @32
+				Parent_View 	@30
+				location   	(-1075, -231)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24DFD036F"
+				client     	@30
+				supplier   	@26
+				vertices   	(list Points
+				    (508, 2742)
+				    (693, 2717))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::02.Consultar Muestrario" @33
+			location   	(1339, 291)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@33
+			    location   	(1338, 466)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"02.Consultar Muestrario")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC249F001E7"
+			width      	306)
+		    (object UseCaseView "Use Case View::03. Tomar Pedido" @34
+			location   	(1353, 713)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@34
+			    location   	(1352, 888)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"03. Tomar Pedido")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC249F10106"
+			width      	306)
+		    (object UseCaseView "Use Case View::04. Realizar entrega de Pedido" @35
+			location   	(1390, 1007)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@35
+			    location   	(1389, 1182)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"04. Realizar entrega de Pedido")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC249F200D7"
+			width      	306)
+		    (object UseCaseView "Use Case View::05. Realizar cobro Pedido" @36
+			location   	(1602, 1350)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@36
+			    location   	(1601, 1525)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"05. Realizar cobro Pedido")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24A1C0183"
+			width      	306)
+		    (object DependencyView "" @37
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	(object SegLabel @38
+			    Parent_View 	@37
+			    location   	(1825, 1131)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<include>>"
+			    pctDist    	0.500000
+			    height     	120
+			    orientation 	0)
+			line_color 	3342489
+			quidu      	"4BC24ADD006E"
+			client     	@35
+			supplier   	@36
+			vertices   	(list Points
+			    (1540, 1038)
+			    (1717, 1078)
+			    (1639, 1255))
+			line_style 	0)
+		    (object UseCaseView "Use Case View::06. Realizar Devolución de Mercadería del Cliente al Viajante" @39
+			location   	(976, 1313)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@39
+			    location   	(975, 1488)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"06. Realizar Devolución de Mercadería del Cliente al Viajante")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24A1D0036"
+			width      	306)
+		    (object UseCaseView "Use Case View::08. Cancelar Pedido Cliente" @40
+			location   	(603, 1776)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@40
+			    location   	(602, 1951)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"08. Cancelar Pedido Cliente")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24A1D03B8"
+			width      	306)
+		    (object ClassView "Class" "Use Case View::Cliente" @41
+			ShowCompartmentStereotypes 	TRUE
+			SuppressAttribute 	TRUE
+			SuppressOperation 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(187, 379)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@41
+			    location   	(186, 587)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	670
+			    justify    	0
+			    label      	"Cliente")
+			icon       	"Business Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24E0801CE"
+			width      	202
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$9" @42
+			location   	(736, 334)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4BC24E1800CB"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$10" @43
+				Parent_View 	@42
+				location   	(549, -45)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24E19006F"
+				client     	@42
+				supplier   	@33
+				vertices   	(list Points
+				    (736, 334)
+				    (1187, 300))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$11" @44
+				Parent_View 	@42
+				location   	(549, -45)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24E190071"
+				client     	@42
+				supplier   	@41
+				vertices   	(list Points
+				    (736, 334)
+				    (285, 369))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$12" @45
+			location   	(743, 536)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4BC24E1A01AC"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$13" @46
+				Parent_View 	@45
+				location   	(556, 157)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24E1B0174"
+				client     	@45
+				supplier   	@34
+				vertices   	(list Points
+				    (743, 536)
+				    (1201, 668))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$14" @47
+				Parent_View 	@45
+				location   	(556, 157)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24E1B0176"
+				client     	@45
+				supplier   	@41
+				vertices   	(list Points
+				    (743, 536)
+				    (285, 405))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$15" @48
+			location   	(760, 677)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4BC24E1C0067"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$16" @49
+				Parent_View 	@48
+				location   	(-626, -439)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24E1D01B5"
+				client     	@48
+				supplier   	@41
+				vertices   	(list Points
+				    (760, 677)
+				    (285, 430))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$17" @50
+				Parent_View 	@48
+				location   	(-626, -439)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24E1D01BA"
+				client     	@48
+				supplier   	@35
+				vertices   	(list Points
+				    (760, 677)
+				    (1236, 925))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$18" @51
+			location   	(875, 849)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4BC24E1E009C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$19" @52
+				Parent_View 	@51
+				location   	(-723, -610)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24E1F0003"
+				client     	@51
+				supplier   	@41
+				vertices   	(list Points
+				    (875, 849)
+				    (285, 444))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$20" @53
+				Parent_View 	@51
+				location   	(-723, -610)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24E1F000A"
+				client     	@51
+				supplier   	@36
+				vertices   	(list Points
+				    (875, 849)
+				    (1465, 1255))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$21" @54
+			location   	(589, 856)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4BC24E20024F"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$22" @55
+				Parent_View 	@54
+				location   	(402, 477)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24E2101CF"
+				client     	@54
+				supplier   	@39
+				vertices   	(list Points
+				    (589, 856)
+				    (893, 1216))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$23" @56
+				Parent_View 	@54
+				location   	(402, 477)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24E2101D1"
+				client     	@54
+				supplier   	@41
+				vertices   	(list Points
+				    (589, 856)
+				    (285, 497))
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$24" @57
+			location   	(412, 1146)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4BC24E220109"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$25" @58
+				Parent_View 	@57
+				location   	(225, 767)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24E230011"
+				client     	@57
+				supplier   	@40
+				vertices   	(list Points
+				    (412, 1146)
+				    (571, 1680))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$26" @59
+				Parent_View 	@57
+				location   	(225, 767)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24E230013"
+				client     	@57
+				supplier   	@41
+				vertices   	(list Points
+				    (412, 1146)
+				    (253, 612))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::07. Modificar Pedido Cliente" @60
+			location   	(1039, 1838)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@60
+			    location   	(1038, 2013)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"07. Modificar Pedido Cliente")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24A1D01F2"
+			width      	306)
+		    (object AssociationViewNew "$UNNAMED$27" @61
+			location   	(619, 1123)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4BC24E2302CA"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$28" @62
+				Parent_View 	@61
+				location   	(432, 744)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24E240340"
+				client     	@61
+				supplier   	@60
+				vertices   	(list Points
+				    (619, 1123)
+				    (979, 1741))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$29" @63
+				Parent_View 	@61
+				location   	(432, 744)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC24E240342"
+				client     	@61
+				supplier   	@41
+				vertices   	(list Points
+				    (619, 1123)
+				    (259, 505))
+				line_style 	0)))
+		    (object DependencyView "" @64
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	(object SegLabel @65
+			    Parent_View 	@64
+			    location   	(1824, 660)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    anchor     	10
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	450
+			    justify    	0
+			    label      	"<<extend>>"
+			    pctDist    	0.500000
+			    height     	120
+			    orientation 	0)
+			line_color 	3342489
+			quidu      	"4BC25563028D"
+			client     	@34
+			supplier   	@33
+			vertices   	(list Points
+			    (1503, 669)
+			    (1898, 563)
+			    (1489, 361))
+			line_style 	0)
+		    (object ClassView "Class" "Use Case View::Empresa de Transporte" @66
+			ShowCompartmentStereotypes 	TRUE
+			SuppressAttribute 	TRUE
+			SuppressOperation 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(273, 3941)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@66
+			    location   	(272, 4149)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	673
+			    justify    	0
+			    label      	"Empresa de Transporte")
+			icon       	"Business Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC25A5E03C1"
+			width      	202
+			annotation 	8
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::25. Recibir mercadería importada" @67
+			location   	(900, 3912)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@67
+			    location   	(899, 4087)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"25. Recibir mercadería importada")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC24C5A0379"
+			width      	306)
+		    (object AssociationViewNew "$UNNAMED$30" @68
+			location   	(559, 3926)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"4BC25A9F0366"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$31" @69
+				Parent_View 	@68
+				location   	(-503, 97)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC25AA002BE"
+				client     	@68
+				supplier   	@67
+				vertices   	(list Points
+				    (559, 3926)
+				    (748, 3918))
+				line_style 	0)
+			    (object RoleView "$UNNAMED$32" @70
+				Parent_View 	@68
+				location   	(-503, 97)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"4BC25AA002C0"
+				client     	@68
+				supplier   	@66
+				vertices   	(list Points
+				    (559, 3926)
+				    (371, 3934))
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::NewUseCase" @71
+			location   	(4120, 1289)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@71
+			    location   	(4119, 1464)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	879
+			    justify    	0
+			    label      	"NewUseCase")
+			icon       	"Business Use Case"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"4BC3226303CD"
+			width      	306)))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"4BC24874034C"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"4BC24874034E"
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"4BC2488500DD"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"4BC24874034E"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"4BC2488500AD"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list)))
+	category   	"Logical View"
+	quidu      	"4BC24874034C")
+    process_structure 	(object Processes
+	quid       	"4BC24874034F"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"4BC248740351"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"propertyId"
+		value      	"809135966")
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Project"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"project"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TableCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ViewCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DomainCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SPPackageCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TriggerCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IndexCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ConstraintCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"StoreProcedureCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"PrimaryKeyCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ForeignKeyCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"JoinCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TableSpaceCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"cONTAINERCounter"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TablePrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ViewPrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DomainPrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TriggerPrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IndexPrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ConstraintPrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"StoreProcedurePrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"PrimaryKeyPrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ForeignKeyPrefix"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TableSpacePrefix"
+			value      	"")))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Module-Spec"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsDatabase"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TargetDatabase"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Location"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsTableSpace"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TableSpaceType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsDeault"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"BufferPool"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ExtentSize"
+			value      	1)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"PrefetchSize"
+			value      	1)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"PageSize"
+			value      	4)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ManagedBy"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ContainerList"
+			value      	"")))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Category"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmSchema"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmDomainPackage"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsSchema"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsDomainPackage"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsRootSchema"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsRootDomainPackage"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsSchemaPackage"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DatabaseID"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DBMS"
+			value      	"")))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Class"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsTable"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsView"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsDomain"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsSPPackage"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Synonymns"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TableSpaceID"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SourceId"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SourceType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"CorrelationName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SelectClause"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsUpdateable"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"CheckOption"
+			value      	"None")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsSnapShot"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsDistinct"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"PersistToServer"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsPackage"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsPackageWrapped"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsPackageBodyWrapped"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Attribute"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Ordinal"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsIdentity"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsUnique"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"NullsAllowed"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Length"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Scale"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ColumnType"
+			value      	"Native")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ForBitData"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DefaultValueType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DefaultValue"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SourceId"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SourceType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"OID"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Association"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsRelationship"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SourceId"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"SourceType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"RIMethod"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ParentUpdateRule"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ParentUpdateRuleName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ParentDeleteRule"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ParentDeleteRuleName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ChildInsertRestrict"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ChildInsertRestrictName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ChildMultiplicity"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ChildMultiplicityName"
+			value      	"")))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Role"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ConstraintName"
+			value      	"")))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Operation"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsConstraint"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ConstraintType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsIndex"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsTrigger"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsStoredProcedure"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsCluster"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TableSpace"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"FillFactor"
+			value      	0)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"KeyList"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"CheckPredicate"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsUnique"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DeferalMode"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"InitialCheckTime"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"TriggerType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsInsertEvent"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsUpdateEvent"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsDeleteEvent"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"RefOldTable"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"RefNewTable"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"RefOldRow"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"RefNewRow"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsRow"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"WhenClause"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Language"
+			value      	"SQL")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ProcType"
+			value      	"Procedure")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsDeterministic"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ParameterStyle"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ReturnedNull"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ExternalName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Length"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Scale"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ForBitData"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DefaultValue"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DefaultValueType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsWrapped"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"default__Parameter"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"dmItem"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DMName"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsInParameter"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"IsOutParameter"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Ordinal"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Length"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"Scale"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"ForBitData"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DefaultValueType"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"DefaultValue"
+			value      	"")
+		    (object Attribute
+			tool       	"Data Modeler"
+			name       	"OperationID"
+			value      	"")))
+	    (object Attribute
+		tool       	"Data Modeler"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Data Modeler Communicator"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"framework"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Rose Model Integrator"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Version Control"
+		name       	"HiddenTool"
+		value      	FALSE))
+	quid       	"4BC248740350"))

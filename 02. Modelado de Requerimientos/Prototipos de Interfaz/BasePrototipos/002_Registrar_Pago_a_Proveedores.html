@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<title>SEEE</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="common.css" />
+<script type="text/javascript" src="jquery.js"></script>
+
+<!-- funcionamiento menú desplegable, uso de jQuery como librería -->
+<script type="text/javascript">
+$(function()  {  
+		   $("#mostrar-menu-ventas").click(function(event) {         
+
+			$("#menu-ventas").slideToggle();  
+			});  
+
+		});
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="cabecera"> <img src="logo_empresa.png"/>
+    <label> <span> User_Name </span></label>
+    <ul>
+      <li><a href="about:blank">Help</a> </li>
+      <li><a href="about:blank">Salir</a> </li>
+      <!--20x20-->
+    </ul>
+  </div>
+  <div id="panelcentral">
+    <div id="navegacion"> <a href="#" id="mostrar-menu-ventas">Ventas</a>
+      <div id="menu-ventas">
+        <ul>
+          <li id="01">Logística</li>
+          <!-- ver si funca lo de id -->
+          <li id="02">Pedido</li>
+          <li><a href="RegistrarCliente.html">Registrar Cliente</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="contenido">
+      <h1>Registrar Pago a Proveedor</h1>
+      <form id="formRegistrarCliente" method="post" action="">
+			<div>
+        <div id="datosPrincipales">
+				<h2>Buscar Proveedor</h2>
+          <ul>
+            <li>
+              <label>Raz�n Social:</label>
+              <input name="txtRazonSocial" type="text"/>
+							<input name="buscar" type="button" value="Buscar" />
+            </li>
+					</ul>
+				<h2>Datos del Proveedor</h2>
+					<ul>
+            <li>
+              <label>Raz�n Social:</label>
+              <label class="datoEntidad">Raz�n social de la empresa</label>
+            </li>
+            <li>
+              <label>Nombre:</label>
+              <label class="datoEntidad">Nombre del proveedor</label>
+            </li>
+						<li>
+							<label>e-Mail:</label>
+              <label class="datoEntidad">emailproveedor@mail.com</label>
+						</li>
+					</ul>
+						<h2>�rdenes de Compra</h2>
+						<table summary="">
+									 <thead>
+									 				<th>N� �rden</th>
+													<th>Fecha</th>
+													<th>Fecha estimada de embarque</th>
+													<th>Monto</th>
+													<th></th>
+													<th>Agregar al pago<th>
+								    </thead>
+									 <tr>
+									 		 <td>1</td>
+											 <td>18/05/2010</td>
+											 <td>02/05/2010</td>
+											 <td>50.000 USD</td>
+											 <td><a href="#">ver</a></a>|<a href="#">modificar</a></td>
+											 <td><input type="checkbox" /></td>
+									 </tr>
+									 <tr>
+									 		 <td>2</td>
+											 <td>23/05/2010</td>
+											 <td>15/05/2010</td>
+											 <td>75.000 USD</td>
+											 <td><a href="#">ver</a></a>|<a href="#">modificar</a></td>
+											 <td><input type="checkbox" /></td>
+									 </tr>									 
+						</table>			 						
+        </div>
+        <div id="datosDomicilio">
+        <h2>Datos del Pago</h2>
+          <ul>
+            <li>
+              <label>Banco: </label>
+							<input name="banco" type="text" />
+            </li>
+            <li>
+              <label>N� de Cuenta: </label>
+							<input name="Ncuenta" type="text" />
+            </li>
+            <li>
+              <label>Monto: </label>
+							<label class="datoEntidad">35.000 USD</label>
+            </li>
+            <li>
+              <label>Fecha de transferencia: </label>
+              <input name="fechaTransferencia" type="text" />
+            </li>
+            <li>
+              <label>Moneda: </label>
+              <select name="provincia" size="1">
+                <option>USD</option>
+                <option>ARS</option>
+              </select>
+            </li>
+          </ul>
+          
+        </div>
+				</div>
+				<div class="GuardarCancelar">
+					<button type="button" name="cancelar" value="">Cancelar</button>
+					<button type="button" name="guardar" value="">Guardar</button>
+				</div>
+      </form>
+    </div>
+  </div>
+  <div id="pie">
+    <p> copyright (c) by Kiwi-Tea </p>
+  </div>
+</div>
+</body>
+</html>

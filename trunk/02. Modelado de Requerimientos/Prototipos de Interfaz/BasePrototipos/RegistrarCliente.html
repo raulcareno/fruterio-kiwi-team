@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<title>SEEE</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+<script type="text/javascript" src="jquery.js"></script>
+
+<!-- funcionamiento menú desplegable, uso de jQuery como librería -->
+<script type="text/javascript">
+$(function()  {  
+		   $("#mostrar-menu-ventas").click(function(event) {         
+
+			$("#menu-ventas").slideToggle();  
+			});  
+
+		});
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="cabecera"> <img src="assets/images/logo-kiwi2.png"/>
+    <label> <span> User_Name </span></label>
+    <ul>
+      <li><a href="about:blank">Help</a> </li>
+      <li><a href="about:blank">Salir</a> </li>
+      <!--20x20-->
+    </ul>
+  </div>
+  <div id="panelcentral">
+    <div id="navegacion"> <a href="#" id="mostrar-menu-ventas">Ventas</a>
+      <div id="menu-ventas">
+        <ul>
+          <li id="01">Logística</li>
+          <!-- ver si funca lo de id -->
+          <li id="02">Pedido</li>
+          <li><a href="RegistrarCliente.html">Registrar Cliente</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="contenido">
+      <h1> Registrar Cliente </h1>
+      <form id="formRegistrarCliente" method="post" action="">
+        <div id="datosPrincipales">
+        <h2>Datos Principales</h2>
+          <ul>
+            <li>
+              <label>Cuit: </label>
+              <input name="txtCuit" type="text"/>
+            </li>
+            <li>
+              <label>Razón Social: </label>
+              <input name="txtCuit" type="text"/>
+              <input name="buscar" type="button" value="Buscar" />
+            </li>
+            <li>
+              <label>Condición IVA: </label>
+              <select name="condicionIVA" size="1">
+                <option>Responsable no Inscripto</option>
+                <option>Responsable Inscripto</option>
+                <option>Monotributista</option>
+              </select>
+            </li>
+          </ul>
+       <!-- </div>-->
+        <!--<div id="datosContacto">-->
+        <h2>Datos de Contacto</h2>
+          <ul>
+            <li>
+              <label>Teléfono Fijo: </label>
+              <input name="telFijo" type="text" />
+            </li>
+            <li>
+              <label>Celular: </label>
+              <input name="cel" type="text" />
+            </li>
+            <li>
+              <label>Fax: </label>
+              <input name="fax" type="text" />
+            </li>
+            <li>
+              <label>Mail: </label>
+              <input name="mail" type="text" />
+            </li>
+          </ul>
+        </div>
+        <div id="datosDomicilio">
+        <h2>Datos de Domicilio</h2>
+          <ul>
+            <li>
+              <label>Provincia: </label>
+              <select name="provincia" size="1">
+                <option>Córdoba</option>
+                <option>Catamarca</option>
+                <option>La Rioja</option>
+              </select>
+            </li>
+            <li>
+              <label>Localidad: </label>
+              <select name="localidad" size="1">
+                <option>Capital</option>
+                <option>Jesús María</option>
+                <option>Colonia Caroya</option>
+              </select>
+            </li>
+            <li>
+              <label>Barrio: </label>
+              <input name="barrio" type="text" />
+            </li>
+            <li>
+              <label>Calle: </label>
+              <input name="calle" type="text" />
+            </li>
+            <li>
+              <label>Piso: </label>
+              <input name="piso" type="text" />
+            </li>
+            <li>
+              <label>CP: </label>
+              <input name="cp" type="text" />
+            </li>
+            <input name="agregarOtro" type="button" value="Agregar Otro" />
+          </ul>
+       <!-- </div>-->
+       <!-- <div id="datosResponsable">-->
+        <h2>Datos de Responsable</h2>
+          <table width="200" border="1">
+            <thead>
+            <th>Nombre</th>
+              <th>Teléfono</th>
+              <th><a href="#">Eliminar</a></th>
+              <th><a href="#">Modificar</a></th>
+              <th><a href="#">Consultar</a></th>
+                </thead>
+            <tbody>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+          <input name="agregar" type="button" value="Agregar" />
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="pie">
+    <p> copyright (c) by Kiwi-Tea </p>
+  </div>
+</div>
+</body>
+</html>

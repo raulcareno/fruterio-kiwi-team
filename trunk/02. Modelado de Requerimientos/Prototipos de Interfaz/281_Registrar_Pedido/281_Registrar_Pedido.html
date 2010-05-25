@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="Common.css"  />
+<link rel="stylesheet" type="text/css" href="281_Registrar_Pedido.css"  />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Registrar Pedido</title>
+<script type="text/javascript" src="../Scripts/scw.js"></script>
+<Script type="text/javascript">
+function mostrar_ocultar(hide)
+{
+	if (document.layers)
+		{document.contenido.visibility = hide ? 'hide' : 'show';}
+	else 
+	{
+		var g = document.all ? document.all.contenido :
+		document.getElementById('conhi');
+		g.style.visibility = hide ? 'hidden' : 'visible';
+	}
+}
+</Script>
+</head>
+
+<body>
+<div id="top">
+Sistema Estratégico Eben Ezer
+	<div id="usrmenu"> 
+		<a class="usrmenuitem" href="">Nombre De Usuario</a>
+		<a class="usrmenuitem" href="">Configurar Cuenta</a>
+		<a class="usrmenuitem" href="">Salir</a>
+	</div>
+</div>
+
+<div id="cuerpo">
+	<div id="navegacion">
+		<div id="navtop"></div>
+		<div id="navmenu">
+			<table id="menu">
+				<tr class="activo"><td class="barra"></td><td class="uno"><a href="">Ventas</a></td></tr>
+				<tr class="activo"><td class="barra"></td><td class="dos"><a href="">Registrar Pedido</td></tr>
+				<tr class="inactivo"><td class="barra"></td><td class="uno"><a href="">Compras</a></td></tr>
+				<tr class="inactivo"><td class="barra"></td><td class="dos"><a href="../002_Registrar_Pago_A_Proveedores/002_Registrar_Pago_a_Proveedores.html">Registrar Pago a Proveedores</a></td></tr>
+				<tr class="inactivo"><td class="barra"></td><td class="uno"><a href="">Lo que sea</a></td></tr>
+				<tr class="inactivo"><td class="barra"></td><td class="uno"><a href="">Uno mas</a></td></tr>
+				<tr class="inactivo"><td class="barra"></td><td class="uno"><a href="">Otro</a></td></tr>
+			</table>
+		</div>
+	</div>
+	<div id="contenido">
+		<div id="contop">
+			<div id="modulo">Registrar Pedido</div>
+			<div id="menubar"> 
+				<a class="barmenuitem" href="">(Imprimir)</a>
+				<a class="barmenuitem" href="">(Guardar)</a>
+				<a class="barmenuitem" href="">(Ayuda!)</a>
+			</div>
+		</div>
+		<div id="conarea">
+		<form>
+			<div id="cliente" class="ven">
+				<div class="cabecera">Cliente</div>					
+				<div class="form">
+					<td><input type="checkbox" onclick="mostrar_ocultar(this.checked);" /> Interno(sin cliente) <span id="fecha">Fecha Estimada de Etrega: </span><input type="text" onclick='scwShow(this,event);' />
+					<table id="conhi" class="hide">
+						<tr><td>CUIT: <input type="text" /> <input type="button" value="Buscar" /> <input type="button" value="Nuevo" /></td><td>Razón Social: <label>Razón Social</label></td><td>Responsable: <label>Responsable</label></td><td>Domicilio de entrega:<select>
+  <option value="1">Domicilio 1</option>
+  <option value="2">Domicilio 2</option>
+ </select><input type="button" value="Agregar" /></td></tr>
+					</table>
+				</div>
+			</div>
+			<div id="detalle" class="ven">
+			<div class="cabecera">Detalle</div>
+			<div class="form"></div>
+			</div>
+		</form>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>

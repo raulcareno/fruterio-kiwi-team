@@ -1,64 +1,90 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<link rel="stylesheet" type="text/css" href="Common.css"  />
-<link rel="stylesheet" type="text/css" href="002_Registrar_Pago_a_Proveedores.css"  />
+<link rel="stylesheet" type="text/css" href="Master Page.css" />
+<link rel="stylesheet" type="text/css" href="002_Registrar_Pago_a_Proveedores.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Untitled Document</title>
+<title>Registrar Pago a Proveedores</title>
 </head>
 
 <body>
-<div id="top">
-Sistema Estratégico Eben Ezer
-	<div id="usrmenu"> 
-		<a class="usrmenuitem" href="">Nombre De Usuario</a>
-		<a class="usrmenuitem" href="">Configurar Cuenta</a>
-		<a class="usrmenuitem" href="">Salir</a>
-	</div>
-</div>
-
-<div id="cuerpo">
-	<div id="navegacion">
-		<div id="navtop"></div>
-		<div id="navmenu">
-			<table id="menu">
-				<tr class="inactivo"><td class="barra"></td><td class="uno"><a href="">Ventas</a></td></tr>
-				<tr class="activo"><td class="barra"></td><td class="uno"><a href="">Compras</a></td></tr>
-				<tr class="activo"><td class="barra"></td><td class="dos"><a href="">Registrar Pago a Proveedores</a></td></tr>
-				<tr class="inactivo"><td class="barra"></td><td class="uno"><a href="">Lo que sea</a></td></tr>
-				<tr class="inactivo"><td class="barra"></td><td class="uno"><a href="">Uno mas</a></td></tr>
-				<tr class="inactivo"><td class="barra"></td><td class="uno"><a href="">Otro</a></td></tr>
-			</table>
+<div id="wraper">
+	<div id="top">
+		<div id="topmenu">
+			<a class="topmenuitem" href="">Nombre De Usuario</a>
+			<a class="topmenuitem" href="">Configurar Cuenta</a>
+			<a class="topmenuitem" href="">Salir</a>
 		</div>
+		Sistema Estrategico Eben Ezer
 	</div>
-	<div id="contenido">
-		<div id="contop">
-			<div id="modulo">Registrar Pago a Proveedores</div>
-			<div id="menubar"> 
-				<a class="barmenuitem" href="">(Imprimir)</a>
-				<a class="barmenuitem" href="">(Guardar)</a>
-				<a class="barmenuitem" href="">(Ayuda!)</a>
+	<div id="cuerpo">
+	<table id="cuerpo_tabla">
+	<tr>
+	<td id="celda_izquierda">
+	<div id="barra_lateral_izquierda">
+			<div id="logo">
 			</div>
-		</div>
-		<div id="conarea">
-		<form>
-			<div id="sup">
-				<div id="izq" class="ven">
-					<div class="formtop">Proveedor</div>
-					<div class="form">
-						<table>
-						<tr><td>Razón Social: </td> <td> <input type="text" name="razonSocial1"  /> </td> <td> <input type="button" value="Buscar"  /></td></tr>
-						<tr><td>Razón Social:</td> <td><label>La Serenisnima SRL</label></td></tr>
-						<tr><td>Nombre:</td> <td><label>La serenisima</label></td></tr>
-						<tr><td>e-Mail:</td> <td><label>laserenisima@lechetibia.com</label></td></tr>
-						<tr><td>Teléfono:</td> <td><label>0800-CHELE</label></td></tr>
-						</table>
-					</div>
+			<div id="contenedor_menu_navegacion">
+				<ul id="menu_navegacion">
+				<li class="activo">Compras</li>
+				<li class="activo"><a href="">Registrar Pago a Proveedores</a></li>
+				<li>Ventas</li>
+				<li><a href="">Registrar Pedido</a></li>
+				<li>Stock</li>
+				<li>Mas o menos</li>
+				</ul>
+			</div>
+	</div>
+	</td>
+	<td id="contenido">
+			<div id="aplicacion_top">
+			<div  id="titulo_aplicacion_top"> Pago a Proveedores</div>
+				<div id="top_contenido_menu">
+					<a class="top_contenido_menu_item" href="">(GUARDAR)</a>
+					<a class="top_contenido_menu_item" href="">(IMPRIMIR)</a>
+					<a class="top_contenido_menu_item" href="">(AYUDA!)</a>
 				</div>
-				<div id="der" class="ven">
-					<div class="formtop">Pago</div>
-					<div class="form">
-						<table>
+			</div>
+			<div id="aplicacion_area">
+			<form>
+				<div id="superior">
+                	<table id="superior_tabla">
+                		<tr>
+                        	<td>
+                            	<div class="ventana">
+                                	<h1>Proveedor</h1>
+                                    <div class="formulario">
+                                    <table>
+										<tr>
+                                        	<td>Razón Social: </td>
+                                            <td> <input type="text" name="razonSocial1"  /></td>
+                                            <td> <input type="button" value="Buscar"  /></td>
+                                       	</tr>
+                                        <tr>
+                                        	<td>Razón Social:</td>
+                                            <td><label>La Serenisnima SRL</label></td>
+                                        </tr>
+                                        <tr>
+                                        	<td>Nombre:</td>
+                                            <td><label>La serenisima</label></td>
+                                       </tr>
+                                       <tr>
+                                       		<td>e-Mail:</td>
+                                        	<td><label>laserenisima@lechetibia.com</label></td>
+                                       </tr>
+                                       <tr>
+                                       		<td>Teléfono:</td>
+                                            <td><label>0800-CHELE</label></td>
+                                       </tr>
+                                	</table>
+                                    </div>
+                                </div>
+                        	</td>
+                        	<td>
+                            	<div class="ventana">
+                                	<h1>Pago</h1>
+                                    <div class="formulario">
+                                    <table>
 						<tr><td>Banco: </td> <td> <input type="text" name="razonSocial1"  /> </td> <td>Nro Cuenta: </td><td><input type="text" /> </td></tr>
 						<tr><td>Monto Total:</td> <td><input type="text" name="razonSocial2"  /></td><td>Moneda: </td><td><select>
   <option value="USD">USD</option>
@@ -68,37 +94,44 @@ Sistema Estratégico Eben Ezer
 						<tr><td>Fecha Transferencia:</td> <td><input type="text" name="mail"  /></td></tr>
 						<tr><td>Teléfono:</td> <td><input type="text" name="telefono"  /></td></tr>
 						</table>
-					</div>
-				</div>
-			</div>
-			<div id="bot" class="ven">
-				<div class="formtop">Ordenes De Compra</div>
-				<div class="form">
-					<div class="tableContainer">
-					<table class="dataTable">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="inferior">
+                	<div class="ventana">
+                    	<h1>Ordenes de Compra</h1>
+                        <div class="formulario">
+                        	<div class="contenedor_tabla_pedidos">
+					<table id="tabla_pedidos">
 					<tr><th>Numero de orden</th><th>Fecha</th><th>Fecha de Embarque</th><th>Monto</th><th>Ver</th><th>Modificar</th><th>Agregar</th></tr>
-					<tr class="alt"><td>algunos dato</td><td>mas datos</td><td></td><td>mas</td><td></td><td></td><td></td></tr>
+					<tr class="alterna"><td>algunos dato</td><td>mas datos</td><td></td><td>mas</td><td></td><td></td><td></td></tr>
 					<tr><td></td><td></td><td>caramba caramba</td><td></td><td></td><td></td><td></td></tr>
-					<tr class="alt"><td></td><td></td><td></td><td>aca</td><td></td><td></td><td></td></tr>
+					<tr class="alterna"><td></td><td></td><td></td><td>aca</td><td></td><td></td><td></td></tr>
 					<tr><td></td><td></td><td></td><td>y aca</td><td></td><td></td><td></td></tr>
-					<tr class="alt"><td>algunos dato</td><td>mas datos</td><td></td><td>mas</td><td></td><td></td><td></td></tr>
+					<tr class="alterna"><td>algunos dato</td><td>mas datos</td><td></td><td>mas</td><td></td><td></td><td></td></tr>
 					<tr><td></td><td></td><td>caramba caramba</td><td></td><td></td><td></td><td></td></tr>
-					<tr class="alt"><td></td><td></td><td></td><td>aca</td><td></td><td></td><td></td></tr>
+					<tr class="alterna"><td></td><td></td><td></td><td>aca</td><td></td><td></td><td></td></tr>
 					<tr><td></td><td></td><td></td><td>y aca</td><td></td><td></td><td></td></tr>		
-					<tr class="alt"><td>algunos dato</td><td>mas datos</td><td></td><td>mas</td><td></td><td></td><td></td></tr>
+					<tr class="alterna"><td>algunos dato</td><td>mas datos</td><td></td><td>mas</td><td></td><td></td><td></td></tr>
 					<tr><td></td><td></td><td>caramba caramba</td><td></td><td></td><td></td><td></td></tr>
-					<tr class="alt"><td></td><td></td><td></td><td>aca</td><td></td><td></td><td></td></tr>
+					<tr class="alterna"><td></td><td></td><td></td><td>aca</td><td></td><td></td><td></td></tr>
 					<tr><td></td><td></td><td></td><td>y aca</td><td></td><td></td><td></td></tr>						
 					</table>
 					</div>
 					<p id="total">Total: <label>00000</label></p>
-				</div>
+                        </div>
+                    </div>
+                </div>
+            <p><input type="submit" value="Aceptar" /><input type="button" value="Cancelar" /></p>
+            </form>
 			</div>
-			<p><input type="submit" value="Aceptar" /><input type="button" value="Cancelar" /></p>
-		</form>
-		</div>
+	</td>
+	</tr>
+	</table>
 	</div>
 </div>
 </body>
-
 </html>

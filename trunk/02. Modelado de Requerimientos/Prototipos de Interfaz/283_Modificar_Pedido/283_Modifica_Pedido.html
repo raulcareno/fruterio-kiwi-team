@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="../Css/Master Page.css" />
+<link rel="stylesheet" type="text/css" href="../Css/contenido.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Modificar Pedido</title>
+<script type="text/javascript" src="../Scripts/scw.js"></script>
+</head>
+
+<body>
+<div id="wraper">
+	<div id="top">
+		<div id="topmenu">
+			<a class="topmenuitem" href="">Nombre De Usuario</a>
+			<a class="topmenuitem" href="">Configurar Cuenta</a>
+			<a class="topmenuitem" href="">Salir</a>
+		</div>
+		Sistema Estrategico Eben Ezer
+	</div>
+	<div id="cuerpo">
+	<table id="cuerpo_tabla">
+	<tr>
+	<td id="celda_izquierda">
+	<div id="barra_lateral_izquierda">
+			<div id="logo">
+			</div>
+			<div id="contenedor_menu_navegacion">
+				<ul id="menu_navegacion">
+				<li>Compras</li>
+				<li><a href="../002_Registrar_Pago_A_Proveedores/002_Registrar_Pago_a_Proveedores.html">Registrar Pago a Proveedores</a></li>
+				<li class="activo">Ventas</li>
+				<li><a href="../281_Registrar_Pedido/281_Registrar_Pedido.html">Registrar Pedido</a></li>
+                <li class="activo"><a href="">Modificar Pedido</a></li>
+				<li>Stock</li>
+				<li>Mas o menos</li>
+				</ul>
+			</div>
+	</div>
+	</td>
+	<td id="contenido">
+			<div id="aplicacion_top">
+			<div  id="titulo_aplicacion_top">Modificar Pedido</div>
+				<div id="top_contenido_menu">
+					<a class="top_contenido_menu_item" href="">(GUARDAR)</a>
+					<a class="top_contenido_menu_item" href="">(IMPRIMIR)</a>
+					<a class="top_contenido_menu_item" href="">(AYUDA!)</a>
+				</div>
+			</div>
+			<div id="aplicacion_area">
+			<form>
+				<div class="ventana">
+                <h1>Pedido</h1>
+                <div class="formulario">
+                <table>
+                <tr><td>Nro. Pedido: <input type="text" /><input type="button" value="Ir" /><input type="button" value="Buscar" /></td><td>Fecha de pedido: <label>20 dic 2009</label></td><td>Estado: <label>Pendiente</label></td><td>Cliente: <label>tuvieja</label></td></tr>
+                <tr><td>Domicilio de entrega:<select>
+  <option value="1">Domicilio 1</option>
+  <option value="2">Domicilio 2</option>
+ </select><input type="button" value="Agregar" /></td><td>Fecha de Etrega: <input type="text" onclick='scwShow(this,event);' /></td><td>Motivo Estado: <input type="text" /> </td><td></td></tr>
+                </table>
+                </div>
+                </div>
+                <div class="ventana">
+                <h1>Detalle</h1>
+                <div class="formulario">
+                	<table>
+                    <tr><td>Codigo:</td><td><input id="txtCodigo" type="text" /><input id="btnBuscar" type="button" value="Buscar" /></td></tr>
+					<tr><td>Cantidad:</td><td><input id="txtCantidad" type="text" /> de <label id="lblCantidadDisp"> XX</label> unidades disponibles</td></tr>
+					<tr><td>Precio:</td><td><input id"txtPrecio" type="text" /> <input id="btnAgregar" type="button" value="Agregar" /></td></tr>
+                    </table>
+                    <div class="contenedor_tabla_listado">
+					<table class="tabla_listado">
+					<tr><th>Código</th><th>Marca</th><th>Modelo</th><th>Tamaño</th><th>Color</th><th>Precio</th><th>Cantidad</th><th>Eliminar</th></tr>
+					<tr class="alterna"><td>a2f6</td><td>marca 2</td><td>modelo 1</td><td>1</td><td>azul</td><td>12</td><td>00</td><td>X</td></tr>
+					<tr><td>a2f5</td><td>marca 2</td><td>modelo 2</td><td>2</td><td>verde</td><td>13</td><td>00</td><td>X</td></tr>
+					<tr class="alterna"><td>a3g8</td><td>marca 3</td><td>modelo 3</td><td>3</td><td>gris</td><td>14</td><td>00</td><td>X</td></tr>
+					<tr><td>b3s3</td><td>marca 3</td><td>modelo 4</td><td>1</td><td>cacadepato</td><td>15</td><td>00</td><td>X</td></tr>
+					<tr class="alterna"><td>r2d2</td><td>marca 2</td><td>modelo 5</td><td>3</td><td>rosa</td><td>12</td><td>00</td><td>X</td></tr>
+					<tr><td>c3p0</td><td>marca 3</td><td>modelo 6</td><td>2</td><td>estrudel</td><td>11</td><td>00</td><td>X</td></tr>
+					</table>
+                    </div>
+                    <table><tr><td>Descuento: <input type="text" /></td></tr></table>
+                </div>
+                </div>
+            </form>
+            <p class="botonera"><input type="submit" value="Aceptar" /><input type="button" value="Cancelar" /></p>
+			</div>
+	</td>
+	</tr>
+	</table>
+	</div>
+</div>
+</body>
+</html>

@@ -1,10 +1,11 @@
-.ven
+/*ventanas*/
+.ventana
 {
 	background-color:#969594;
 	padding:2px;
+	margin:5px;
 }
-
-.cabecera
+.ventana h1
 {
 	font-family:calibri, "Arial Narrow", Arial, "Bell MT";
 	font-size:20px;
@@ -12,7 +13,7 @@
 	color:#DEDEDD;
 	padding-left:5px;
 }
-.form
+.formulario
 {
 	background-color: #bab3d6;
 	border: solid thin grey;
@@ -20,65 +21,28 @@
 	font-size:12px;
 }
 
-#detalle
-{
-	margin-top:5px;
-	max-height:300px;
-}
-#fecha
-{
-	margin-left:30px;
-}
-.hide
-{
-	position: relative;
-	visibility: visible;
-}
-.hide td
-{
-	padding-left:5px;
-	padding-right:5px;
-}
-.hide label
-{
-	font-weight:bold;
-}
-.form label
-{
-	font-weight:bold;
-	
-}
-#bot .form
-{
-	height:auto;
-}
-#txtCantidad
-{
-	width:50px;
-	
-}
-#tabla_container
+.contenedor_tabla_listado
 {
 	background-color:#8E84B7;
 	overflow:auto;
-	max-height: 150px;
 	border: thin solid black;
 }
 
-.dataTable
+.tabla_listado
 {
 	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
 	width:100%;
 	border-collapse:collapse;
 	background:#999999;
 }
-.dataTable td, .dataTable th 
+
+.tabla_listado td, .tabla_listado th 
 {
 	font-size:1em;
 	border:1px solid black;
 	padding:3px 7px 2px 7px;
 }
-.dataTable th
+.tabla_listado th
 {
 	background-color:#C4BF66;
 	font-size:16px;
@@ -87,20 +51,42 @@
 	padding-bottom:4px;
 	color:#000000;
 }
-.dataTable tr.alt td 
+.tabla_listado tr.alterna td 
 {
-color:#000000;
-background-color:#97946b;
+	color:#000000;
+	background-color:#97946b;
 }
-#conarea p
+
+
+
+.botonera
 {
 	text-align:right;
 	font-size:16px;
+	margin-right:5px;
 	margin-bottom:1px;
 	margin-top:6px;
 	
 }
-p#total
+.pie_de_tabla
 {
-	margin:0px;
+	text-align:right;
+	margin-right:40px;
+	font-size:16px;
+	font-style:oblique;
+}
+.pie_de_tabla label
+{
+	font-style:normal;
+	font-weight:bolder;
+}
+
+.formulario table td
+{
+	padding:2px 5px 2px 5px;
+}
+.formulario table td label
+{
+	font-weight:bold;
+	font-size:12px;
 }

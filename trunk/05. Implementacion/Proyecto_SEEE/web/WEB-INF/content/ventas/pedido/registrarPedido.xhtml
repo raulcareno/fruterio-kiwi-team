@@ -13,33 +13,79 @@
                         <h:panelGroup><span>Fecha de Entrega:</span><h:inputText onclick='scwShow(this,event);' value="//TODO"/></h:panelGroup>
                     </h:panelGrid>
                     <table><tr id="hideable"><td><span>CUIT:</span><h:inputText value="//TODO"/><h:commandButton value="Buscar" action="//TODO"/><h:commandButton value="Nuevo" action="//TODO"/></td>
-                    <td><span>Razón Social:</span><h:inputText value="//TODO"/></td>
-                        <td><span>Domicilio de entrega:</span><h:selectOneMenu value="//TODO"/><h:commandButton value="Nuevo" action="//TODO"/></td></tr></table>
+                        <td><span>Razón Social:</span><label> aca va la razon social</label></td>
+                        <td><span>Domicilio de entrega:</span><h:selectOneMenu value="//TODO"/><h:commandButton value="Nuevo" action="//TODO"/></td></tr>
+                    </table>
                 </div>
+                <h2>Responsables</h2>
+                <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="responsable" value="//TODOresponsables">
+                    <h:column>
+                        <f:facet name="header">Nombre de Responsable</f:facet>
+                        Juan pepe
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Telefono</f:facet>
+                        Telefono
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">e-Mail</f:facet>
+                        e-Mail
+                    </h:column>
+                </h:dataTable>
             </div>
+
+
             <div class="ventana">
                 <h1>Detalles</h1>
                 <div class="formulario">
                     <table>
-                        <tr><td>Codigo:</td><td><input id="txtCodigo" type="text" /><input id="btnBuscar" type="button" value="Buscar" /></td></tr>
-                        <tr><td>Cantidad:</td><td><input id="txtCantidad" type="text" /> de <label id="lblCantidadDisp"> XX</label> unidades disponibles</td></tr>
-                        <tr><td>Precio:</td><td><input id="txtPrecio" type="text" /> <input id="btnAgregar" type="button" value="Agregar" /></td></tr>
+                        <tr><td><span>Codigo:</span></td><td><h:inputText value="//TODO"/><h:commandButton value="Buscar" action="//TODO"/></td></tr>
+                        <tr><td><span>Cantidad:</span></td><td><h:inputText value="//TODO"/><span> de <label id="lblCantidadDisp"> XX</label> unidades disponibles</span></td></tr>
+                        <tr><td><span>Precio:</span></td><td><h:inputText value="//TODO"/> <h:commandButton value="Buscar" action="//TODO"/></td></tr>
                     </table>
                     <div class="contenedor_tabla_listado">
-                        <table class="tabla_listado">
-                            <tr><th>Código</th><th>Marca</th><th>Modelo</th><th>Tamaño</th><th>Color</th><th>Precio</th><th>Cantidad</th><th>Eliminar</th></tr>
-                            <tr class="alterna"><td>a2f6</td><td>marca 2</td><td>modelo 1</td><td>1</td><td>azul</td><td>12</td><td>00</td><td>X</td></tr>
-                            <tr><td>a2f5</td><td>marca 2</td><td>modelo 2</td><td>2</td><td>verde</td><td>13</td><td>00</td><td>X</td></tr>
-                            <tr class="alterna"><td>a3g8</td><td>marca 3</td><td>modelo 3</td><td>3</td><td>gris</td><td>14</td><td>00</td><td>X</td></tr>
-                            <tr><td>b3s3</td><td>marca 3</td><td>modelo 4</td><td>1</td><td>cacadepato</td><td>15</td><td>00</td><td>X</td></tr>
-                            <tr class="alterna"><td>r2d2</td><td>marca 2</td><td>modelo 5</td><td>3</td><td>rosa</td><td>12</td><td>00</td><td>X</td></tr>
-                            <tr><td>c3p0</td><td>marca 3</td><td>modelo 6</td><td>2</td><td>estrudel</td><td>11</td><td>00</td><td>X</td></tr>
-                        </table>
+                        <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="domicilio" value="//TODOdomicilios">
+                            <h:column>
+                                <f:facet name="header">Código</f:facet>
+                                Cordoba
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Marca</f:facet>
+                                Capital
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Modelo</f:facet>
+                                Barrio
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Tamaño</f:facet>
+                                Calle
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Color</f:facet>
+                                Altura
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Precio</f:facet>
+                                CP
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Cantidad</f:facet>
+                                CP
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Acciones</f:facet>
+                                <h:commandLink value="Eliminar" action="//TODO"/>
+                            </h:column>
+                        </h:dataTable>
                     </div>
-                    <table><tr><td>Descuento: <input type="text" /></td></tr></table>
+                    <span>Descuento:</span> <h:inputText value="//TODO"/>
                 </div>
             </div>
-            <p class="botonera"><input type="submit" value="Aceptar" /><input type="button" value="Cancelar" /></p>
+            <p class="botonera">
+            <h:commandButton value="Aceptar" action="//TODO"/>
+            <h:commandButton value="Cancelar" action="//TODO"/>
+            </p>
         </h:form>
     </ui:composition>
 </html>

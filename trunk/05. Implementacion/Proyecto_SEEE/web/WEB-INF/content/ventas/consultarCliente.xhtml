@@ -1,0 +1,84 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition>
+        <h:form>
+            <div id="superior">
+                <table id="superior_tabla">
+                    <tr>
+                        <td>
+                            <div class="ventana">
+                                <h1>Búsqueda</h1>
+                                <div class="formulario">
+                                    <h:panelGrid columns="4">
+                                        <span>CUIT:</span>
+                                        <h:inputText value="//TODO"/>                       
+                                        <h:selectBooleanCheckbox value="true" onclick="mostrar_ocultar(this.checked,'filtros');"/><span>Avanzada</span>
+                                    </h:panelGrid>
+                                    <div id="filtros">
+                                        <h:panelGrid columns="4">
+                                            <span>Razón Social:</span>
+                                            <h:inputText value="//TODO"/>
+                                            <span>IVA:</span>
+                                            <h:selectOneMenu value="//TODO"/>
+                                            <span>Telefono:</span>
+                                            <h:inputText  value="//TODO"/>
+                                            <span>Celular:</span>
+                                            <h:inputText value="//TODO"/>
+                                            <span>Fax:</span>
+                                            <h:inputText value="//TODO"/>
+                                            <span>Mail:</span>
+                                            <h:inputText value="//TODO"/>
+                                        </h:panelGrid>
+                                    </div>
+                                    <h:commandButton value="Buscar" action="//TODO"/>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="inferior">
+                <div class="ventana">
+                    <h1>Pedidos</h1>
+                    <div class="formulario">
+                        <div class="contenedor_tabla_listado">
+                            <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="clientes" value="//TODOClientes">
+                                <h:column>
+                                    <f:facet name="header">CUIT</f:facet>
+                                    25-32002356/6
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Razón Social</f:facet>
+                                    La concha de la lora hermanos
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Condicion de iva</f:facet>
+                                    Inscripto fruta fruta
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Celular</f:facet>
+                                    356-2345678
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Mail</f:facet>
+                                    laconchadel@lora.com
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Acciones</f:facet>
+                                    <h:commandLink value="Consultar" action="//TODO"/>
+                                    <h:commandLink value="Seleccionar" action="//TODO"/>
+                                </h:column>
+                            </h:dataTable>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+        </h:form>
+    </ui:composition>
+
+</html>

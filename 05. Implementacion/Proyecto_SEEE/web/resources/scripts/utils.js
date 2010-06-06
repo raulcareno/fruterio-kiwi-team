@@ -52,16 +52,7 @@ $(document).ready(function() {
         $(".datepicker2").datepicker();
     });
 
-    $("#linkFiltros").click(function () {
-        $("#filtros").slideToggle("0");
-    });
 
-    $("#dialog-form").dialog({
-        autoOpen: false,
-        height: 300,
-        width: 350,
-        modal: true
-    });
     
     $('#create-user')
     .button()
@@ -72,4 +63,11 @@ $(document).ready(function() {
 
 
 
+
 });
+
+
+function mioToggle(elemento)
+{
+    $(elemento).slideToggle("0");
+}

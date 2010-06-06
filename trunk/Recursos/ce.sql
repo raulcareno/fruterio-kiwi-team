@@ -2,7 +2,26 @@
 -- PostgreSQL database dump
 --
 
--- Started on 2010-06-06 17:56:31
+-- Started on 2010-06-06 18:07:19
+
+SET statement_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = off;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET escape_string_warning = off;
+
+--
+-- TOC entry 2539 (class 1262 OID 16395)
+-- Name: ce; Type: DATABASE; Schema: -; Owner: postgres
+--
+
+CREATE DATABASE ce WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'Spanish_Spain.1252' LC_CTYPE = 'Spanish_Spain.1252';
+
+
+ALTER DATABASE ce OWNER TO postgres;
+
+\connect ce
 
 SET statement_timeout = 0;
 SET client_encoding = 'UTF8';
@@ -50,21 +69,12 @@ CREATE SEQUENCE "Accesorio_id_seq"
 ALTER TABLE public."Accesorio_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2619 (class 0 OID 0)
+-- TOC entry 2542 (class 0 OID 0)
 -- Dependencies: 1733
 -- Name: Accesorio_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Accesorio_id_seq" OWNED BY "Accesorio".id;
-
-
---
--- TOC entry 2620 (class 0 OID 0)
--- Dependencies: 1733
--- Name: Accesorio_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Accesorio_id_seq"', 1, false);
 
 
 --
@@ -100,21 +110,12 @@ CREATE SEQUENCE "Barrio_id_seq"
 ALTER TABLE public."Barrio_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2621 (class 0 OID 0)
+-- TOC entry 2543 (class 0 OID 0)
 -- Dependencies: 1746
 -- Name: Barrio_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Barrio_id_seq" OWNED BY "Barrio".id;
-
-
---
--- TOC entry 2622 (class 0 OID 0)
--- Dependencies: 1746
--- Name: Barrio_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Barrio_id_seq"', 1, false);
 
 
 --
@@ -150,21 +151,12 @@ CREATE SEQUENCE "Cargo_id_seq"
 ALTER TABLE public."Cargo_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2623 (class 0 OID 0)
+-- TOC entry 2544 (class 0 OID 0)
 -- Dependencies: 1769
 -- Name: Cargo_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Cargo_id_seq" OWNED BY "Cargo".id;
-
-
---
--- TOC entry 2624 (class 0 OID 0)
--- Dependencies: 1769
--- Name: Cargo_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Cargo_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -212,21 +204,12 @@ CREATE SEQUENCE "Cheque_id_seq"
 ALTER TABLE public."Cheque_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2625 (class 0 OID 0)
+-- TOC entry 2545 (class 0 OID 0)
 -- Dependencies: 1781
 -- Name: Cheque_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Cheque_id_seq" OWNED BY "Cheque".id;
-
-
---
--- TOC entry 2626 (class 0 OID 0)
--- Dependencies: 1781
--- Name: Cheque_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Cheque_id_seq"', 1, false);
 
 
 --
@@ -312,21 +295,12 @@ CREATE SEQUENCE "CobroPedido_id_seq"
 ALTER TABLE public."CobroPedido_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2627 (class 0 OID 0)
+-- TOC entry 2546 (class 0 OID 0)
 -- Dependencies: 1792
 -- Name: CobroPedido_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "CobroPedido_id_seq" OWNED BY "CobroPedido".id;
-
-
---
--- TOC entry 2628 (class 0 OID 0)
--- Dependencies: 1792
--- Name: CobroPedido_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"CobroPedido_id_seq"', 1, false);
 
 
 SET default_with_oids = false;
@@ -362,21 +336,12 @@ CREATE SEQUENCE "Color_id_seq"
 ALTER TABLE public."Color_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2629 (class 0 OID 0)
+-- TOC entry 2547 (class 0 OID 0)
 -- Dependencies: 1719
 -- Name: Color_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Color_id_seq" OWNED BY "Color".id;
-
-
---
--- TOC entry 2630 (class 0 OID 0)
--- Dependencies: 1719
--- Name: Color_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Color_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -414,21 +379,12 @@ CREATE SEQUENCE "Compra_id_seq"
 ALTER TABLE public."Compra_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2631 (class 0 OID 0)
+-- TOC entry 2548 (class 0 OID 0)
 -- Dependencies: 1830
 -- Name: Compra_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Compra_id_seq" OWNED BY "Compra".id;
-
-
---
--- TOC entry 2632 (class 0 OID 0)
--- Dependencies: 1830
--- Name: Compra_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Compra_id_seq"', 1, false);
 
 
 SET default_with_oids = false;
@@ -465,21 +421,12 @@ CREATE SEQUENCE "CondicionIVA_id_seq"
 ALTER TABLE public."CondicionIVA_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2633 (class 0 OID 0)
+-- TOC entry 2549 (class 0 OID 0)
 -- Dependencies: 1763
 -- Name: CondicionIVA_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "CondicionIVA_id_seq" OWNED BY "CondicionIVA".id;
-
-
---
--- TOC entry 2634 (class 0 OID 0)
--- Dependencies: 1763
--- Name: CondicionIVA_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"CondicionIVA_id_seq"', 1, false);
 
 
 --
@@ -513,21 +460,12 @@ CREATE SEQUENCE "CreditoCliente_id_seq"
 ALTER TABLE public."CreditoCliente_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2635 (class 0 OID 0)
+-- TOC entry 2550 (class 0 OID 0)
 -- Dependencies: 1758
 -- Name: CreditoCliente_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "CreditoCliente_id_seq" OWNED BY "CreditoCliente".id;
-
-
---
--- TOC entry 2636 (class 0 OID 0)
--- Dependencies: 1758
--- Name: CreditoCliente_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"CreditoCliente_id_seq"', 1, false);
 
 
 --
@@ -564,21 +502,12 @@ CREATE SEQUENCE "DetalleCartera_id_seq"
 ALTER TABLE public."DetalleCartera_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2637 (class 0 OID 0)
+-- TOC entry 2551 (class 0 OID 0)
 -- Dependencies: 1767
 -- Name: DetalleCartera_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "DetalleCartera_id_seq" OWNED BY "DetalleCartera".id;
-
-
---
--- TOC entry 2638 (class 0 OID 0)
--- Dependencies: 1767
--- Name: DetalleCartera_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"DetalleCartera_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -619,21 +548,12 @@ CREATE SEQUENCE "DetalleCobroPedido_id_seq"
 ALTER TABLE public."DetalleCobroPedido_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2639 (class 0 OID 0)
+-- TOC entry 2552 (class 0 OID 0)
 -- Dependencies: 1785
 -- Name: DetalleCobroPedido_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "DetalleCobroPedido_id_seq" OWNED BY "DetalleCobroPedido".id;
-
-
---
--- TOC entry 2640 (class 0 OID 0)
--- Dependencies: 1785
--- Name: DetalleCobroPedido_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"DetalleCobroPedido_id_seq"', 1, false);
 
 
 --
@@ -703,21 +623,12 @@ CREATE SEQUENCE "DetalleCompra_id_seq"
 ALTER TABLE public."DetalleCompra_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2641 (class 0 OID 0)
+-- TOC entry 2553 (class 0 OID 0)
 -- Dependencies: 1853
 -- Name: DetalleCompra_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "DetalleCompra_id_seq" OWNED BY "DetalleCompra".id;
-
-
---
--- TOC entry 2642 (class 0 OID 0)
--- Dependencies: 1853
--- Name: DetalleCompra_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"DetalleCompra_id_seq"', 1, false);
 
 
 SET default_with_oids = false;
@@ -754,21 +665,12 @@ CREATE SEQUENCE "DetalleDevolucionProductosTerminados_id_seq"
 ALTER TABLE public."DetalleDevolucionProductosTerminados_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2643 (class 0 OID 0)
+-- TOC entry 2554 (class 0 OID 0)
 -- Dependencies: 1742
 -- Name: DetalleDevolucionProductosTerminados_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "DetalleDevolucionProductosTerminados_id_seq" OWNED BY "DetalleDevolucionProductosTerminados".id;
-
-
---
--- TOC entry 2644 (class 0 OID 0)
--- Dependencies: 1742
--- Name: DetalleDevolucionProductosTerminados_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"DetalleDevolucionProductosTerminados_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -806,21 +708,12 @@ CREATE SEQUENCE "DetalleFactura_id_seq"
 ALTER TABLE public."DetalleFactura_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2645 (class 0 OID 0)
+-- TOC entry 2555 (class 0 OID 0)
 -- Dependencies: 1838
 -- Name: DetalleFactura_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "DetalleFactura_id_seq" OWNED BY "DetalleFactura".id;
-
-
---
--- TOC entry 2646 (class 0 OID 0)
--- Dependencies: 1838
--- Name: DetalleFactura_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"DetalleFactura_id_seq"', 1, false);
 
 
 --
@@ -860,21 +753,12 @@ CREATE SEQUENCE "DetalleHojaRuta_id_seq"
 ALTER TABLE public."DetalleHojaRuta_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2647 (class 0 OID 0)
+-- TOC entry 2556 (class 0 OID 0)
 -- Dependencies: 1824
 -- Name: DetalleHojaRuta_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "DetalleHojaRuta_id_seq" OWNED BY "DetalleHojaRuta".id;
-
-
---
--- TOC entry 2648 (class 0 OID 0)
--- Dependencies: 1824
--- Name: DetalleHojaRuta_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"DetalleHojaRuta_id_seq"', 1, false);
 
 
 SET default_with_oids = false;
@@ -912,21 +796,12 @@ CREATE SEQUENCE "DetalleMateriaPrima_id_seq"
 ALTER TABLE public."DetalleMateriaPrima_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2649 (class 0 OID 0)
+-- TOC entry 2557 (class 0 OID 0)
 -- Dependencies: 1729
 -- Name: DetalleMateriaPrima_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "DetalleMateriaPrima_id_seq" OWNED BY "DetalleMateriaPrima".id;
-
-
---
--- TOC entry 2650 (class 0 OID 0)
--- Dependencies: 1729
--- Name: DetalleMateriaPrima_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"DetalleMateriaPrima_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -968,21 +843,12 @@ CREATE SEQUENCE "DetalleNotificacionReaprovisionamiento_id_seq"
 ALTER TABLE public."DetalleNotificacionReaprovisionamiento_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2651 (class 0 OID 0)
+-- TOC entry 2558 (class 0 OID 0)
 -- Dependencies: 1848
 -- Name: DetalleNotificacionReaprovisionamiento_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "DetalleNotificacionReaprovisionamiento_id_seq" OWNED BY "DetalleNotificacionReaprovisionamiento".id;
-
-
---
--- TOC entry 2652 (class 0 OID 0)
--- Dependencies: 1848
--- Name: DetalleNotificacionReaprovisionamiento_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"DetalleNotificacionReaprovisionamiento_id_seq"', 1, false);
 
 
 --
@@ -1056,21 +922,12 @@ CREATE SEQUENCE "DetalleOrdenCompra_id_seq"
 ALTER TABLE public."DetalleOrdenCompra_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2653 (class 0 OID 0)
+-- TOC entry 2559 (class 0 OID 0)
 -- Dependencies: 1841
 -- Name: DetalleOrdenCompra_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "DetalleOrdenCompra_id_seq" OWNED BY "DetalleOrdenCompra".id;
-
-
---
--- TOC entry 2654 (class 0 OID 0)
--- Dependencies: 1841
--- Name: DetalleOrdenCompra_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"DetalleOrdenCompra_id_seq"', 1, false);
 
 
 --
@@ -1119,21 +976,12 @@ CREATE SEQUENCE "DetallePedidoProductosTerminados_id_seq"
 ALTER TABLE public."DetallePedidoProductosTerminados_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2655 (class 0 OID 0)
+-- TOC entry 2560 (class 0 OID 0)
 -- Dependencies: 1796
 -- Name: DetallePedidoProductosTerminados_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "DetallePedidoProductosTerminados_id_seq" OWNED BY "DetallePedidoProductosTerminados".id;
-
-
---
--- TOC entry 2656 (class 0 OID 0)
--- Dependencies: 1796
--- Name: DetallePedidoProductosTerminados_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"DetallePedidoProductosTerminados_id_seq"', 1, false);
 
 
 SET default_with_oids = false;
@@ -1175,21 +1023,12 @@ CREATE SEQUENCE "DetalleVenta_id_seq"
 ALTER TABLE public."DetalleVenta_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2657 (class 0 OID 0)
+-- TOC entry 2561 (class 0 OID 0)
 -- Dependencies: 1739
 -- Name: DetalleVenta_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "DetalleVenta_id_seq" OWNED BY "DetalleVenta".id;
-
-
---
--- TOC entry 2658 (class 0 OID 0)
--- Dependencies: 1739
--- Name: DetalleVenta_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"DetalleVenta_id_seq"', 1, false);
 
 
 --
@@ -1225,21 +1064,12 @@ CREATE SEQUENCE "DevolucionProductosTerminados_id_seq"
 ALTER TABLE public."DevolucionProductosTerminados_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2659 (class 0 OID 0)
+-- TOC entry 2562 (class 0 OID 0)
 -- Dependencies: 1752
 -- Name: DevolucionProductosTerminados_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "DevolucionProductosTerminados_id_seq" OWNED BY "DevolucionProductosTerminados".id;
-
-
---
--- TOC entry 2660 (class 0 OID 0)
--- Dependencies: 1752
--- Name: DevolucionProductosTerminados_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"DevolucionProductosTerminados_id_seq"', 1, false);
 
 
 --
@@ -1274,21 +1104,12 @@ CREATE SEQUENCE "Divisa_id_seq"
 ALTER TABLE public."Divisa_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2661 (class 0 OID 0)
+-- TOC entry 2563 (class 0 OID 0)
 -- Dependencies: 1774
 -- Name: Divisa_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Divisa_id_seq" OWNED BY "Divisa".id;
-
-
---
--- TOC entry 2662 (class 0 OID 0)
--- Dependencies: 1774
--- Name: Divisa_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Divisa_id_seq"', 1, false);
 
 
 --
@@ -1326,21 +1147,12 @@ CREATE SEQUENCE "Domicilio_id_seq"
 ALTER TABLE public."Domicilio_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2663 (class 0 OID 0)
+-- TOC entry 2564 (class 0 OID 0)
 -- Dependencies: 1748
 -- Name: Domicilio_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Domicilio_id_seq" OWNED BY "Domicilio".id;
-
-
---
--- TOC entry 2664 (class 0 OID 0)
--- Dependencies: 1748
--- Name: Domicilio_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Domicilio_id_seq"', 1, false);
 
 
 --
@@ -1415,21 +1227,12 @@ CREATE SEQUENCE "EmpresaClienteXPersona_id_seq"
 ALTER TABLE public."EmpresaClienteXPersona_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2665 (class 0 OID 0)
+-- TOC entry 2565 (class 0 OID 0)
 -- Dependencies: 1761
 -- Name: EmpresaClienteXPersona_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "EmpresaClienteXPersona_id_seq" OWNED BY "EmpresaClienteXPersona".id;
-
-
---
--- TOC entry 2666 (class 0 OID 0)
--- Dependencies: 1761
--- Name: EmpresaClienteXPersona_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"EmpresaClienteXPersona_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -1469,21 +1272,12 @@ CREATE SEQUENCE "EmpresaTransporte_id_seq"
 ALTER TABLE public."EmpresaTransporte_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2667 (class 0 OID 0)
+-- TOC entry 2566 (class 0 OID 0)
 -- Dependencies: 1813
 -- Name: EmpresaTransporte_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "EmpresaTransporte_id_seq" OWNED BY "EmpresaTransporte".id;
-
-
---
--- TOC entry 2668 (class 0 OID 0)
--- Dependencies: 1813
--- Name: EmpresaTransporte_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"EmpresaTransporte_id_seq"', 1, false);
 
 
 SET default_with_oids = false;
@@ -1519,21 +1313,12 @@ CREATE SEQUENCE "EstadoCartera_id_seq"
 ALTER TABLE public."EstadoCartera_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2669 (class 0 OID 0)
+-- TOC entry 2567 (class 0 OID 0)
 -- Dependencies: 1765
 -- Name: EstadoCartera_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "EstadoCartera_id_seq" OWNED BY "EstadoCartera".id;
-
-
---
--- TOC entry 2670 (class 0 OID 0)
--- Dependencies: 1765
--- Name: EstadoCartera_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"EstadoCartera_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -1571,21 +1356,12 @@ CREATE SEQUENCE "EstadoCobroCheque_id_seq"
 ALTER TABLE public."EstadoCobroCheque_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2671 (class 0 OID 0)
+-- TOC entry 2568 (class 0 OID 0)
 -- Dependencies: 1783
 -- Name: EstadoCobroCheque_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "EstadoCobroCheque_id_seq" OWNED BY "EstadoCobroCheque".id;
-
-
---
--- TOC entry 2672 (class 0 OID 0)
--- Dependencies: 1783
--- Name: EstadoCobroCheque_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"EstadoCobroCheque_id_seq"', 1, false);
 
 
 --
@@ -1621,21 +1397,12 @@ CREATE SEQUENCE "EstadoCobroPedido_id_seq"
 ALTER TABLE public."EstadoCobroPedido_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2673 (class 0 OID 0)
+-- TOC entry 2569 (class 0 OID 0)
 -- Dependencies: 1790
 -- Name: EstadoCobroPedido_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "EstadoCobroPedido_id_seq" OWNED BY "EstadoCobroPedido".id;
-
-
---
--- TOC entry 2674 (class 0 OID 0)
--- Dependencies: 1790
--- Name: EstadoCobroPedido_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"EstadoCobroPedido_id_seq"', 1, false);
 
 
 --
@@ -1671,21 +1438,12 @@ CREATE SEQUENCE "EstadoDetalleOrdenCompra_id_seq"
 ALTER TABLE public."EstadoDetalleOrdenCompra_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2675 (class 0 OID 0)
+-- TOC entry 2570 (class 0 OID 0)
 -- Dependencies: 1839
 -- Name: EstadoDetalleOrdenCompra_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "EstadoDetalleOrdenCompra_id_seq" OWNED BY "EstadoDetalleOrdenCompra".id;
-
-
---
--- TOC entry 2676 (class 0 OID 0)
--- Dependencies: 1839
--- Name: EstadoDetalleOrdenCompra_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"EstadoDetalleOrdenCompra_id_seq"', 1, false);
 
 
 --
@@ -1721,21 +1479,12 @@ CREATE SEQUENCE "EstadoDetallePedidoCliente_id_seq"
 ALTER TABLE public."EstadoDetallePedidoCliente_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2677 (class 0 OID 0)
+-- TOC entry 2571 (class 0 OID 0)
 -- Dependencies: 1794
 -- Name: EstadoDetallePedidoCliente_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "EstadoDetallePedidoCliente_id_seq" OWNED BY "EstadoDetallePedidoProductoTerminado".id;
-
-
---
--- TOC entry 2678 (class 0 OID 0)
--- Dependencies: 1794
--- Name: EstadoDetallePedidoCliente_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"EstadoDetallePedidoCliente_id_seq"', 1, false);
 
 
 SET default_with_oids = false;
@@ -1771,21 +1520,12 @@ CREATE SEQUENCE "EstadoDetalleVenta_id_seq"
 ALTER TABLE public."EstadoDetalleVenta_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2679 (class 0 OID 0)
+-- TOC entry 2572 (class 0 OID 0)
 -- Dependencies: 1737
 -- Name: EstadoDetalleVenta_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "EstadoDetalleVenta_id_seq" OWNED BY "EstadoDetalleVenta".id;
-
-
---
--- TOC entry 2680 (class 0 OID 0)
--- Dependencies: 1737
--- Name: EstadoDetalleVenta_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"EstadoDetalleVenta_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -1823,21 +1563,12 @@ CREATE SEQUENCE "EstadoNotificacionReaprovisionamiento_id_seq"
 ALTER TABLE public."EstadoNotificacionReaprovisionamiento_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2681 (class 0 OID 0)
+-- TOC entry 2573 (class 0 OID 0)
 -- Dependencies: 1844
 -- Name: EstadoNotificacionReaprovisionamiento_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "EstadoNotificacionReaprovisionamiento_id_seq" OWNED BY "EstadoNotificacionReaprovisionamiento".id;
-
-
---
--- TOC entry 2682 (class 0 OID 0)
--- Dependencies: 1844
--- Name: EstadoNotificacionReaprovisionamiento_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"EstadoNotificacionReaprovisionamiento_id_seq"', 1, false);
 
 
 --
@@ -1873,21 +1604,12 @@ CREATE SEQUENCE "EstadoOrdenCompra_id_seq"
 ALTER TABLE public."EstadoOrdenCompra_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2683 (class 0 OID 0)
+-- TOC entry 2574 (class 0 OID 0)
 -- Dependencies: 1815
 -- Name: EstadoOrdenCompra_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "EstadoOrdenCompra_id_seq" OWNED BY "EstadoOrdenCompra".id;
-
-
---
--- TOC entry 2684 (class 0 OID 0)
--- Dependencies: 1815
--- Name: EstadoOrdenCompra_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"EstadoOrdenCompra_id_seq"', 1, false);
 
 
 --
@@ -1923,21 +1645,12 @@ CREATE SEQUENCE "EstadoPedidoProductosTerminados_id_seq"
 ALTER TABLE public."EstadoPedidoProductosTerminados_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2685 (class 0 OID 0)
+-- TOC entry 2575 (class 0 OID 0)
 -- Dependencies: 1798
 -- Name: EstadoPedidoProductosTerminados_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "EstadoPedidoProductosTerminados_id_seq" OWNED BY "EstadoPedidoProductosTerminados".id;
-
-
---
--- TOC entry 2686 (class 0 OID 0)
--- Dependencies: 1798
--- Name: EstadoPedidoProductosTerminados_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"EstadoPedidoProductosTerminados_id_seq"', 1, false);
 
 
 --
@@ -1973,21 +1686,12 @@ CREATE SEQUENCE "EstadoVenta_id_seq"
 ALTER TABLE public."EstadoVenta_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2687 (class 0 OID 0)
+-- TOC entry 2576 (class 0 OID 0)
 -- Dependencies: 1807
 -- Name: EstadoVenta_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "EstadoVenta_id_seq" OWNED BY "EstadoVenta".id;
-
-
---
--- TOC entry 2688 (class 0 OID 0)
--- Dependencies: 1807
--- Name: EstadoVenta_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"EstadoVenta_id_seq"', 1, false);
 
 
 --
@@ -2025,21 +1729,12 @@ CREATE SEQUENCE "Factura_id_seq"
 ALTER TABLE public."Factura_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2689 (class 0 OID 0)
+-- TOC entry 2577 (class 0 OID 0)
 -- Dependencies: 1805
 -- Name: Factura_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Factura_id_seq" OWNED BY "Factura".id;
-
-
---
--- TOC entry 2690 (class 0 OID 0)
--- Dependencies: 1805
--- Name: Factura_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Factura_id_seq"', 1, false);
 
 
 --
@@ -2077,21 +1772,12 @@ CREATE SEQUENCE "HojaRuta_id_seq"
 ALTER TABLE public."HojaRuta_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2691 (class 0 OID 0)
+-- TOC entry 2578 (class 0 OID 0)
 -- Dependencies: 1822
 -- Name: HojaRuta_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "HojaRuta_id_seq" OWNED BY "HojaRuta".id;
-
-
---
--- TOC entry 2692 (class 0 OID 0)
--- Dependencies: 1822
--- Name: HojaRuta_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"HojaRuta_id_seq"', 1, false);
 
 
 --
@@ -2135,21 +1821,12 @@ CREATE SEQUENCE "Importacion_id_seq"
 ALTER TABLE public."Importacion_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2693 (class 0 OID 0)
+-- TOC entry 2579 (class 0 OID 0)
 -- Dependencies: 1834
 -- Name: Importacion_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Importacion_id_seq" OWNED BY "Importacion".id;
-
-
---
--- TOC entry 2694 (class 0 OID 0)
--- Dependencies: 1834
--- Name: Importacion_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Importacion_id_seq"', 1, false);
 
 
 SET default_with_oids = false;
@@ -2186,21 +1863,12 @@ CREATE SEQUENCE "Localidad_id_seq"
 ALTER TABLE public."Localidad_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2695 (class 0 OID 0)
+-- TOC entry 2580 (class 0 OID 0)
 -- Dependencies: 1751
 -- Name: Localidad_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Localidad_id_seq" OWNED BY "Localidad".id;
-
-
---
--- TOC entry 2696 (class 0 OID 0)
--- Dependencies: 1751
--- Name: Localidad_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Localidad_id_seq"', 1, false);
 
 
 --
@@ -2236,21 +1904,12 @@ CREATE SEQUENCE "Lote_id_seq"
 ALTER TABLE public."Lote_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2697 (class 0 OID 0)
+-- TOC entry 2581 (class 0 OID 0)
 -- Dependencies: 1727
 -- Name: Lote_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Lote_id_seq" OWNED BY "Lote".id;
-
-
---
--- TOC entry 2698 (class 0 OID 0)
--- Dependencies: 1727
--- Name: Lote_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Lote_id_seq"', 1, false);
 
 
 --
@@ -2284,21 +1943,12 @@ CREATE SEQUENCE "Marca_id_seq"
 ALTER TABLE public."Marca_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2699 (class 0 OID 0)
+-- TOC entry 2582 (class 0 OID 0)
 -- Dependencies: 1716
 -- Name: Marca_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Marca_id_seq" OWNED BY "Marca".id;
-
-
---
--- TOC entry 2700 (class 0 OID 0)
--- Dependencies: 1716
--- Name: Marca_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Marca_id_seq"', 1, false);
 
 
 --
@@ -2335,21 +1985,12 @@ CREATE SEQUENCE "MateriaPrima_id_seq"
 ALTER TABLE public."MateriaPrima_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2701 (class 0 OID 0)
+-- TOC entry 2583 (class 0 OID 0)
 -- Dependencies: 1723
 -- Name: MateriaPrima_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "MateriaPrima_id_seq" OWNED BY "MateriaPrima".id;
-
-
---
--- TOC entry 2702 (class 0 OID 0)
--- Dependencies: 1723
--- Name: MateriaPrima_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"MateriaPrima_id_seq"', 1, false);
 
 
 --
@@ -2384,21 +2025,12 @@ CREATE SEQUENCE "Modelo_id_seq"
 ALTER TABLE public."Modelo_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2703 (class 0 OID 0)
+-- TOC entry 2584 (class 0 OID 0)
 -- Dependencies: 1717
 -- Name: Modelo_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Modelo_id_seq" OWNED BY "Modelo".id;
-
-
---
--- TOC entry 2704 (class 0 OID 0)
--- Dependencies: 1717
--- Name: Modelo_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Modelo_id_seq"', 1, false);
 
 
 --
@@ -2433,21 +2065,12 @@ CREATE SEQUENCE "Muestrario_id_seq"
 ALTER TABLE public."Muestrario_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2705 (class 0 OID 0)
+-- TOC entry 2585 (class 0 OID 0)
 -- Dependencies: 1735
 -- Name: Muestrario_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Muestrario_id_seq" OWNED BY "Muestrario".id;
-
-
---
--- TOC entry 2706 (class 0 OID 0)
--- Dependencies: 1735
--- Name: Muestrario_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Muestrario_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -2489,21 +2112,12 @@ CREATE SEQUENCE "NotificacionReaprovisionamiento_id_seq"
 ALTER TABLE public."NotificacionReaprovisionamiento_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2707 (class 0 OID 0)
+-- TOC entry 2586 (class 0 OID 0)
 -- Dependencies: 1846
 -- Name: NotificacionReaprovisionamiento_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "NotificacionReaprovisionamiento_id_seq" OWNED BY "NotificacionReaprovisionamiento".id;
-
-
---
--- TOC entry 2708 (class 0 OID 0)
--- Dependencies: 1846
--- Name: NotificacionReaprovisionamiento_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"NotificacionReaprovisionamiento_id_seq"', 1, false);
 
 
 --
@@ -2569,21 +2183,12 @@ CREATE SEQUENCE "OrdenCompraXImportacion_id_seq"
 ALTER TABLE public."OrdenCompraXImportacion_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2709 (class 0 OID 0)
+-- TOC entry 2587 (class 0 OID 0)
 -- Dependencies: 1836
 -- Name: OrdenCompraXImportacion_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "OrdenCompraXImportacion_id_seq" OWNED BY "OrdenCompraXImportacion".id;
-
-
---
--- TOC entry 2710 (class 0 OID 0)
--- Dependencies: 1836
--- Name: OrdenCompraXImportacion_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"OrdenCompraXImportacion_id_seq"', 1, false);
 
 
 --
@@ -2603,21 +2208,12 @@ CREATE SEQUENCE "OrdenCompra_id_seq"
 ALTER TABLE public."OrdenCompra_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2711 (class 0 OID 0)
+-- TOC entry 2588 (class 0 OID 0)
 -- Dependencies: 1817
 -- Name: OrdenCompra_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "OrdenCompra_id_seq" OWNED BY "OrdenCompra".id;
-
-
---
--- TOC entry 2712 (class 0 OID 0)
--- Dependencies: 1817
--- Name: OrdenCompra_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"OrdenCompra_id_seq"', 1, false);
 
 
 --
@@ -2689,21 +2285,12 @@ CREATE SEQUENCE "PagoEmpleado_idPago_seq"
 ALTER TABLE public."PagoEmpleado_idPago_seq" OWNER TO postgres;
 
 --
--- TOC entry 2713 (class 0 OID 0)
+-- TOC entry 2589 (class 0 OID 0)
 -- Dependencies: 1779
 -- Name: PagoEmpleado_idPago_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "PagoEmpleado_idPago_seq" OWNED BY "PagoEmpleado"."idPago";
-
-
---
--- TOC entry 2714 (class 0 OID 0)
--- Dependencies: 1779
--- Name: PagoEmpleado_idPago_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"PagoEmpleado_idPago_seq"', 1, false);
 
 
 --
@@ -2739,21 +2326,12 @@ CREATE SEQUENCE "Pago_id_seq"
 ALTER TABLE public."Pago_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2715 (class 0 OID 0)
+-- TOC entry 2590 (class 0 OID 0)
 -- Dependencies: 1772
 -- Name: Pago_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Pago_id_seq" OWNED BY "Pago".id;
-
-
---
--- TOC entry 2716 (class 0 OID 0)
--- Dependencies: 1772
--- Name: Pago_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Pago_id_seq"', 1, false);
 
 
 --
@@ -2809,21 +2387,12 @@ CREATE SEQUENCE "PedidoProductosTerminados_id_seq"
 ALTER TABLE public."PedidoProductosTerminados_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2717 (class 0 OID 0)
+-- TOC entry 2591 (class 0 OID 0)
 -- Dependencies: 1800
 -- Name: PedidoProductosTerminados_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "PedidoProductosTerminados_id_seq" OWNED BY "PedidoProductosTerminados".id;
-
-
---
--- TOC entry 2718 (class 0 OID 0)
--- Dependencies: 1800
--- Name: PedidoProductosTerminados_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"PedidoProductosTerminados_id_seq"', 1, false);
 
 
 SET default_with_oids = false;
@@ -2866,21 +2435,12 @@ CREATE SEQUENCE "Persona_id_seq"
 ALTER TABLE public."Persona_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2719 (class 0 OID 0)
+-- TOC entry 2592 (class 0 OID 0)
 -- Dependencies: 1755
 -- Name: Persona_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Persona_id_seq" OWNED BY "Persona".id;
-
-
---
--- TOC entry 2720 (class 0 OID 0)
--- Dependencies: 1755
--- Name: Persona_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Persona_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -2963,21 +2523,12 @@ CREATE SEQUENCE "ProductoTerminado_id_seq"
 ALTER TABLE public."ProductoTerminado_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2721 (class 0 OID 0)
+-- TOC entry 2593 (class 0 OID 0)
 -- Dependencies: 1725
 -- Name: ProductoTerminado_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "ProductoTerminado_id_seq" OWNED BY "ProductoTerminado".id;
-
-
---
--- TOC entry 2722 (class 0 OID 0)
--- Dependencies: 1725
--- Name: ProductoTerminado_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"ProductoTerminado_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -3035,21 +2586,12 @@ CREATE SEQUENCE "ProductosDefectuososXCompra_id_seq"
 ALTER TABLE public."ProductosDefectuososXCompra_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2723 (class 0 OID 0)
+-- TOC entry 2594 (class 0 OID 0)
 -- Dependencies: 1832
 -- Name: ProductosDefectuososXCompra_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "ProductosDefectuososXCompra_id_seq" OWNED BY "ProductosDefectuososXCompra".id;
-
-
---
--- TOC entry 2724 (class 0 OID 0)
--- Dependencies: 1832
--- Name: ProductosDefectuososXCompra_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"ProductosDefectuososXCompra_id_seq"', 1, false);
 
 
 --
@@ -3069,21 +2611,12 @@ CREATE SEQUENCE "ProductosDefectuosos_id_seq"
 ALTER TABLE public."ProductosDefectuosos_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2725 (class 0 OID 0)
+-- TOC entry 2595 (class 0 OID 0)
 -- Dependencies: 1828
 -- Name: ProductosDefectuosos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "ProductosDefectuosos_id_seq" OWNED BY "ProductosDefectuosos".id;
-
-
---
--- TOC entry 2726 (class 0 OID 0)
--- Dependencies: 1828
--- Name: ProductosDefectuosos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"ProductosDefectuosos_id_seq"', 1, false);
 
 
 --
@@ -3149,21 +2682,12 @@ CREATE SEQUENCE "Provincia_id_seq"
 ALTER TABLE public."Provincia_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2727 (class 0 OID 0)
+-- TOC entry 2596 (class 0 OID 0)
 -- Dependencies: 1750
 -- Name: Provincia_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Provincia_id_seq" OWNED BY "Provincia".id;
-
-
---
--- TOC entry 2728 (class 0 OID 0)
--- Dependencies: 1750
--- Name: Provincia_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Provincia_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -3203,21 +2727,12 @@ CREATE SEQUENCE "RentabilidadCliente_id_seq"
 ALTER TABLE public."RentabilidadCliente_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2729 (class 0 OID 0)
+-- TOC entry 2597 (class 0 OID 0)
 -- Dependencies: 1820
 -- Name: RentabilidadCliente_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "RentabilidadCliente_id_seq" OWNED BY "RentabilidadCliente".id;
-
-
---
--- TOC entry 2730 (class 0 OID 0)
--- Dependencies: 1820
--- Name: RentabilidadCliente_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"RentabilidadCliente_id_seq"', 1, false);
 
 
 --
@@ -3253,21 +2768,12 @@ CREATE SEQUENCE "Tamano_id_seq"
 ALTER TABLE public."Tamano_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2731 (class 0 OID 0)
+-- TOC entry 2598 (class 0 OID 0)
 -- Dependencies: 1776
 -- Name: Tamano_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Tamano_id_seq" OWNED BY "Tamano".id;
-
-
---
--- TOC entry 2732 (class 0 OID 0)
--- Dependencies: 1776
--- Name: Tamano_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Tamano_id_seq"', 1, false);
 
 
 SET default_with_oids = false;
@@ -3303,21 +2809,12 @@ CREATE SEQUENCE "TipoAccesorio_id_seq"
 ALTER TABLE public."TipoAccesorio_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2733 (class 0 OID 0)
+-- TOC entry 2599 (class 0 OID 0)
 -- Dependencies: 1731
 -- Name: TipoAccesorio_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "TipoAccesorio_id_seq" OWNED BY "TipoAccesorio".id;
-
-
---
--- TOC entry 2734 (class 0 OID 0)
--- Dependencies: 1731
--- Name: TipoAccesorio_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"TipoAccesorio_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -3355,21 +2852,12 @@ CREATE SEQUENCE "TipoDefecto_id_seq"
 ALTER TABLE public."TipoDefecto_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2735 (class 0 OID 0)
+-- TOC entry 2600 (class 0 OID 0)
 -- Dependencies: 1826
 -- Name: TipoDefecto_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "TipoDefecto_id_seq" OWNED BY "TipoDefecto".id;
-
-
---
--- TOC entry 2736 (class 0 OID 0)
--- Dependencies: 1826
--- Name: TipoDefecto_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"TipoDefecto_id_seq"', 1, false);
 
 
 SET default_with_oids = false;
@@ -3405,21 +2893,12 @@ CREATE SEQUENCE "TipoDni_id_seq"
 ALTER TABLE public."TipoDni_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2737 (class 0 OID 0)
+-- TOC entry 2601 (class 0 OID 0)
 -- Dependencies: 1753
 -- Name: TipoDni_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "TipoDni_id_seq" OWNED BY "TipoDni".id;
-
-
---
--- TOC entry 2738 (class 0 OID 0)
--- Dependencies: 1753
--- Name: TipoDni_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"TipoDni_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -3457,21 +2936,12 @@ CREATE SEQUENCE "TipoFactura_id_seq"
 ALTER TABLE public."TipoFactura_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2739 (class 0 OID 0)
+-- TOC entry 2602 (class 0 OID 0)
 -- Dependencies: 1803
 -- Name: TipoFactura_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "TipoFactura_id_seq" OWNED BY "TipoFactura".id;
-
-
---
--- TOC entry 2740 (class 0 OID 0)
--- Dependencies: 1803
--- Name: TipoFactura_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"TipoFactura_id_seq"', 1, false);
 
 
 SET default_with_oids = false;
@@ -3507,21 +2977,12 @@ CREATE SEQUENCE "Ubicacion_id_seq"
 ALTER TABLE public."Ubicacion_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2741 (class 0 OID 0)
+-- TOC entry 2603 (class 0 OID 0)
 -- Dependencies: 1721
 -- Name: Ubicacion_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Ubicacion_id_seq" OWNED BY "Ubicacion".id;
-
-
---
--- TOC entry 2742 (class 0 OID 0)
--- Dependencies: 1721
--- Name: Ubicacion_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Ubicacion_id_seq"', 1, false);
 
 
 SET default_with_oids = true;
@@ -3569,21 +3030,12 @@ CREATE SEQUENCE "Venta_id_seq"
 ALTER TABLE public."Venta_id_seq" OWNER TO postgres;
 
 --
--- TOC entry 2743 (class 0 OID 0)
+-- TOC entry 2604 (class 0 OID 0)
 -- Dependencies: 1809
 -- Name: Venta_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Venta_id_seq" OWNED BY "Venta".id;
-
-
---
--- TOC entry 2744 (class 0 OID 0)
--- Dependencies: 1809
--- Name: Venta_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"Venta_id_seq"', 1, false);
 
 
 SET default_with_oids = false;
@@ -3618,15 +3070,6 @@ CREATE SEQUENCE proveedor_id_seq
 
 
 ALTER TABLE public.proveedor_id_seq OWNER TO postgres;
-
---
--- TOC entry 2745 (class 0 OID 0)
--- Dependencies: 1812
--- Name: proveedor_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('proveedor_id_seq', 1, false);
-
 
 --
 -- TOC entry 2150 (class 2604 OID 16617)
@@ -4184,786 +3627,6 @@ ALTER TABLE "Ubicacion" ALTER COLUMN id SET DEFAULT nextval('"Ubicacion_id_seq"'
 --
 
 ALTER TABLE "Venta" ALTER COLUMN id SET DEFAULT nextval('"Venta_id_seq"'::regclass);
-
-
---
--- TOC entry 2546 (class 0 OID 16614)
--- Dependencies: 1734
--- Data for Name: Accesorio; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Accesorio" (id, nombre, "idTipoaccesorio", "idProducto") FROM stdin;
-\.
-
-
---
--- TOC entry 2554 (class 0 OID 16738)
--- Dependencies: 1747
--- Data for Name: Barrio; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Barrio" (id, nombre, "idLocalidad", "idViajante") FROM stdin;
-\.
-
-
---
--- TOC entry 2565 (class 0 OID 16966)
--- Dependencies: 1770
--- Data for Name: Cargo; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Cargo" (id, nombre, descripcion, "precioPorHora") FROM stdin;
-\.
-
-
---
--- TOC entry 2572 (class 0 OID 17154)
--- Dependencies: 1782
--- Data for Name: Cheque; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Cheque" (id, banco, nro, emisor, "fechaEmision", "fechaCobro", cobrador) FROM stdin;
-\.
-
-
---
--- TOC entry 2575 (class 0 OID 17180)
--- Dependencies: 1787
--- Data for Name: CobreCheque; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "CobreCheque" ("idDetalleCobroPedido", "idCheque", "idEstadoDetalleCobroPedido") FROM stdin;
-\.
-
-
---
--- TOC entry 2576 (class 0 OID 17200)
--- Dependencies: 1788
--- Data for Name: CobroEfectivo; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "CobroEfectivo" ("idDetalleCobroPedido") FROM stdin;
-\.
-
-
---
--- TOC entry 2577 (class 0 OID 17210)
--- Dependencies: 1789
--- Data for Name: CobroNotaCredito; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "CobroNotaCredito" ("idDetalleCobroPedido", "idCreditoCliente") FROM stdin;
-\.
-
-
---
--- TOC entry 2579 (class 0 OID 17237)
--- Dependencies: 1793
--- Data for Name: CobroPedido; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "CobroPedido" (id, "idEstadoCobroPedido", "fechaCobro") FROM stdin;
-\.
-
-
---
--- TOC entry 2539 (class 0 OID 16452)
--- Dependencies: 1720
--- Data for Name: Color; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Color" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2599 (class 0 OID 17609)
--- Dependencies: 1831
--- Data for Name: Compra; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Compra" (id, "fechaRealLlegada") FROM stdin;
-\.
-
-
---
--- TOC entry 2562 (class 0 OID 16912)
--- Dependencies: 1764
--- Data for Name: CondicionIVA; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "CondicionIVA" (id, nombre, descripcion) FROM stdin;
-\.
-
-
---
--- TOC entry 2559 (class 0 OID 16867)
--- Dependencies: 1759
--- Data for Name: CreditoCliente; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "CreditoCliente" (id, monto) FROM stdin;
-\.
-
-
---
--- TOC entry 2564 (class 0 OID 16943)
--- Dependencies: 1768
--- Data for Name: DetalleCartera; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetalleCartera" (id, "fechaDesde", "fechaHasta", "idEstadoCartera", "idEmpresaCliente") FROM stdin;
-\.
-
-
---
--- TOC entry 2574 (class 0 OID 17174)
--- Dependencies: 1786
--- Data for Name: DetalleCobroPedido; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetalleCobroPedido" (id, varlor, fecha, "idCobroPedido") FROM stdin;
-\.
-
-
---
--- TOC entry 2612 (class 0 OID 18031)
--- Dependencies: 1854
--- Data for Name: DetalleCompra; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetalleCompra" (id, "idCompra", "idDetalleOrdenCompra") FROM stdin;
-\.
-
-
---
--- TOC entry 2614 (class 0 OID 18062)
--- Dependencies: 1856
--- Data for Name: DetalleCompraMateriaPrima; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetalleCompraMateriaPrima" ("idDetalleCompra", "idDetalleOrdenCompraMateriaPrima") FROM stdin;
-\.
-
-
---
--- TOC entry 2613 (class 0 OID 18047)
--- Dependencies: 1855
--- Data for Name: DetalleCompraProductoImportado; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetalleCompraProductoImportado" ("idDetalleCompra", "idDetalleOrdenCompraProductoImportado") FROM stdin;
-\.
-
-
---
--- TOC entry 2551 (class 0 OID 16697)
--- Dependencies: 1743
--- Data for Name: DetalleDevolucionProductosTerminados; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetalleDevolucionProductosTerminados" (id, "idDevolucionProductosTerminados", "idDetalleVenta") FROM stdin;
-\.
-
-
---
--- TOC entry 2584 (class 0 OID 17325)
--- Dependencies: 1802
--- Data for Name: DetalleFactura; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetalleFactura" ("idDetallePedidoProductosTerminados", "idFactura", id) FROM stdin;
-\.
-
-
---
--- TOC entry 2596 (class 0 OID 17562)
--- Dependencies: 1825
--- Data for Name: DetalleHojaRuta; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetalleHojaRuta" (id, "idHojaRuta", "idEmpresaCliente", "idDomicilioVisitar") FROM stdin;
-\.
-
-
---
--- TOC entry 2544 (class 0 OID 16582)
--- Dependencies: 1730
--- Data for Name: DetalleMateriaPrima; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetalleMateriaPrima" (id, "cantidadMateriaPrima", "idMateriaPrima", "idLote") FROM stdin;
-\.
-
-
---
--- TOC entry 2608 (class 0 OID 17965)
--- Dependencies: 1849
--- Data for Name: DetalleNotificacionReaprovisionamiento; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetalleNotificacionReaprovisionamiento" (id, cantidad, "idNotificacionReaprovisionamiento", "idProductoImportado") FROM stdin;
-\.
-
-
---
--- TOC entry 2604 (class 0 OID 17912)
--- Dependencies: 1842
--- Data for Name: DetalleOrdenCompra; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetalleOrdenCompra" (id, precio, "idEstadoDetalleOrdenCompra") FROM stdin;
-\.
-
-
---
--- TOC entry 2610 (class 0 OID 18003)
--- Dependencies: 1851
--- Data for Name: DetalleOrdenCompraMateriaPrima; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetalleOrdenCompraMateriaPrima" ("idDetalleOrdenCompra", "idMateriaPrima", cantidad) FROM stdin;
-\.
-
-
---
--- TOC entry 2609 (class 0 OID 17982)
--- Dependencies: 1850
--- Data for Name: DetalleOrdenCompraProductoImportado; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetalleOrdenCompraProductoImportado" ("idDetalleOrdenCompra", "idProductoImportado", "cantidadProducto") FROM stdin;
-\.
-
-
---
--- TOC entry 2581 (class 0 OID 17265)
--- Dependencies: 1797
--- Data for Name: DetallePedidoProductosTerminados; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetallePedidoProductosTerminados" (id, "idProductoTerminado", "cantidadProducto", "precioPorUnidad", "idEstadoDetallePedidoProductoTerminado", "motivoDevolucion", "motivoNoEntregado", "fechaDevolucion", "idPedidoProductosTerminados") FROM stdin;
-\.
-
-
---
--- TOC entry 2549 (class 0 OID 16669)
--- Dependencies: 1740
--- Data for Name: DetalleVenta; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DetalleVenta" (id, "idProducto", "cantidadProducto", "precioUnidad", "idEstadoDetalleVenta", "motivoDevolucion", "fechaDevolucion", "idVenta") FROM stdin;
-\.
-
-
---
--- TOC entry 2550 (class 0 OID 16690)
--- Dependencies: 1741
--- Data for Name: DevolucionProductosTerminados; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "DevolucionProductosTerminados" (fecha, "idViajante", "idCliente", id) FROM stdin;
-\.
-
-
---
--- TOC entry 2568 (class 0 OID 17020)
--- Dependencies: 1775
--- Data for Name: Divisa; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Divisa" (id, nombre, "tasaCambio") FROM stdin;
-\.
-
-
---
--- TOC entry 2555 (class 0 OID 16754)
--- Dependencies: 1749
--- Data for Name: Domicilio; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Domicilio" (id, altura, "nombreCalle", "nroDpto", "codPostal", "idBarrio") FROM stdin;
-\.
-
-
---
--- TOC entry 2566 (class 0 OID 16979)
--- Dependencies: 1771
--- Data for Name: Empleado; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Empleado" (cuil, "fechaIngreso", "fechaBaja", "motivoBaja", "idPersona", "idCargo") FROM stdin;
-\.
-
-
---
--- TOC entry 2560 (class 0 OID 16874)
--- Dependencies: 1760
--- Data for Name: EmpresaCliente; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "EmpresaCliente" (id, "razonSocial", cuit, "idCondicionIVA", telefono, fax, mail, celular, "idCreditoCliente", "idDomicilio") FROM stdin;
-\.
-
-
---
--- TOC entry 2561 (class 0 OID 16894)
--- Dependencies: 1762
--- Data for Name: EmpresaClienteXPersona; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "EmpresaClienteXPersona" (id, "idEmpresaCliente", "idPersona") FROM stdin;
-\.
-
-
---
--- TOC entry 2590 (class 0 OID 17469)
--- Dependencies: 1814
--- Data for Name: EmpresaTransporte; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "EmpresaTransporte" (id, nombre, "idDomicilio") FROM stdin;
-\.
-
-
---
--- TOC entry 2563 (class 0 OID 16930)
--- Dependencies: 1766
--- Data for Name: EstadoCartera; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "EstadoCartera" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2573 (class 0 OID 17164)
--- Dependencies: 1784
--- Data for Name: EstadoCobroCheque; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "EstadoCobroCheque" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2578 (class 0 OID 17227)
--- Dependencies: 1791
--- Data for Name: EstadoCobroPedido; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "EstadoCobroPedido" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2603 (class 0 OID 17902)
--- Dependencies: 1840
--- Data for Name: EstadoDetalleOrdenCompra; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "EstadoDetalleOrdenCompra" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2580 (class 0 OID 17255)
--- Dependencies: 1795
--- Data for Name: EstadoDetallePedidoProductoTerminado; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "EstadoDetallePedidoProductoTerminado" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2548 (class 0 OID 16656)
--- Dependencies: 1738
--- Data for Name: EstadoDetalleVenta; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "EstadoDetalleVenta" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2606 (class 0 OID 17937)
--- Dependencies: 1845
--- Data for Name: EstadoNotificacionReaprovisionamiento; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "EstadoNotificacionReaprovisionamiento" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2591 (class 0 OID 17482)
--- Dependencies: 1816
--- Data for Name: EstadoOrdenCompra; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "EstadoOrdenCompra" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2582 (class 0 OID 17284)
--- Dependencies: 1799
--- Data for Name: EstadoPedidoProductosTerminados; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "EstadoPedidoProductosTerminados" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2587 (class 0 OID 17371)
--- Dependencies: 1808
--- Data for Name: EstadoVenta; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "EstadoVenta" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2586 (class 0 OID 17347)
--- Dependencies: 1806
--- Data for Name: Factura; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Factura" (id, "idTipoFactura", "idPedidoProductosTerminados") FROM stdin;
-\.
-
-
---
--- TOC entry 2595 (class 0 OID 17549)
--- Dependencies: 1823
--- Data for Name: HojaRuta; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "HojaRuta" (id, "idPosicionViajante", fecha) FROM stdin;
-\.
-
-
---
--- TOC entry 2601 (class 0 OID 17635)
--- Dependencies: 1835
--- Data for Name: Importacion; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Importacion" (id, fecha, "lugarOrigen", "idCompra", "pagoAduana", "fechaEmbarque") FROM stdin;
-\.
-
-
---
--- TOC entry 2553 (class 0 OID 16723)
--- Dependencies: 1745
--- Data for Name: Localidad; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Localidad" (nombre, "idProvincia", id) FROM stdin;
-\.
-
-
---
--- TOC entry 2543 (class 0 OID 16565)
--- Dependencies: 1728
--- Data for Name: Lote; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Lote" (id, "nroLote", "cantidadProducida", "idProducto") FROM stdin;
-\.
-
-
---
--- TOC entry 2537 (class 0 OID 16398)
--- Dependencies: 1715
--- Data for Name: Marca; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Marca" (nombre, id) FROM stdin;
-\.
-
-
---
--- TOC entry 2541 (class 0 OID 16478)
--- Dependencies: 1724
--- Data for Name: MateriaPrima; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "MateriaPrima" (id, codigo, nombre, descripcion, "stockActual") FROM stdin;
-\.
-
-
---
--- TOC entry 2538 (class 0 OID 16437)
--- Dependencies: 1718
--- Data for Name: Modelo; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Modelo" (id, nombre, "nroSerie") FROM stdin;
-\.
-
-
---
--- TOC entry 2547 (class 0 OID 16637)
--- Dependencies: 1736
--- Data for Name: Muestrario; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Muestrario" (id, "fechaDesde", "fechaHasta") FROM stdin;
-\.
-
-
---
--- TOC entry 2607 (class 0 OID 17947)
--- Dependencies: 1847
--- Data for Name: NotificacionReaprovisionamiento; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "NotificacionReaprovisionamiento" (id, "idEmpleado", "idEstadoNotificacionReaprovisionamiento", "fechaIngresoDeposito") FROM stdin;
-\.
-
-
---
--- TOC entry 2592 (class 0 OID 17492)
--- Dependencies: 1818
--- Data for Name: OrdenCompra; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "OrdenCompra" (id, "idEmpresaTransporteInterior", "idEmpresaTransporteExterior", "idProveedor", "fechaPedido", "fechaEstimadaLlegada", "idEstadoOrdenCompra", "otrosGastos") FROM stdin;
-\.
-
-
---
--- TOC entry 2602 (class 0 OID 17648)
--- Dependencies: 1837
--- Data for Name: OrdenCompraXImportacion; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "OrdenCompraXImportacion" (id, "idImportacion", "idOrdenCompra") FROM stdin;
-\.
-
-
---
--- TOC entry 2571 (class 0 OID 17142)
--- Dependencies: 1780
--- Data for Name: OtrosGastos; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "OtrosGastos" ("idPago", descripcion) FROM stdin;
-\.
-
-
---
--- TOC entry 2567 (class 0 OID 17009)
--- Dependencies: 1773
--- Data for Name: Pago; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Pago" (id, monto, "fechaPago", "nroPago", "idDivisa") FROM stdin;
-\.
-
-
---
--- TOC entry 2570 (class 0 OID 17117)
--- Dependencies: 1778
--- Data for Name: PagoEmpleado; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "PagoEmpleado" ("idEmpleado", "idPago") FROM stdin;
-\.
-
-
---
--- TOC entry 2593 (class 0 OID 17518)
--- Dependencies: 1819
--- Data for Name: PagoProveedor; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "PagoProveedor" ("idPago", "idOrdenCompra") FROM stdin;
-\.
-
-
---
--- TOC entry 2583 (class 0 OID 17294)
--- Dependencies: 1801
--- Data for Name: PedidoProductosTerminados; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "PedidoProductosTerminados" (id, "fechaPedido", "idEstadoPedidoProductosTerminados", "fechaCancelacion", "motivoEstado", "fechaEstimadaEntrega", "fechaEntregaViajante", "idViajante", "idEmpleado", descuento, "domicilioEnvio", "idEmpresaCliente") FROM stdin;
-\.
-
-
---
--- TOC entry 2557 (class 0 OID 16830)
--- Dependencies: 1756
--- Data for Name: Persona; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Persona" (id, nombre, apellido, "idDomicilio", telefono, celular, dni, "idTipoDni", mail) FROM stdin;
-\.
-
-
---
--- TOC entry 2611 (class 0 OID 18019)
--- Dependencies: 1852
--- Data for Name: ProductoFabricado; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "ProductoFabricado" ("idProductoTerminado", "costoProduccion") FROM stdin;
-\.
-
-
---
--- TOC entry 2605 (class 0 OID 17925)
--- Dependencies: 1843
--- Data for Name: ProductoImportado; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "ProductoImportado" ("idProductoTerminado", "precioCompra") FROM stdin;
-\.
-
-
---
--- TOC entry 2542 (class 0 OID 16495)
--- Dependencies: 1726
--- Data for Name: ProductoTerminado; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "ProductoTerminado" (id, "nroProducto", "precioEstimado", nombre, "nivelReaprovisionamiento", "stockMaximo", "fechaIngreso", "idModelo", "idColor", "stockActual", "idTamano", "precioVenta", "idMarca", "idUbicacion", "idMuestrario") FROM stdin;
-\.
-
-
---
--- TOC entry 2598 (class 0 OID 17595)
--- Dependencies: 1829
--- Data for Name: ProductosDefectuosos; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "ProductosDefectuosos" (id, cantidad, "idTipoDefecto") FROM stdin;
-\.
-
-
---
--- TOC entry 2600 (class 0 OID 17617)
--- Dependencies: 1833
--- Data for Name: ProductosDefectuososXCompra; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "ProductosDefectuososXCompra" (id, "idCompra", "idProductosDefectuosos") FROM stdin;
-\.
-
-
---
--- TOC entry 2589 (class 0 OID 17448)
--- Dependencies: 1811
--- Data for Name: Proveedor; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Proveedor" (id, nombre, "razonSocial", mail, "telefonoFijo", "telefonoCelular", "idDomicilioa", pais, "fechaAlta") FROM stdin;
-\.
-
-
---
--- TOC entry 2552 (class 0 OID 16713)
--- Dependencies: 1744
--- Data for Name: Provincia; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Provincia" (nombre, id) FROM stdin;
-\.
-
-
---
--- TOC entry 2594 (class 0 OID 17535)
--- Dependencies: 1821
--- Data for Name: RentabilidadCliente; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "RentabilidadCliente" (id, coeficiente, "idEmpresaCliente") FROM stdin;
-\.
-
-
---
--- TOC entry 2569 (class 0 OID 17104)
--- Dependencies: 1777
--- Data for Name: Tamano; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Tamano" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2545 (class 0 OID 16601)
--- Dependencies: 1732
--- Data for Name: TipoAccesorio; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "TipoAccesorio" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2597 (class 0 OID 17585)
--- Dependencies: 1827
--- Data for Name: TipoDefecto; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "TipoDefecto" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2556 (class 0 OID 16817)
--- Dependencies: 1754
--- Data for Name: TipoDni; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "TipoDni" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2585 (class 0 OID 17337)
--- Dependencies: 1804
--- Data for Name: TipoFactura; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "TipoFactura" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2540 (class 0 OID 16465)
--- Dependencies: 1722
--- Data for Name: Ubicacion; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Ubicacion" (id, nombre) FROM stdin;
-\.
-
-
---
--- TOC entry 2588 (class 0 OID 17381)
--- Dependencies: 1810
--- Data for Name: Venta; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Venta" (id, "fechaVenta", "nroFactura", "idCobroPedido", "idPedidoProductosTerminados", "idEstadoVenta", "fechaMaximaDevolucion") FROM stdin;
-\.
-
-
---
--- TOC entry 2558 (class 0 OID 16849)
--- Dependencies: 1757
--- Data for Name: Viajante; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY "Viajante" ("idPersona", "comisionPorVenta", "idDetalleCartera") FROM stdin;
-\.
 
 
 --
@@ -7057,7 +5720,7 @@ ALTER TABLE ONLY "Viajante"
 
 
 --
--- TOC entry 2618 (class 0 OID 0)
+-- TOC entry 2541 (class 0 OID 0)
 -- Dependencies: 3
 -- Name: public; Type: ACL; Schema: -; Owner: postgres
 --
@@ -7068,7 +5731,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2010-06-06 17:56:35
+-- Completed on 2010-06-06 18:07:20
 
 --
 -- PostgreSQL database dump complete

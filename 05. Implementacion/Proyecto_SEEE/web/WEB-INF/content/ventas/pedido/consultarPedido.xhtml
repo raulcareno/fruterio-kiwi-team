@@ -15,7 +15,7 @@
                                         <span>Nro Pedido:</span>
                                         <h:inputText value="//TODO"/>
                                     </h:panelGrid>
-                                    <a href="#"  id="linkFiltros" onclick="mioToggle('filtros')">Filtros</a>
+                                    <h:panelGroup><h:selectBooleanCheckbox value="true" onclick="mostrar_ocultar(this.checked,'filtros');"/><span>Filtros de Búsqueda</span></h:panelGroup>
                                     <div id="filtros">
                                         <h:panelGrid columns="2">
                                             <span>Viajante:</span>
@@ -43,7 +43,7 @@
                     <h1>Pedidos</h1>
                     <div class="formulario">                      
                         <div class="contenedor_tabla_listado">
-                            <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="domicilio" value="//TODOdomicilios">
+                            <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="pedido" value="//TODOPedidos">
                                 <h:column>
                                     <f:facet name="header">Nro</f:facet>
                                     Nro
@@ -70,7 +70,9 @@
                                 </h:column>
                                 <h:column>
                                     <f:facet name="header">Acciones</f:facet>
-                                    <h:commandLink value="Consultar" action="//TODO"/>
+                                    <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consultar">
+                                        <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/consultarDetallePedido.xhtml"/>
+                                    </h:commandLink>
                                 </h:column>
                             </h:dataTable>
                         </div>
@@ -78,22 +80,9 @@
                     </div>
                 </div>
             </div>
-            <p>
+
             <h:commandButton value="Salir" action="//TODO"/>
-            </p>
 
-            <div id="dialog-form" title="Create new user">
-                <fieldset>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" />
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" value=""/>
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" value="" />
-                </fieldset>
-
-            </div>
-            <button id="create-user">Create new user</button>
 
 
         </h:form>

@@ -1,8 +1,4 @@
-SET FOREIGN_KEY_CHECKS=0;
-
-CREATE DATABASE `SEEE`
-    CHARACTER SET 'latin1'
-    COLLATE 'latin1_swedish_ci';
+﻿SET FOREIGN_KEY_CHECKS=0;
 
 USE `seee`;
 
@@ -49,20 +45,20 @@ CREATE TABLE `cobrocheque` (
   `idDetalleCobroPedido` INTEGER(11) NOT NULL,
   `idCheque` INTEGER(11) NOT NULL,
   `idEstadoDetalleCobroPedido` INTEGER(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idDetalleCobroPedido`)
 )ENGINE=InnoDB
 ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 
 CREATE TABLE `cobroefectivo` (
   `idDetalleCobroPedido` INTEGER(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idDetalleCobroPedido`)
 )ENGINE=InnoDB
 ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 
 CREATE TABLE `cobronotacredito` (
   `idDetalleCobroPedido` INTEGER(11) NOT NULL,
   `idCreditoCliente` INTEGER(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idDetalleCobroPedido`)
 )ENGINE=InnoDB
 ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 
@@ -133,14 +129,14 @@ ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish
 CREATE TABLE `detallecompramateriaprima` (
   `idDetalleCompra` INTEGER(11) NOT NULL,
   `idDetalleOrdenCompraMateriaPrima` INTEGER(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idDetalleCompra`)
 )ENGINE=InnoDB
 ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 
 CREATE TABLE `detallecompraproductoimportado` (
   `idDetalleCompra` INTEGER(11) NOT NULL,
   `idDetalleOrdenCompraProductoImportado` INTEGER(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idDetalleCompra`)
 )ENGINE=InnoDB
 ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 
@@ -199,7 +195,7 @@ CREATE TABLE `detalleordencompramateriaprima` (
   `idDetalleOrdenCompra` INTEGER(11) NOT NULL,
   `idMateriaPrima` INTEGER(11) NOT NULL,
   `cantidad` INTEGER(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idDetalleOrdenCompra`)
 )ENGINE=InnoDB
 ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 
@@ -207,7 +203,7 @@ CREATE TABLE `detalleordencompraproductoimportado` (
   `idDetalleOrdenCompra` INTEGER(11) NOT NULL,
   `idProductoImportado` INTEGER(11) NOT NULL,
   `cantidadProducto` INTEGER(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idDetalleOrdenCompra`)
 )ENGINE=InnoDB
 ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 
@@ -273,7 +269,7 @@ CREATE TABLE `empleado` (
   `motivoBaja` VARCHAR(200) COLLATE latin1_swedish_ci DEFAULT NULL,
   `idPersona` INTEGER(11) NOT NULL,
   `idCargo` INTEGER(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idPersona`)
 )ENGINE=InnoDB
 AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 
@@ -488,7 +484,7 @@ ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish
 CREATE TABLE `otrosgastos` (
   `idPago` INTEGER(11) NOT NULL,
   `descripcion` VARCHAR(20) COLLATE latin1_swedish_ci NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idPago`)
 )ENGINE=InnoDB
 AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 
@@ -505,14 +501,14 @@ ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish
 CREATE TABLE `pagoempleado` (
   `idEmpleado` INTEGER(11) NOT NULL,
   `idPago` INTEGER(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idPago`)
 )ENGINE=InnoDB
 ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 
 CREATE TABLE `pagoproveedor` (
   `idPago` INTEGER(11) NOT NULL,
   `idOrdenCompra` INTEGER(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idPago`)
 )ENGINE=InnoDB
 ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 
@@ -550,14 +546,14 @@ AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 CREATE TABLE `productofabricado` (
   `idProductoTerminado` INTEGER(11) NOT NULL,
   `costoProduccion` DECIMAL(20,2) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idProductoTerminado`)
 )ENGINE=InnoDB
 ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 
 CREATE TABLE `productoimportado` (
   `idProductoTerminado` INTEGER(11) NOT NULL,
   `precioCompra` DECIMAL(20,2) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idProductoTerminado`)
 )ENGINE=InnoDB
 ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 
@@ -607,7 +603,6 @@ CREATE TABLE `proveedor` (
   `idDomicilioa` INTEGER(11) DEFAULT NULL,
   `pais` VARCHAR(20) COLLATE latin1_swedish_ci DEFAULT NULL,
   `fechaAlta` DATE NOT NULL,
-  PRIMARY KEY (`id`),
   PRIMARY KEY (`id`)
 )ENGINE=InnoDB
 AUTO_INCREMENT=1 AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
@@ -685,7 +680,7 @@ CREATE TABLE `viajante` (
   `idPersona` INTEGER(11) NOT NULL,
   `comisionPorVenta` INTEGER(11) NOT NULL DEFAULT '0',
   `idDetalleCartera` INTEGER(11) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`idPersona`)
 )ENGINE=InnoDB
 ROW_FORMAT=FIXED AUTO_INCREMENT=1 CHARACTER SET 'latin1' COLLATE 'latin1_swedish_ci';
 

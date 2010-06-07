@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-jun-2010 1:18:02 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="hibernate.Rentabilidadcliente" table="rentabilidadcliente" catalog="seee">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="empresacliente" class="hibernate.Empresacliente" fetch="select">
+            <column name="idEmpresaCliente" not-null="true" />
+        </many-to-one>
+        <property name="coeficiente" type="float">
+            <column name="coeficiente" precision="9" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

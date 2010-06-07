@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-jun-2010 1:18:02 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="hibernate.Ordencompra" table="ordencompra" catalog="seee">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="proveedor" class="hibernate.Proveedor" fetch="select">
+            <column name="idProveedor" />
+        </many-to-one>
+        <many-to-one name="estadoordencompra" class="hibernate.Estadoordencompra" fetch="select">
+            <column name="idEstadoOrdenCompra" not-null="true" />
+        </many-to-one>
+        <many-to-one name="empresatransporteByIdEmpresaTransporteExterior" class="hibernate.Empresatransporte" fetch="select">
+            <column name="idEmpresaTransporteExterior" />
+        </many-to-one>
+        <many-to-one name="empresatransporteByIdEmpresaTransporteInterior" class="hibernate.Empresatransporte" fetch="select">
+            <column name="idEmpresaTransporteInterior" />
+        </many-to-one>
+        <property name="fechaPedido" type="date">
+            <column name="fechaPedido" length="10" not-null="true" />
+        </property>
+        <property name="fechaEstimadaLlegada" type="date">
+            <column name="fechaEstimadaLlegada" length="10" />
+        </property>
+        <property name="otrosGastos" type="java.lang.Float">
+            <column name="otrosGastos" precision="9" />
+        </property>
+        <set name="ordencompraximportacions" inverse="true">
+            <key>
+                <column name="idOrdenCompra" not-null="true" />
+            </key>
+            <one-to-many class="hibernate.Ordencompraximportacion" />
+        </set>
+        <set name="pagos" inverse="false" table="pagoproveedor">
+            <key>
+                <column name="idOrdenCompra" not-null="true" />
+            </key>
+            <many-to-many entity-name="hibernate.Pago">
+                <column name="idPago" not-null="true" unique="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

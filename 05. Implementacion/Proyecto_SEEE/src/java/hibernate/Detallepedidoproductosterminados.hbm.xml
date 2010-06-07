@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-jun-2010 1:18:02 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="hibernate.Detallepedidoproductosterminados" table="detallepedidoproductosterminados" catalog="seee">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="productoterminado" class="hibernate.Productoterminado" fetch="select">
+            <column name="idProductoTerminado" not-null="true" />
+        </many-to-one>
+        <many-to-one name="estadodetallepedidoproductoterminado" class="hibernate.Estadodetallepedidoproductoterminado" fetch="select">
+            <column name="idEstadoDetallePedidoProductoTerminado" not-null="true" />
+        </many-to-one>
+        <many-to-one name="pedidoproductosterminados" class="hibernate.Pedidoproductosterminados" fetch="select">
+            <column name="idPedidoProductosTerminados" not-null="true" />
+        </many-to-one>
+        <property name="cantidadProducto" type="int">
+            <column name="cantidadProducto" not-null="true" />
+        </property>
+        <property name="precioPorUnidad" type="float">
+            <column name="precioPorUnidad" precision="9" not-null="true" />
+        </property>
+        <property name="motivoDevolucion" type="string">
+            <column name="motivoDevolucion" length="100" />
+        </property>
+        <property name="motivoNoEntregado" type="string">
+            <column name="motivoNoEntregado" length="100" />
+        </property>
+        <property name="fechaDevolucion" type="java.lang.Integer">
+            <column name="fechaDevolucion" />
+        </property>
+        <set name="detallefacturas" inverse="true">
+            <key>
+                <column name="idDetallePedidoProductosTerminados" />
+            </key>
+            <one-to-many class="hibernate.Detallefactura" />
+        </set>
+    </class>
+</hibernate-mapping>

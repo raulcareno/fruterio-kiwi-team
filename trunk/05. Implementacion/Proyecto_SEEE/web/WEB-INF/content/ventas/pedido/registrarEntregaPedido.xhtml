@@ -1,0 +1,124 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition>
+        <h:form>
+            <div id="superior">
+                <table id="superior_tabla">
+                    <tr>
+                        <td>
+                            <div class="ventana">
+                                <h1>Pedido</h1>
+                                <div class="formulario">
+                                    <h:panelGrid columns="2">
+                                        <h:panelGroup>
+                                            <span>Nro Pedido:</span>
+                                            <h:inputText value="//TODO"/>
+                                            <h:commandButton value="Buscar" action="//TODO"/>
+                                        </h:panelGroup>
+                                        <span>Viajante:</span>
+                                        <h:outputText value="//TODO Viajante"/>
+                                        <span>Cliente:</span>
+                                        <h:outputText value="//TODO Cliente"/>
+                                        <span>Fecha Estimada de Entrega:</span>
+                                        <h:outputText value="//TODO Nosey"/>
+                                        <span>Fecha Real de Entrega:</span>
+                                        <h:outputText value="//TODO Today"/>
+                                    </h:panelGrid>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ventana">
+                                <h1>Detalle del Pedido</h1>
+                                <div class="formulario">
+                                    <div class="contenedor_tabla_listado">
+                                        <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="detallePedido" value="//TODODetalles">
+                                            <h:column>
+                                                <f:facet name="header">Código</f:facet>
+                                                001
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Descripción</f:facet>
+                                                Lalala
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Precio Unitario</f:facet>
+                                                20$
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Cantidad Pedido</f:facet>
+                                                50
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Cantidad Entregado</f:facet>
+                                                40
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Subtotalo</f:facet>
+                                                20
+                                            </h:column>         
+                                            <h:outputText value="Total: 50$"/>
+                                        </h:dataTable>
+                                    </div>
+
+                                    <h:panelGroup>
+                                        <h2>Agregar Producto</h2>
+                                        <span>Código:</span>
+                                        <h:inputText value="//TODO"/>
+                                        <span>Cantidad:</span>
+                                        <h:inputText value="//TODO"/>
+                                        <h:commandButton value="Buscar" action="//TODO"/>
+                                        <h:commandButton value="Agregar" action="//TODO"/>
+                                    </h:panelGroup>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="inferior">
+                <div class="ventana">
+                    <h1>Pedidos</h1>
+                    <div class="formulario">
+                        <div class="contenedor_tabla_listado">
+                            <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="clientes" value="//TODOClientes">
+                                <h:column>
+                                    <f:facet name="header">CUIT</f:facet>
+                                    25-32002356/6
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Razón Social</f:facet>
+                                    La concha de la lora hermanos
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Condicion de iva</f:facet>
+                                    Inscripto fruta fruta
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Celular</f:facet>
+                                    356-2345678
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Mail</f:facet>
+                                    laconchadel@lora.com
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Acciones</f:facet>
+                                    <h:commandLink value="Seleccionar" action="//TODO"/>
+                                    <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consultar">
+                                        <f:param name="includePath" value="/WEB-INF/content/ventas/mostrarCliente.xhtml"/>
+                                    </h:commandLink>
+                                </h:column>
+                            </h:dataTable>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </h:form>
+    </ui:composition>
+
+</html>

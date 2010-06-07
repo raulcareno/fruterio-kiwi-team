@@ -3,6 +3,7 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
     <ui:composition>
+        
         <h:form>
             <div id="superior">
                 <table id="superior_tabla">
@@ -83,60 +84,53 @@
                 </table>
             </div>
             <div id="inferior">
-                <table id="inferior_tabla">
-                    <tr>
-                        <td>
-                            <div class="ventana">
-                                <h1>Pagos</h1>
-                                <div class="formulario">
-                                    <h:panelGrid columns="2">
-                                        <span>Forma de Pago:</span>
-                                        <h:selectOneMenu value="//TODOformaPago"/>
-                                        <span>Nro Cheque:</span>
-                                        <h:inputText value="//TODO Nro Cheque"/>
-                                        <span>Banco:</span>
-                                        <h:panelGroup>
-                                            <h:inputText value="//TODO Banco"/>
-                                            <span>Sucursal:</span>
-                                            <h:inputText value="//TODO Sucursal"/>
-                                        </h:panelGroup>
-                                        <span>Nombre Emisor:</span>
-                                        <h:inputText value="//TODO Nombre Emisor"/>
-                                        <span>Fecha de Emisión:</span>
-                                        <h:outputText value="//TODO FechaEmisión"/>
-                                        <span>Fecha de Cobro:</span>
-                                        <h:outputText value="//TODO FechaCobro"/>
-                                        <span>Nombre Cobrador::</span>
-                                        <h:inputText value="//TODO Nombre Cobrador"/>
-                                        <span>Monto:</span>
-                                        <h:inputText value="//TODO Monto"/>
-                                    </h:panelGrid>
-                                    <h:commandButton value="Agregar" action="//TODO"/>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="ventana">
-                                <h1>Detalle del Pago</h1>
-                                <div class="formulario">
-                                    <div class="contenedor_tabla_listado">
-                                        <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="detallePago" value="//TODODetalles">
-                                            <h:column>
-                                                <f:facet name="header">Pagos</f:facet>
-                                                001
-                                            </h:column>
-                                            <h:column>
-                                                <f:facet name="header">Acciones</f:facet>                                                
-                                                <h:commandLink value="Eliminar"/>
-                                            </h:column>
-                                        </h:dataTable>
-                                    </div>
-                                </div>
 
-                            </div>
-                        </td>
-                    </tr>
-                </table>
+                <div class="ventana">
+                    <h1>Pagos</h1>
+                    <div class="formulario">
+                        <h:panelGrid columns="2">
+                            <span>Forma de Pago:</span>
+                            <h:selectOneMenu value="//TODOformaPago"/>
+                            <span>Nro Cheque:</span>
+                            <h:inputText value="//TODO Nro Cheque"/>
+                            <span>Banco:</span>
+                            <h:panelGroup>
+                                <h:inputText value="//TODO Banco"/>
+                                <span>Sucursal:</span>
+                                <h:inputText value="//TODO Sucursal"/>
+                            </h:panelGroup>
+                            <span>Nombre Emisor:</span>
+                            <h:inputText value="//TODO Nombre Emisor"/>
+                            <span>Fecha de Emisión:</span>
+                            <h:outputText value="//TODO FechaEmisión"/>
+                            <span>Fecha de Cobro:</span>
+                            <h:outputText value="//TODO FechaCobro"/>
+                            <span>Nombre Cobrador::</span>
+                            <h:inputText value="//TODO Nombre Cobrador"/>
+                            <span>Monto:</span>
+                            <h:inputText value="//TODO Monto"/>
+                        </h:panelGrid>
+                        <h:commandButton value="Agregar" action="//TODO"/>
+                    </div>
+
+
+
+                    <div class="contenedor_tabla_listado">
+                        <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="detallePago" value="//TODODetalles">
+                            <h:column>
+                                <f:facet name="header">Pagos</f:facet>
+                                001
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Acciones</f:facet>
+                                <h:commandLink value="Eliminar"/>
+                            </h:column>
+                        </h:dataTable>
+                    </div>
+
+
+                </div>
+
             </div>
 
             <h:commandButton  value="Guardar" action="//TODO"/>

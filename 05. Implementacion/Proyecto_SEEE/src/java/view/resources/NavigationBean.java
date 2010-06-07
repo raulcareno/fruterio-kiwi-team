@@ -22,6 +22,7 @@ import javax.faces.context.FacesContext;
 
 public class NavigationBean implements  Serializable{
     private String path = "/WEB-INF/content/ventas/registrarCliente.xhtml";
+    private String titulo = "Registrar Cliente";
 
     public NavigationBean() {
 
@@ -38,17 +39,32 @@ public class NavigationBean implements  Serializable{
         return path;
     }
 
+     public String getTitulo(){
+        FacesContext context = FacesContext.getCurrentInstance();
+        Map map = context.getExternalContext().getRequestParameterMap();
+        String tit = (String) map.get("titulo");
+        if ((tit != null) && (tit.length() > 0))  {
+            titulo = tit;
+        }
+
+        return titulo;
+    }
+
 
     public void setSelectedIncludePath(String selectedIncludePath) {
         path = selectedIncludePath;
     }
 
 
+
     public void navigationPathChange(ActionEvent event){
         FacesContext context = FacesContext.getCurrentInstance();
         Map map = context.getExternalContext().getRequestParameterMap();
         path = (String) map.get("includePath");
+        titulo = (String) map.get("titulo");
     }
+
+   
 
 
 }

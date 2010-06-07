@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-jun-2010 1:18:02 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="hibernate.Productoterminado" table="productoterminado" catalog="seee">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="modelo" class="hibernate.Modelo" fetch="select">
+            <column name="idModelo" not-null="true" />
+        </many-to-one>
+        <many-to-one name="color" class="hibernate.Color" fetch="select">
+            <column name="idColor" not-null="true" />
+        </many-to-one>
+        <many-to-one name="muestrario" class="hibernate.Muestrario" fetch="select">
+            <column name="idMuestrario" />
+        </many-to-one>
+        <many-to-one name="marca" class="hibernate.Marca" fetch="select">
+            <column name="idMarca" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tamano" class="hibernate.Tamano" fetch="select">
+            <column name="idTamano" not-null="true" />
+        </many-to-one>
+        <many-to-one name="ubicacion" class="hibernate.Ubicacion" fetch="select">
+            <column name="idUbicacion" not-null="true" />
+        </many-to-one>
+        <property name="nroProducto" type="int">
+            <column name="nroProducto" not-null="true" />
+        </property>
+        <property name="precioEstimado" type="java.lang.Float">
+            <column name="precioEstimado" precision="9" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="20" not-null="true" />
+        </property>
+        <property name="nivelReaprovisionamiento" type="int">
+            <column name="nivelReaprovisionamiento" not-null="true" />
+        </property>
+        <property name="stockMaximo" type="int">
+            <column name="stockMaximo" not-null="true" />
+        </property>
+        <property name="fechaIngreso" type="date">
+            <column name="fechaIngreso" length="10" not-null="true" />
+        </property>
+        <property name="stockActual" type="int">
+            <column name="stockActual" not-null="true" />
+        </property>
+        <property name="precioVenta" type="java.lang.Float">
+            <column name="precioVenta" precision="9" />
+        </property>
+        <set name="productoimportados" inverse="true">
+            <key>
+                <column name="idProductoTerminado" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="hibernate.Productoimportado" />
+        </set>
+        <set name="detallepedidoproductosterminadoses" inverse="true">
+            <key>
+                <column name="idProductoTerminado" not-null="true" />
+            </key>
+            <one-to-many class="hibernate.Detallepedidoproductosterminados" />
+        </set>
+        <set name="lotes" inverse="true">
+            <key>
+                <column name="idProducto" not-null="true" />
+            </key>
+            <one-to-many class="hibernate.Lote" />
+        </set>
+        <set name="accesorios" inverse="true">
+            <key>
+                <column name="idProducto" not-null="true" />
+            </key>
+            <one-to-many class="hibernate.Accesorio" />
+        </set>
+        <set name="productofabricados" inverse="true">
+            <key>
+                <column name="idProductoTerminado" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="hibernate.Productofabricado" />
+        </set>
+        <set name="detalleventas" inverse="true">
+            <key>
+                <column name="idProducto" not-null="true" />
+            </key>
+            <one-to-many class="hibernate.Detalleventa" />
+        </set>
+    </class>
+</hibernate-mapping>

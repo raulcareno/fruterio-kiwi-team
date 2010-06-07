@@ -12,8 +12,8 @@
                                 <h1>Pedido</h1>
                                 <div class="formulario">
                                     <h:panelGrid columns="2">
-                                        <h:panelGroup>
-                                            <span>Nro Pedido:</span>
+                                        <span>Nro Pedido:</span>
+                                        <h:panelGroup>                                            
                                             <h:inputText value="//TODO"/>
                                             <h:commandButton value="Buscar" action="//TODO"/>
                                         </h:panelGroup>
@@ -62,9 +62,12 @@
                                             <h:outputText value="Total: 50$"/>
                                         </h:dataTable>
                                     </div>
+                                </div>
 
+
+                                <h2>Agregar Producto</h2>
+                                <div class="formulario">
                                     <h:panelGroup>
-                                        <h2>Agregar Producto</h2>
                                         <span>Código:</span>
                                         <h:inputText value="//TODO"/>
                                         <span>Cantidad:</span>
@@ -73,50 +76,71 @@
                                         <h:commandButton value="Agregar" action="//TODO"/>
                                     </h:panelGroup>
                                 </div>
+
                             </div>
                         </td>
                     </tr>
                 </table>
             </div>
             <div id="inferior">
-                <div class="ventana">
-                    <h1>Pedidos</h1>
-                    <div class="formulario">
-                        <div class="contenedor_tabla_listado">
-                            <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="clientes" value="//TODOClientes">
-                                <h:column>
-                                    <f:facet name="header">CUIT</f:facet>
-                                    25-32002356/6
-                                </h:column>
-                                <h:column>
-                                    <f:facet name="header">Razón Social</f:facet>
-                                    La concha de la lora hermanos
-                                </h:column>
-                                <h:column>
-                                    <f:facet name="header">Condicion de iva</f:facet>
-                                    Inscripto fruta fruta
-                                </h:column>
-                                <h:column>
-                                    <f:facet name="header">Celular</f:facet>
-                                    356-2345678
-                                </h:column>
-                                <h:column>
-                                    <f:facet name="header">Mail</f:facet>
-                                    laconchadel@lora.com
-                                </h:column>
-                                <h:column>
-                                    <f:facet name="header">Acciones</f:facet>
-                                    <h:commandLink value="Seleccionar" action="//TODO"/>
-                                    <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consultar">
-                                        <f:param name="includePath" value="/WEB-INF/content/ventas/mostrarCliente.xhtml"/>
-                                    </h:commandLink>
-                                </h:column>
-                            </h:dataTable>
-                        </div>
+                <table id="inferior_tabla">
+                    <tr>
+                        <td>
+                            <div class="ventana">
+                                <h1>Pagos</h1>
+                                <div class="formulario">
+                                    <h:panelGrid columns="2">
+                                        <span>Forma de Pago:</span>
+                                        <h:selectOneMenu value="//TODOformaPago"/>
+                                        <span>Nro Cheque:</span>
+                                        <h:inputText value="//TODO Nro Cheque"/>
+                                        <span>Banco:</span>
+                                        <h:panelGroup>
+                                            <h:inputText value="//TODO Banco"/>
+                                            <span>Sucursal:</span>
+                                            <h:inputText value="//TODO Sucursal"/>
+                                        </h:panelGroup>
+                                        <span>Nombre Emisor:</span>
+                                        <h:inputText value="//TODO Nombre Emisor"/>
+                                        <span>Fecha de Emisión:</span>
+                                        <h:outputText value="//TODO FechaEmisión"/>
+                                        <span>Fecha de Cobro:</span>
+                                        <h:outputText value="//TODO FechaCobro"/>
+                                        <span>Nombre Cobrador::</span>
+                                        <h:inputText value="//TODO Nombre Cobrador"/>
+                                        <span>Monto:</span>
+                                        <h:inputText value="//TODO Monto"/>
+                                    </h:panelGrid>
+                                    <h:commandButton value="Agregar" action="//TODO"/>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ventana">
+                                <h1>Detalle del Pago</h1>
+                                <div class="formulario">
+                                    <div class="contenedor_tabla_listado">
+                                        <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="detallePago" value="//TODODetalles">
+                                            <h:column>
+                                                <f:facet name="header">Pagos</f:facet>
+                                                001
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Acciones</f:facet>                                                
+                                                <h:commandLink value="Eliminar"/>
+                                            </h:column>
+                                        </h:dataTable>
+                                    </div>
+                                </div>
 
-                    </div>
-                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
+
+            <h:commandButton  value="Guardar" action="//TODO"/>
+            <h:commandButton  value="Cancelar" action="//TODO"/>
 
         </h:form>
     </ui:composition>

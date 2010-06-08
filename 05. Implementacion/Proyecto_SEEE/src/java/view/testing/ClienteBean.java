@@ -11,6 +11,7 @@ import java.util.Set;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.model.SelectItem;
+import model.Condicioniva;
 import model.Localidad;
 import model.Provincia;
 
@@ -22,7 +23,9 @@ import model.Provincia;
 @RequestScoped
 public class ClienteBean {
 
+    private ArrayList<SelectItem> localidades;
     private Boolean localidadListDisabled = true;
+    private ArrayList<SelectItem> condicionesIVA;
     private Integer idProvincia;
     private Integer idLocalidad;
     private Integer idBarrio;
@@ -47,6 +50,7 @@ public class ClienteBean {
 
     public void setIdProvincia(Integer idProvincia) {
         this.idProvincia = idProvincia;
+        this.localidadListDisabled = false;
     }
 
     public Integer getIdLocalidad() {
@@ -55,7 +59,7 @@ public class ClienteBean {
 
     public void setIdLocalidad(Integer idLocalidad) {
         this.idLocalidad = idLocalidad;
-        this.localidadListDisabled = false;
+
     }
 
     public Integer getIdBarrio() {
@@ -154,13 +158,13 @@ public class ClienteBean {
         this.celular = celular;
     }
 
-    public ArrayList<SelectItem> getLocalidades(int idProvincia){
-        if (getIdProvincia() != null){
+    public ArrayList<SelectItem> getLocalidades() {
+        if (getIdProvincia() != null) {
             System.out.println("Entre a buscar localidades");
             BusinessGeneral<Provincia> bgProvincia = new BusinessGeneral<Provincia>();
             Provincia prov = bgProvincia.consultarObjetoPorId(new Provincia(), idProvincia);
             Set<Localidad> auxLocalidades = prov.getLocalidads();
-            ArrayList<SelectItem> localidades = new ArrayList<SelectItem>();
+            localidades = new ArrayList<SelectItem>();
             for (Localidad localidad : auxLocalidades) {
                 localidades.add(new SelectItem(localidad.getId(), localidad.getNombre()));
             }
@@ -168,7 +172,23 @@ public class ClienteBean {
         }
         return null;
     }
-    
 
+    public Boolean getLocalidadListDisabled() {
+        return localidadListDisabled;
+    }
 
+    public void setLocalidadListDisabled(Boolean localidadListDisabled) {
+        this.localidadListDisabled = localidadListDisabled;
+    }
+
+    public ArrayList<SelectItem> getCondicionesIVA() {
+        BusinessGeneral<Condicioniva> bgCondicionIVA = new BusinessGeneral<Condicioniva>();
+        LinkedList<Condicioniva> auxCondicionesIVA = bgCondicionIVA.listar(new Condicioniva());
+        condicionesIVA = new ArrayList<SelectItem>();
+        for (Condicioniva condicioniva : auxCondicionesIVA) {
+            condicionesIVA.add(new SelectItem(condicioniva.getId(), condicioniva.getNombre()));
+        }
+
+        return condicionesIVA;
+    }
 }

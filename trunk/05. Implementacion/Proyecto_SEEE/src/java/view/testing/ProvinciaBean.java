@@ -25,6 +25,7 @@ public class ProvinciaBean {
     public ProvinciaBean() {
         BusinessGeneral<Provincia> bgProvincias = new BusinessGeneral<Provincia>();
         LinkedList<Provincia> auxProvincias = bgProvincias.listar(new Provincia());
+        provincias = new ArrayList<SelectItem>();
         for (Provincia provincia : auxProvincias) {
             provincias.add(new SelectItem(provincia.getId(), provincia.getNombre()));
         }

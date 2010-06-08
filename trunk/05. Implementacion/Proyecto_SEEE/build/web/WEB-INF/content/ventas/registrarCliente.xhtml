@@ -14,11 +14,11 @@
                                     <h:panelGrid columns="2">
                                         <span>CUIT:</span>
                                         <h:panelGroup>
-                                            <h:inputText value="//TODO"/>
+                                            <h:inputText value="#{clienteBean.cuit}"/>
                                             <h:commandButton value="Buscar" action="//TODO"/>
                                         </h:panelGroup>
                                         <span>Razón Social:</span>
-                                        <h:inputText value="//TODO"/>
+                                        <h:inputText value="#{clienteBean.razonSocial}"/>
                                         <span>Condición IVA:</span>
                                         <h:selectOneMenu value="//TODO"/>
                                         <span>Teléfono:</span>
@@ -78,9 +78,14 @@
                         <h:commandButton value="Agregar" action="//TODO"/>
                         <h:panelGrid columns="2">
                             <span>Provincia:</span>
-                            <h:selectOneMenu value="//TODO"/>
+                            <h:selectOneMenu value="#{clienteBean.idProvincia}">
+                                <f:selectItems value="#{provinciaBean.provincias}"/>
+                                <f:ajax render="localidad"/>
+                            </h:selectOneMenu>
                             <span>Localidad:</span>
-                            <h:selectOneMenu value="//TODO"/>
+                            <h:selectOneMenu id="localidad" value="#{clienteBean.idLocalidad}" disabled="#{clienteBean.localidadListDisabled}">
+                                <f:selectItems value="#{clienteBean.localidades}"/>
+                            </h:selectOneMenu>
                             <span>Barrio:</span>
                             <h:inputText value="//TODO"/>
                             <span>Calle:</span>

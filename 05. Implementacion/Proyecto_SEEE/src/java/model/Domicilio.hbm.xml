@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-jun-2010 21:59:38 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Domicilio" table="domicilio" catalog="seee">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="barrio" class="model.Barrio" fetch="select">
+            <column name="idBarrio" not-null="true" />
+        </many-to-one>
+        <property name="altura" type="java.lang.Integer">
+            <column name="altura" />
+        </property>
+        <property name="nombreCalle" type="string">
+            <column name="nombreCalle" length="20" />
+        </property>
+        <property name="nroDpto" type="java.lang.Integer">
+            <column name="nroDpto" />
+        </property>
+        <property name="codPostal" type="java.lang.Integer">
+            <column name="codPostal" />
+        </property>
+        <set name="empresaclientes" inverse="true">
+            <key>
+                <column name="idDomicilio" not-null="true" />
+            </key>
+            <one-to-many class="model.Empresacliente" />
+        </set>
+        <set name="empresatransportes" inverse="true">
+            <key>
+                <column name="idDomicilio" />
+            </key>
+            <one-to-many class="model.Empresatransporte" />
+        </set>
+        <set name="personas" inverse="true">
+            <key>
+                <column name="idDomicilio" />
+            </key>
+            <one-to-many class="model.Persona" />
+        </set>
+        <set name="proveedors" inverse="true">
+            <key>
+                <column name="idDomicilioa" />
+            </key>
+            <one-to-many class="model.Proveedor" />
+        </set>
+        <set name="hojarutas" inverse="true">
+            <key>
+                <column name="idPosicionViajante" not-null="true" />
+            </key>
+            <one-to-many class="model.Hojaruta" />
+        </set>
+        <set name="detallehojarutas" inverse="true">
+            <key>
+                <column name="idDomicilioVisitar" not-null="true" />
+            </key>
+            <one-to-many class="model.Detallehojaruta" />
+        </set>
+    </class>
+</hibernate-mapping>

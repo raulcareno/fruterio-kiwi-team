@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-jun-2010 21:59:38 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Cheque" table="cheque" catalog="seee">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="banco" type="string">
+            <column name="banco" length="20" not-null="true" />
+        </property>
+        <property name="nro" type="int">
+            <column name="nro" not-null="true" />
+        </property>
+        <property name="emisor" type="string">
+            <column name="emisor" length="100" not-null="true" />
+        </property>
+        <property name="fechaEmision" type="date">
+            <column name="fechaEmision" length="10" not-null="true" />
+        </property>
+        <property name="fechaCobro" type="date">
+            <column name="fechaCobro" length="10" />
+        </property>
+        <property name="cobrador" type="string">
+            <column name="cobrador" length="100" />
+        </property>
+        <set name="cobrocheques" inverse="true">
+            <key>
+                <column name="idCheque" not-null="true" />
+            </key>
+            <one-to-many class="model.Cobrocheque" />
+        </set>
+    </class>
+</hibernate-mapping>

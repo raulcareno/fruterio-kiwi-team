@@ -15,9 +15,10 @@ import model.Provincia;
 public class PruebaSanti {
     public static void main(String[] args) {
         BusinessGeneral bg = new BusinessGeneral();
-        LinkedList provincias = bg.listar(Provincia.class);
-        for (Object object : provincias) {
-            System.out.println(object);
-        }
+//        LinkedList provincias = bg.listar(Provincia.class);
+        Provincia prov = bg.consultarProvinciaPorId(1);
+        System.out.println(prov.getNombre());
+        
+
     }
 }

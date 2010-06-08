@@ -8,59 +8,113 @@
             <table>
                 <tr>
                     <td>
-                        <div id="importaciones" class="lista">
+                        <div class="ventana">
                             <h1>Seleccione una Importacion</h1>
-                            <h:selectOneListbox id="importacionesLista" value="#{id_importacion}" size="5">
-                                <f:selectItems value="#{arreglo_de_importaciones}" />
-                                <f:ajax render="ordenesLista"/>
-                            </h:selectOneListbox>
+                            <div id="importaciones" class="formulario">
+
+                                <h:selectOneListbox id="importacionesLista" value="#{id_importacion}" size="5">
+                                    <f:selectItems value="#{arreglo_de_importaciones}" />
+                                    <f:ajax render="ordenesLista cabecera_importacion"/>
+
+                                </h:selectOneListbox>
+                            </div>
+
+                            <div  class="formulario">
+                                <h:panelGrid id="cabecera_importacion" columns="2">
+                                    <span>Fecha estimada de llegada: </span>
+                                    <h:outputLabel value="//TODO"/>
+                                    <span>Fecha de embarque: </span>
+                                    <h:outputLabel value="//TODO"/>
+                                    <span>Empresa de Transporte: </span>
+                                    <h:outputLabel value="//TODO"/>
+                                    <span>Fecha de llegada: </span>
+                                    <h:inputText value="//TODO(fechadehoy)"/>
+                                    <span>Origen: </span>
+                                    <h:outputLabel value="//TODO"/>
+                                </h:panelGrid>
+                            </div>
                         </div>
                     </td>
                     <td>
-                        <div id="ordenes" class="lista">
+                        <div class="ventana">
                             <h1>Seleccione una Orden de Compra</h1>
-                            <h:selectOneListbox id="ordenesLista" value="#{id_orden}" size="5">
-                                <f:selectItems value="#{arreglo_de_ordenes}" />
-                                <f:ajax render="productosLista"/>
-                            </h:selectOneListbox>
+                            <div id="ordenes" class="formulario">
+
+                                <h:selectOneListbox id="ordenesLista" value="#{id_orden}" size="5">
+                                    <f:selectItems value="#{arreglo_de_ordenes}" />
+                                    <f:ajax render="productosLista cabecera_orden"/>
+
+                                </h:selectOneListbox>
+                            </div>
+                            <div  class="formulario">
+                                <h:panelGrid id="cabecera_orden" columns="2">
+                                    <span>Proveedor: </span>
+                                    <h:outputLabel value="//TODO"/>
+                                    <span>Fecha de Pedido: </span>
+                                    <h:outputLabel value="//TODO"/>
+
+                                </h:panelGrid>
+                            </div>
                         </div>
                     </td>
                     <td>
-                        <div id="productos" class="lista">
+                        <div class="ventana">
                             <h1>Seleccione un producto</h1>
-                            <h:selectOneListbox id="productosLista" value="#{id_producto}" size="5">
-                                <f:selectItems value="#{arreglo_de_productos}" />
-                                <f:ajax render="productosLista"/>
-                            </h:selectOneListbox>
+                            <div id="productos" class="formulario">
+                                <h:dataTable id="productosLista" styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="producto" value="//TODOproductos">>
+                                    <h:column>
+                                        <f:facet name="header">Código</f:facet>
+                                        producto.codigo
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">Cantidad Pedida</f:facet>
+                                        producto.cantidadpedida
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">Cantidad Real</f:facet>
+                                        producto.cantidadreal
+                                    </h:column>
+                                    <h:column>
+                                        <f:facet name="header">Acciones</f:facet>
+                                        <h:commandLink>
+                                            Cargar
+                                            <f:ajax render="cabecera_producto"/>
+                                        </h:commandLink>
+                                    </h:column>
+
+
+                                </h:dataTable>
+
+
+                            </div>
+                            <div  class="formulario">
+                                <h:panelGrid id="cabecera_producto" columns="2">
+                                    <span>Codigo: </span>
+                                    <h:outputLabel value="//TODO"/>
+                                    <span>Marca: </span>
+                                    <h:outputLabel value="//TODO"/>
+                                    <span>Modelo: </span>
+                                    <h:outputLabel value="//TODO"/>
+                                    <span>Tamaño: </span>
+                                    <h:outputLabel value="//TODO"/>
+                                    <span>Color: </span>
+                                    <h:outputLabel value="//TODO"/>
+                                    <span>Color: </span>
+                                    <h:inputText size="3" value="//TODO(cantidaddelproductoselecciondo)"/>
+                                </h:panelGrid>
+                            </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <div id="cabecera_importacion">
-                            <h:panelGrid columns="2">
-                                <span>Fecha estimada de llegada: </span>
-                                <h:outputLabel value="//TODO"/>
-                                <span>Fecha de embarque: </span>
-                                <h:outputLabel value="//TODO"/>
-                                <span>Empresa de Transporte: </span>
-                                <h:outputLabel value="//TODO"/>
-                                <span>Fecha de llegada: </span>
-                                <h:inputText value="//TODO(fechadehoy)"/>
-                                <span>Origen: </span>
-                                <h:outputLabel value="//TODO"/>
-                            </h:panelGrid>
-                        </div>
+
                     </td>
                     <td>
-                        <div id="cabecera_orden">
 
-                        </div>
                     </td>
                     <td>
-                        <div id="cabecera_producto">
 
-                        </div>
                     </td>
                 </tr>
             </table>

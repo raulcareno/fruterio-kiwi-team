@@ -3,6 +3,7 @@ package business;
 import hibernate.HibernateUtil;
 import java.util.LinkedList;
 import javax.swing.JOptionPane;
+import model.Provincia;
 import org.hibernate.Session;
 
 /**
@@ -73,5 +74,20 @@ public class BusinessGeneral {
             session.getTransaction().rollback();
         }
         return result;
+    }
+
+    public Provincia consultarProvinciaPorId(int idObjeto) {
+        Provincia prov = null;
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        try {
+            session.beginTransaction();
+            prov = (Provincia) session.load(Provincia.class, idObjeto);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(null,"Error al consultar por id","Error",JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+            session.getTransaction().rollback();
+        }
+        return prov;
     }
 }

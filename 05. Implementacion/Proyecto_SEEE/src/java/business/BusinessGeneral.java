@@ -9,7 +9,7 @@ import org.hibernate.Session;
 /**
  * @author Waisman, Gabriel Leandro
  */
-public class BusinessGeneral {
+public class BusinessGeneral <E>{
 
     /**
      *  Constructor de la clase sin parametros.
@@ -17,7 +17,7 @@ public class BusinessGeneral {
     public BusinessGeneral() {
     }
 
-    public LinkedList <Object> listar(Object clase) {
+    public LinkedList <E> listar(E clase) {
         LinkedList result = new LinkedList();
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
@@ -33,7 +33,7 @@ public class BusinessGeneral {
         return result;
     }
 
-    public void agregarModificar(Object nuevo) {
+    public void agregarModificar(E nuevo) {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
@@ -47,7 +47,7 @@ public class BusinessGeneral {
         }
     }
 
-    public void eliminar(Object nuevo) {
+    public void eliminar(E nuevo) {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
@@ -61,12 +61,12 @@ public class BusinessGeneral {
         }
     }
 
-    public Object consultarObjetoPorId(Object clase, int idObjeto) {
-        Object result = new Object();
+    public E consultarObjetoPorId(E clase, int idObjeto) {
+        E result = null;
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         try {
             session.beginTransaction();
-            result = session.load(clase.getClass(), idObjeto);
+            result = (E) session.load(clase.getClass(), idObjeto);
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(null,"Error al consultar "+clase.getClass().getName()+" por id","Error",JOptionPane.ERROR_MESSAGE);

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-jun-2010 21:59:38 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Notificacionreaprovisionamiento" table="notificacionreaprovisionamiento" catalog="seee">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="empleado" class="model.Empleado" fetch="select">
+            <column name="idEmpleado" not-null="true" />
+        </many-to-one>
+        <many-to-one name="estadonotificacionreaprovisionamiento" class="model.Estadonotificacionreaprovisionamiento" fetch="select">
+            <column name="idEstadoNotificacionReaprovisionamiento" not-null="true" />
+        </many-to-one>
+        <property name="fechaIngresoDeposito" type="date">
+            <column name="fechaIngresoDeposito" length="10" not-null="true" />
+        </property>
+        <set name="detallenotificacionreaprovisionamientos" inverse="true">
+            <key>
+                <column name="idNotificacionReaprovisionamiento" not-null="true" />
+            </key>
+            <one-to-many class="model.Detallenotificacionreaprovisionamiento" />
+        </set>
+    </class>
+</hibernate-mapping>

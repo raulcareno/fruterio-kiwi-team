@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-jun-2010 21:59:38 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Empresacliente" table="empresacliente" catalog="seee">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="creditocliente" class="model.Creditocliente" fetch="select">
+            <column name="idCreditoCliente" not-null="true" />
+        </many-to-one>
+        <many-to-one name="domicilio" class="model.Domicilio" fetch="select">
+            <column name="idDomicilio" not-null="true" />
+        </many-to-one>
+        <many-to-one name="condicioniva" class="model.Condicioniva" fetch="select">
+            <column name="idCondicionIVA" not-null="true" />
+        </many-to-one>
+        <property name="razonSocial" type="string">
+            <column name="razonSocial" length="20" not-null="true" />
+        </property>
+        <property name="cuit" type="string">
+            <column name="cuit" length="20" not-null="true" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="20" />
+        </property>
+        <property name="fax" type="string">
+            <column name="fax" length="20" />
+        </property>
+        <property name="mail" type="string">
+            <column name="mail" length="30" />
+        </property>
+        <property name="celular" type="string">
+            <column name="celular" length="20" />
+        </property>
+        <set name="pedidoproductosterminadoses" inverse="true">
+            <key>
+                <column name="idEmpresaCliente" not-null="true" />
+            </key>
+            <one-to-many class="model.Pedidoproductosterminados" />
+        </set>
+        <set name="detallecarteras" inverse="true">
+            <key>
+                <column name="idEmpresaCliente" not-null="true" />
+            </key>
+            <one-to-many class="model.Detallecartera" />
+        </set>
+        <set name="devolucionproductosterminadoses" inverse="true">
+            <key>
+                <column name="idCliente" not-null="true" />
+            </key>
+            <one-to-many class="model.Devolucionproductosterminados" />
+        </set>
+        <set name="empresaclientexpersonas" inverse="true">
+            <key>
+                <column name="idEmpresaCliente" not-null="true" />
+            </key>
+            <one-to-many class="model.Empresaclientexpersona" />
+        </set>
+        <set name="detallehojarutas" inverse="true">
+            <key>
+                <column name="idEmpresaCliente" not-null="true" />
+            </key>
+            <one-to-many class="model.Detallehojaruta" />
+        </set>
+        <set name="rentabilidadclientes" inverse="true">
+            <key>
+                <column name="idEmpresaCliente" not-null="true" />
+            </key>
+            <one-to-many class="model.Rentabilidadcliente" />
+        </set>
+    </class>
+</hibernate-mapping>

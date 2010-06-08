@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-jun-2010 21:59:38 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Lote" table="lote" catalog="seee">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="productoterminado" class="model.Productoterminado" fetch="select">
+            <column name="idProducto" not-null="true" />
+        </many-to-one>
+        <property name="nroLote" type="int">
+            <column name="nroLote" not-null="true" />
+        </property>
+        <property name="cantidadProducida" type="int">
+            <column name="cantidadProducida" not-null="true" />
+        </property>
+        <set name="detallemateriaprimas" inverse="true">
+            <key>
+                <column name="idLote" not-null="true" />
+            </key>
+            <one-to-many class="model.Detallemateriaprima" />
+        </set>
+    </class>
+</hibernate-mapping>

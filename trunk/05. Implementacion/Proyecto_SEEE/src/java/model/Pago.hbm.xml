@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 07-jun-2010 21:59:38 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Pago" table="pago" catalog="seee">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="monto" type="float">
+            <column name="monto" precision="9" scale="3" not-null="true" />
+        </property>
+        <property name="fechaPago" type="date">
+            <column name="fechaPago" length="10" not-null="true" />
+        </property>
+        <property name="nroPago" type="int">
+            <column name="nroPago" not-null="true" />
+        </property>
+        <property name="idDivisa" type="java.lang.Integer">
+            <column name="idDivisa" />
+        </property>
+        <set name="empleados" inverse="false" table="pagoempleado">
+            <key>
+                <column name="idPago" not-null="true" unique="true" />
+            </key>
+            <many-to-many entity-name="model.Empleado">
+                <column name="idEmpleado" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="ordencompras" inverse="false" table="pagoproveedor">
+            <key>
+                <column name="idPago" not-null="true" unique="true" />
+            </key>
+            <many-to-many entity-name="model.Ordencompra">
+                <column name="idOrdenCompra" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="otrosgastoses" inverse="true">
+            <key>
+                <column name="idPago" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="model.Otrosgastos" />
+        </set>
+    </class>
+</hibernate-mapping>

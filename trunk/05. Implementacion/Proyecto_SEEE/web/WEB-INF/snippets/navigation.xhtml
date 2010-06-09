@@ -54,16 +54,19 @@
             </li>
             <li>Deposito
                 <ul>
-                    <li>
-                    <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Ingreso De Productos Importados">
+                    <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Ingreso De Productos Importados">
                         <f:param name="includePath" value="/WEB-INF/content/deposito/registrarIngresoDeProductosImportados.xhtml"/>
                         <f:param name="titulo" value="Registar Ingreso de Productos Importados"/>
-                    </h:commandLink>
-                    <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Salida De Materia Prima">
-                        <f:param name="includePath" value="/WEB-INF/content/deposito/registrarSalidaDeMateriaPrima.xhtml"/>
-                        <f:param name="titulo" value="Registar Ingreso de Productos Importados"/>
-                    </h:commandLink>
-            </li>
+                    </h:commandLink></li>
+            <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Salida De Materia Prima">
+                <f:param name="includePath" value="/WEB-INF/content/deposito/registrarSalidaDeMateriaPrima.xhtml"/>
+                <f:param name="titulo" value="Registar Salida De Materia Prima"/>
+            </h:commandLink></li>
+            <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Ingreso De Materia Prima">
+                <f:param name="includePath" value="/WEB-INF/content/deposito/registrarIngresoDeMateriaPrima.xhtml"/>
+                <f:param name="titulo" value="Registar Ingreso De Materia Prima"/>
+            </h:commandLink></li>
+
             </ul>
             </li>
             <li>Mas o menos</li>

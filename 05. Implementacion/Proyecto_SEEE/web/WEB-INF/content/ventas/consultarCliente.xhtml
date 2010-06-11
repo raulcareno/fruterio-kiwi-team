@@ -1,9 +1,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
     <ui:composition>
-        <h:form>
+        <h:form id="todo">
             <div id="superior">
                 <table id="superior_tabla">
                     <tr>
@@ -22,7 +23,7 @@
                                                     <h:panelGrid columns="4">
                                                         <span>Razón Solcial:</span><h:inputText value="//TODO"/>
                                                         <span>Mail:</span><h:inputText value="//TODO"/>
-                                                        
+
                                                     </h:panelGrid>
                                                 </div>
                                             </div>
@@ -65,14 +66,14 @@
                                     <f:facet name="header">Acciones</f:facet>
                                     <h:commandLink value="Seleccionar" action="//TODO"/>
                                     <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consultar">
-                            <f:param name="includePath" value="/WEB-INF/content/ventas/mostrarCliente.xhtml"/>
-                        </h:commandLink>
-                                    <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Modificar">
-                            <f:param name="includePath" value="/WEB-INF/content/ventas/registrarCliente.xhtml"/>
-                            <f:param name="titulo" value="Modificar Cliente"/>
-                            
+                                        <f:param name="includePath" value="/WEB-INF/content/ventas/mostrarCliente.xhtml"/>
+                                    </h:commandLink>
+                                    <c:if test="${navigationBean.titulo == 'Modificar Cliente'}"><h:commandLink id="linkmodificar" actionListener="#{navigationBean.navigationPathChange}" value="Modificar">
+                                            <f:param name="includePath" value="/WEB-INF/content/ventas/registrarCliente.xhtml"/>
+                                            <f:param name="titulo" value="Modificar Cliente"/>
 
-                        </h:commandLink>
+
+                                        </h:commandLink></c:if>
                                 </h:column>
                             </h:dataTable>
                         </div>
@@ -80,11 +81,12 @@
                     </div>
                 </div>
             </div>
-            
+
         </h:form>
         <script type="text/javascript">
                     var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1");
         </script>
+
     </ui:composition>
 
 </html>

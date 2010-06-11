@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition>
+        <h:form>
+            <div class="ventana">
+                <h1>Lote</h1>
+                <div id="importaciones" class="formulario">
+                    <table><tr><td>
+                                <span>Nro. de Lote: </span><h:inputText value="//TODOlote"/><h:commandButton value="Buscar"/></td><td>
+                                <h:panelGrid id="cabeceraLote" columns="2"><span>Nro. de Lote: </span><h:outputLabel value="//TODOlote"/>
+                    <span>Código de producto: </span><h:outputLabel value="//TODOlote.producto.codigo"/>
+                    <span>Cantidad Prodcida: </span><h:outputLabel value="//TODOlote.cantidad"/>
+                    <span>Cantidad a Ingresar: </span><h:inputText value="//TODOlote"/></h:panelGrid></td></tr></table>
+
+                    
+                </div>
+            </div>
+            
+            <p><h:commandButton value="Confirmar Ingreso"/><h:commandButton value="Cancelar"/></p>
+        </h:form>
+    </ui:composition>
+</html>

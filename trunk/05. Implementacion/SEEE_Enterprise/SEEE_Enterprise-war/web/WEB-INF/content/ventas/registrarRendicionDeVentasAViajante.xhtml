@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <ui:composition>
+        <h:form>
+            <table>
+                <tr>
+                    <td>
+                        <div class="ventana">
+                            <h1>Seleccione un Vendedor</h1>
+                            <div id="vendedores" class="formulario">
+
+                                <h:selectOneListbox id="vendedoresLista" value="vendedorid" size="5" title="Seleccione un Vendedor">
+                                    <f:selectItems value="#{id_vendedores}" itemLabel="nombreVendedores"  />
+                                    <f:ajax render="ventasLista datosVendedor"/>
+                                </h:selectOneListbox>
+                            </div>
+
+                            <div  class="formulario">
+                                <h:panelGrid id="datosVendedor" columns="2">
+                                    <span>Nombre: </span>
+                                    <h:outputLabel value="//TODO"/>
+                                    <span>Apellido: </span>
+                                    <h:outputLabel value="//TODO"/>
+                                    <span>% Comision: </span>
+                                    <h:outputLabel value="//TODO"/>
+                                </h:panelGrid>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="ventana">
+                            <h1>Seleccione las Ventas a Rendir</h1>
+                            <div id="ordenes" class="formulario">
+
+                                <h:selectOneListbox id="ventasLista" value="#{id_venta}" title="ventas a rendir" size="5">
+                                    <f:selectItems value="#{VentasxFecha}" />
+                                    <f:ajax render="listaventasarendir ventasLista"/>
+                                </h:selectOneListbox>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="ventana">
+                <h1>Ventas a Rendir</h1>
+                <div class="formulario">
+                    <h:dataTable styleClass="tabla_listado" id="listaventasarendir" rowClasses="alterna1 alterna2" value="listadeventas" var="venta">
+                        <h:column>
+                            <f:facet name="header">Fecha Venta</f:facet>
+                            <f:facet name="footer">Comision</f:facet>
+                            venta.fecha
+
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Cliente</f:facet>
+                            venta.cliente
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Monto de Venta</f:facet>
+                            venta.monto
+                            <f:facet name="footer">comsioncalculada</f:facet>
+                        </h:column>
+                    </h:dataTable>
+                </div>
+            </div>
+            <p><h:commandButton value="Aceptar"/>
+            <h:commandButton value="Cancelar"/></p>
+        </h:form>
+    </ui:composition>
+</html>

@@ -1,0 +1,91 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition>
+        <h:form>
+            <div class="ventana">
+                <h1>Datos de Entrega</h1>
+                <div class="formulario">
+                    <h:panelGrid columns="4">
+                        <h:panelGroup><h:selectBooleanCheckbox value="true" onclick="mostrar_ocultar(this.checked,'hideable');"/><span>Con Cliente</span></h:panelGroup>
+                        <h:panelGroup><span>Fecha de Pedido:</span><h:inputText onclick='scwShow(this,event);' value="//TODO"/></h:panelGroup>
+                        <h:panelGroup><span>Fecha de Entrega:</span><h:inputText onclick='scwShow(this,event);' value="//TODO"/></h:panelGroup>
+                    </h:panelGrid>
+                    <table><tr id="hideable"><td><span>CUIT:</span><h:inputText value="//TODO"/><h:commandButton value="Buscar" action="//TODO"/><h:commandButton value="Nuevo" action="//TODO"/></td>
+                        <td><span>Razón Social:</span><label> aca va la razon social</label></td>
+                        <td><span>Domicilio de entrega:</span><h:selectOneMenu value="//TODO"/><h:commandButton value="Nuevo" action="//TODO"/></td></tr>
+                    </table>
+                </div>
+                <h2>Responsables</h2>
+                <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="responsable" value="//TODOresponsables">
+                    <h:column>
+                        <f:facet name="header">Nombre de Responsable</f:facet>
+                        Juan pepe
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Telefono</f:facet>
+                        Telefono
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">e-Mail</f:facet>
+                        e-Mail
+                    </h:column>
+                </h:dataTable>
+            </div>
+
+
+            <div class="ventana">
+                <h1>Detalles</h1>
+                <div class="formulario">
+                    <table>
+                        <tr><td><span>Codigo:</span></td><td><h:inputText value="//TODO"/><h:commandButton value="Buscar" action="//TODO"/></td></tr>
+                        <tr><td><span>Cantidad:</span></td><td><h:inputText value="//TODO"/><span> de <label id="lblCantidadDisp"> XX</label> unidades disponibles</span></td></tr>
+                        <tr><td><span>Precio:</span></td><td><h:inputText value="//TODO"/> <h:commandButton value="Buscar" action="//TODO"/></td></tr>
+                    </table>
+                    <div class="contenedor_tabla_listado">
+                        <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="domicilio" value="//TODOdomicilios">
+                            <h:column>
+                                <f:facet name="header">Código</f:facet>
+                                Cordoba
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Marca</f:facet>
+                                Capital
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Modelo</f:facet>
+                                Barrio
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Tamaño</f:facet>
+                                Calle
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Color</f:facet>
+                                Altura
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Precio</f:facet>
+                                CP
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Cantidad</f:facet>
+                                CP
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Acciones</f:facet>
+                                <h:commandLink value="Eliminar" action="//TODO"/>
+                            </h:column>
+                        </h:dataTable>
+                    </div>
+                    <span>Descuento:</span> <h:inputText value="//TODO"/>
+                </div>
+            </div>
+            <p class="botonera">
+            <h:commandButton value="Aceptar" action="//TODO"/>
+            <h:commandButton value="Cancelar" action="//TODO"/>
+            </p>
+        </h:form>
+    </ui:composition>
+</html>

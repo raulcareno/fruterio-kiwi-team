@@ -1,4 +1,4 @@
-DELETE FROM 'localidad'; 
+DELETE FROM localidad; 
 DELETE FROM `provincia`;
 
 INSERT INTO provincia (id,nombre) VALUES(1,'Buenos Aires');
@@ -26,7 +26,7 @@ INSERT INTO provincia (id,nombre) VALUES(22,'Tierra del Fuego');
 INSERT INTO provincia (id,nombre) VALUES(23,'Tucuman');
 
 
-//localidad DE CORDOBA
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Achiras',5);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Adelia Maria',5);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Agua De Oro',5);
@@ -82,7 +82,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Capilla De Los Remedios',5);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Capilla De Siton',5);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Capilla Del Carmen',5);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Capilla Del Monte',5);
-INSERT INTO localidad (nombre,idProvincia) VALUES('Capitán General Bernardo O’higgins',5);
+INSERT INTO localidad (nombre,idProvincia) VALUES('Capitán General Bernardo Ohiggins',5);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Carnerillo',5);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Carrilobo',5);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Casa Grande',5);
@@ -456,7 +456,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Yacanto',5);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Washington',5);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Wenceslao Escalante',5);
 
-//localidad DE BUENOS AIRES
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Adolfo Alsina',1);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Alberti',1);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Almirante Brown',1);
@@ -593,7 +593,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Villarino',1);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Zarate',1);
 
 
-//SAN LUIS
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Balde',18);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Carpintería ',18);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Concarán',18);
@@ -617,7 +617,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Villa la Quebrada',18);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Larca',18);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Mercedes',18);
 
-//localidad DE LA RIOJA
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Arauco',11);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Castro Barros',11);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Chamical',11);
@@ -637,7 +637,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('San Blas De Los Sauces',11);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Sanagasta',11);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Vinchina',11);
 
-//localidad DE CATAMARCA
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Aconquija',2);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Ancasti',2);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Andalgalá',2);
@@ -675,7 +675,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Tinogasta',2);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Valle Viejo',2);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Vil',2);
 
-//localidad DE JUJUY
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Abdon Castro Tolay (Barrancas)',9);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Abra Pampa',9);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Abralaite',9);
@@ -738,7 +738,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Yala',9);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Yaví',9);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Yuto',9);
 
-//localidad DEL CHACO
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Avia Terai',3);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Barranqueras',3);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Basail',3);
@@ -808,7 +808,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Angela',3);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Berthet',3);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Rio Bermejito',3);
 
-//localidad DE CHUBUT
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('28 De Julio',4);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Aldea Apeleg',4);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Aldea Beleiro',4);
@@ -856,7 +856,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Telsen',4);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Trelew',4);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Trevelin',4);
 
-//localidad DE CORRIENTES
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Alvear',6);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Bella Vista',6);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Beron De Astrada',6);
@@ -924,7 +924,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Olivari',6);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Yapeyu',6);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Yatayti Calle',6);
 
-//localidad DE ENTRE RIOS
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Alarcón',7);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Alcaraz Norte',7);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Alcaraz Sur',7);
@@ -1193,7 +1193,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Walter Moss',7);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Yacaré',7);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Yeso Oeste',7);
 
-//localidad DE FORMOSA
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Buena Vista',8);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Clorinda',8);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Colonia Pastoril',8);
@@ -1234,7 +1234,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Dos Trece',8);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Escolar',8);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Villa General Guemes',8);
 
-//localidad DE LA PAMPA
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('25 De Mayo',10);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Abramo',10);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Adolfo Van Praet',10);
@@ -1315,7 +1315,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Victorica',10);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Mirasol',10);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Winifreda',10);
 
-//localidad DE MENDOZA
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('General Alvear',12);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Godoy Cruz',12);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Guaymallen',12);
@@ -1335,7 +1335,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Santa Rosa',12);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Tunuyan',12);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Tupungato',12);
 
-//localidad DE MISIONES
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('25 De Mayo',13);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Alba Posse',13);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Almafuerte',13);
@@ -1413,7 +1413,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Santiago De Liniers',13);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Santo Pipo',13);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Tres Capones',13);
 
-//localidad DE NEUQUEN
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Aguada San Roque',14);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Alumine',14);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Andacollo',14);
@@ -1472,7 +1472,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Traful',14);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Vista Alegre',14);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Zapala',14);
 
-//localidad DE RIO NEGRO
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Aguada Cecilio',15);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Aguada De Guerra',15);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Aguada Guzmán',15);
@@ -1549,7 +1549,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Mascardi',15);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Regina',15);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Yaminué',15);
 
-//localidad DE SALTA
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Aguaray',16);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Angastaco',16);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Animana',16);
@@ -1611,7 +1611,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Urundel',16);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Vaqueros',16);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Villa San Lorenzo',16);
 
-//localidad DE SAN JUAN
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('25 De Mayo',17);
 INSERT INTO localidad (nombre,idProvincia) VALUES('9 De Julio',17);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Albardon',17);
@@ -1632,7 +1632,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Ullum',17);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Valle Fertil',17);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Zonda',17);
 
-//localidad DE SANTA CRUZ
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('28 De Noviembre',19);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Caleta Olivia',19);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Cañadon Seco',19);
@@ -1654,7 +1654,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Rio Gallegos',19);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Rio Turbio',19);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Tres Lagos',19);
 
-//localidad DE SANTA FE
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Acebal',20);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Aguara Grande',20);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Albarellos',20);
@@ -2019,7 +2019,7 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Wheelwright',20);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Zaballa',20);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Zenon Pereyra',20);
 
-//localidad DE SANTIAGO DEL ESTERO
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Añatuya',21);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Arraga',21);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Bandera',21);
@@ -2092,12 +2092,12 @@ INSERT INTO localidad (nombre,idProvincia) VALUES('Villa Union',21);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Vilmer',21);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Weisburd',21);
 
-//localidad DE TIERRA DEL FUEGO
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('Río Grande',22);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Tolhuin',22);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Ushuaia',22);
 
-//localidad DE TUCUMAN
+
 INSERT INTO localidad (nombre,idProvincia) VALUES('7 De Abril',23);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Acheral',23);
 INSERT INTO localidad (nombre,idProvincia) VALUES('Agua Dulce Y La Soledad',23);

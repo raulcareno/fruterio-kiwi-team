@@ -592,3 +592,8 @@ function Disable(id) {
     ctrl.disabled = true;
 
 }
+function Enable(id) {
+    var ctrl = document.getElementById(id);
+    ctrl.disabled = false;
+
+}

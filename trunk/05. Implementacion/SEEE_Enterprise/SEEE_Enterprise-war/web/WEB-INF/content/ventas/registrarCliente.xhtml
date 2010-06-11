@@ -79,13 +79,13 @@
                         <h:commandButton value="Agregar" action="//TODO"/>
                         <h:panelGrid columns="2">
                             <span>Provincia:</span>
-                            <h:selectOneMenu value="#{clienteBean.idProvincia}">
-                                <f:selectItems value="#{provinciaController.itemsAvailableSelectOne}"/>
+                            <h:selectOneMenu value="#{provinciaController.provinciaSeleccionada}">
+                                <f:selectItems value="#{provinciaController.provincias}"/>
                                 <f:ajax render="localidad"/>
                             </h:selectOneMenu>
                             <span>Localidad:</span>
-                            <h:selectOneMenu id="localidad" value="//TODO" disabled="//TODO">
-                                <f:selectItems value="#{clienteBean.localidades}"/>
+                            <h:selectOneMenu id="localidad" value="#{empresaClienteController.localidad}" disabled="//TODO">
+                                <f:selectItems value="#{provinciaController.localidades}"/>
                             </h:selectOneMenu>
                             <span>Barrio:</span>
                             <h:inputText value="//TODO"/>

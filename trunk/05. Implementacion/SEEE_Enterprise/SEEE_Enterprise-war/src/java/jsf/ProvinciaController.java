@@ -40,7 +40,7 @@ public class ProvinciaController {
     }
 
     public Provincia getCurrent() {
-        return current == null ? new Provincia() : current;
+        return current == null ? current = new Provincia() : current;
     }
 
     public Provincia getProvinciaSeleccionada() {
@@ -64,11 +64,8 @@ public class ProvinciaController {
     }
 
     public List<SelectItem> getLocalidades() {
-        System.out.println("//TODO Provincia: " + current);
+        
         if (provinciaSeleccionada != null) {
-            System.out.println("ENTRE!");
-            System.out.println(provinciaSeleccionada);
-            System.out.println(provinciaSeleccionada.getId());
             List<Localidad> localidades = ejbFacade.findLocalidades(provinciaSeleccionada);
             System.out.println(localidades);
             List<SelectItem> localidaedesSelectItem = new ArrayList<SelectItem>();

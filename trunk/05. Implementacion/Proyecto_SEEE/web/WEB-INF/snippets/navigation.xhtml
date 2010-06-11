@@ -43,6 +43,12 @@
                             </h:commandLink>
                             </li>
                             <li>
+                            <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consutar Catalogo">
+                                <f:param name="includePath" value="/WEB-INF/content/ventas/consultarCatalogo.xhtml"/>
+                                <f:param name="titulo" value="Consltar Catalogo"/>
+                            </h:commandLink>
+                            </li>
+                            <li>
                             <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Nuevo Pedido">
                                 <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/registrarPedido.xhtml"/>
                                 <f:param name="titulo" value="Nuevo Pedido"/>
@@ -58,6 +64,18 @@
                             <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Entrega Pedido">
                                 <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/registrarEntregaPedido.xhtml"/>
                                 <f:param name="titulo" value="Registrar Entrega de Pedido"/>
+                            </h:commandLink>
+                            </li>
+                            <li>
+                            <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Rendicion de ventas a viajante">
+                                <f:param name="includePath" value="/WEB-INF/content/ventas/registrarRendicionDeVentasAViajante.xhtml"/>
+                                <f:param name="titulo" value="Registrar Rendicion de ventas a viajante"/>
+                            </h:commandLink>
+                            </li>
+                            <li>
+                            <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Devolución de Productos Terminados Vendidos">
+                                <f:param name="includePath" value="/WEB-INF/content/ventas/registrarDevolucióndeProductosTerminadosVendidos.xhtml"/>
+                                <f:param name="titulo" value="Registrar Devolución de Productos Terminados Vendidos"/>
                             </h:commandLink>
                             </li>
 
@@ -103,6 +121,10 @@
                             <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Salida de Pedido">
                                 <f:param name="includePath" value="/WEB-INF/content/deposito/registrarSalidaDePedido.xhtml"/>
                                 <f:param name="titulo" value="Registrar Salida De Pedido"/>
+                            </h:commandLink></li>
+                            <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Producto">
+                                <f:param name="includePath" value="/WEB-INF/content/deposito/registrarProducto.xhtml"/>
+                                <f:param name="titulo" value="Registrar Producto"/>
                             </h:commandLink></li>
                             <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consultar Producto">
                                 <f:param name="includePath" value="/WEB-INF/content/deposito/consultarProducto.xhtml"/>

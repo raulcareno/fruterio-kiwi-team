@@ -1,9 +1,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
     <ui:composition>
-        <h:form>
+        <h:form id="todo">
             <div id="superior">
                 <table id="superior_tabla">
                     <tr>
@@ -14,8 +15,8 @@
                                     <h:panelGrid columns="2">
                                         <span>CUIT:</span>
                                         <h:panelGroup>
-                                            <h:inputText value="#{clienteBean.cuit}"/>
-                                            <h:commandButton value="Buscar" action="//TODO"/>
+                                            <h:inputText id="cuit" value="#{clienteBean.cuit}"/>
+                                            <h:commandButton id="buscar" value="Buscar" action="//TODO"/>
                                         </h:panelGroup>
                                         <span>Razón Social:</span>
                                         <h:inputText value="#{clienteBean.razonSocial}"/>
@@ -42,29 +43,29 @@
                                         <h:commandButton value="Agregar Responsable" action="//TODO"/>
                                     </h:panelGrid>
                                     <div class="contenedor_tabla_listado">
-                            <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="responsable" value="//TODOresponsables">
-                                <h:column>
-                                    <f:facet name="header">Nombre</f:facet>
-                                    Federico Nafría
-                                </h:column>
-                                <h:column>
-                                    <f:facet name="header">DNI</f:facet>
-                                    940980977
-                               </h:column>
-                                <h:column>
-                                    <f:facet name="header">Telefono</f:facet>
-                                    uno rojo con tach
-                                </h:column>
-                                <h:column>
-                                    <f:facet name="header">e-Mail</f:facet>
-                                    federiconafria@hotmail.com
-                                </h:column>
-                                <h:column>
-                                    <f:facet name="header">Acciones</f:facet>
-                                    <h:commandLink value="Eliminar" action="//TODO"/>
-                                </h:column>
-                            </h:dataTable>
-                        </div>
+                                        <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="responsable" value="//TODOresponsables">
+                                            <h:column>
+                                                <f:facet name="header">Nombre</f:facet>
+                                                Federico Nafría
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">DNI</f:facet>
+                                                940980977
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Telefono</f:facet>
+                                                uno rojo con tach
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">e-Mail</f:facet>
+                                                federiconafria@hotmail.com
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Acciones</f:facet>
+                                                <h:commandLink value="Eliminar" action="//TODO"/>
+                                            </h:column>
+                                        </h:dataTable>
+                                    </div>
                                 </div>
                             </div>
                         </td>
@@ -141,9 +142,20 @@
             <p>
             <h:commandButton value="Aceptar" action="//TODO"/>
             <h:commandButton value="Cancelar" action="//TODO"/>
-            
+
             </p>
         </h:form>
+        <c:if test="true">
+            <script type="text/javascript">
+               
+             Disable("todo:buscar");
+             Disable("todo:cuit");
+             
+                
+            </script>
+
+       </c:if>
     </ui:composition>
+
 
 </html>

@@ -11,20 +11,18 @@
                             <div class="ventana">
                                 <h1>Busqueda de producto</h1>
                                 <div class="formulario">
-                                    <table><tr><td><span>Codigo</span><h:inputText value="//TODO"/><br/>
+                                    <table><tr><td><span>CUIT</span><h:inputText value="//TODO"/><br/>
                                         <h:commandButton value="Buscar">
-                                            <!--<f:ajax render="resultadoProductos"/>-->
+                                            <f:ajax render="resultadoClientes"/>
                                         </h:commandButton></td>
                                         <td>
                                             <div id="CollapsiblePanel1" class="CollapsiblePanel">
                                                 <div class="CollapsiblePanelTab" tabindex="1">(Avanzado)</div>
                                                 <div class="CollapsiblePanelContent">
                                                     <h:panelGrid columns="4">
-                                                        <span>Nombre:</span><h:inputText value="//TODO"/>
-                                                        <span>Modelo:</span><h:inputText value="//TODO"/>
-                                                        <span>Tamaño:</span><h:inputText value="//TODO"/>
-                                                        <span>Color:</span><h:inputText value="//TODO"/>
-                                                        <span>Marca:</span><h:inputText value="//TODO"/>
+                                                        <span>Razón Solcial:</span><h:inputText value="//TODO"/>
+                                                        <span>Mail:</span><h:inputText value="//TODO"/>
+                                                        
                                                     </h:panelGrid>
                                                 </div>
                                             </div>
@@ -42,7 +40,7 @@
                     <h1>Clientes</h1>
                     <div class="formulario">
                         <div class="contenedor_tabla_listado">
-                            <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="clientes" value="//TODOClientes">
+                            <h:dataTable id="resultadoClientes" styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="clientes" value="//TODOClientes">
                                 <h:column>
                                     <f:facet name="header">CUIT</f:facet>
                                     25-32002356/6
@@ -71,6 +69,9 @@
                         </h:commandLink>
                                     <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Modificar">
                             <f:param name="includePath" value="/WEB-INF/content/ventas/registrarCliente.xhtml"/>
+                            <f:param name="titulo" value="Modificar Cliente"/>
+                            
+
                         </h:commandLink>
                                 </h:column>
                             </h:dataTable>

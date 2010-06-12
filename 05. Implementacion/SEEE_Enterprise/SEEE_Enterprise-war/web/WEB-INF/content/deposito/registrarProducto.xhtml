@@ -9,13 +9,7 @@
                 <h1>Nuevo Producto</h1>
                 <div class="formulario">
                     <span>Nombre</span><h:inputText value="//TODO nombre"><f:ajax render="aviso" event="blur"/></h:inputText>
-                    <ui:fragment id="aviso">
-
-                        <c:if test="true">
-                            <h:outputLabel style="color:red; font-style: italic">Producto Existente</h:outputLabel>
-                        </c:if>
-
-                    </ui:fragment>
+                    <h:outputLabel id="aviso" style="color:red; font-style: italic">#{aviso}</h:outputLabel>
                     <h:panelGrid columns="4">
                         <span>Marca: </span><h:inputText value="//TODO"/>
                         <span>Modelo: </span><h:inputText value="//TODO"/>
@@ -28,7 +22,8 @@
 
                 </div>
             </div>
-            <p><h:commandButton id="registrar" value="Registrar Producto"/><h:commandButton value="cancelar"/></p>
+            <p><h:commandButton  value="Registrar Producto"/><h:commandButton value="cancelar"/></p>
+
         </h:form>
     </ui:composition>
 </html>

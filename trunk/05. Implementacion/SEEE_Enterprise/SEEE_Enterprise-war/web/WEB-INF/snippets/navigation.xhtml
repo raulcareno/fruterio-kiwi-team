@@ -61,9 +61,15 @@
                             </h:commandLink>
                             </li>
                             <li>
-                            <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Entrega Pedido">
+                            <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Venta">
                                 <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/registrarEntregaPedido.xhtml"/>
-                                <f:param name="titulo" value="Registrar Entrega de Pedido"/>
+                                <f:param name="titulo" value="Registrar Venta"/>
+                            </h:commandLink>
+                            </li>
+                            <li>
+                            <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Anular Pedido">
+                                <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/anularPedido.xhtml"/>
+                                <f:param name="titulo" value="Anular Pedido"/>
                             </h:commandLink>
                             </li>
                             <li>
@@ -76,6 +82,12 @@
                             <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Devolución de Productos Terminados Vendidos">
                                 <f:param name="includePath" value="/WEB-INF/content/ventas/registrarDevolucióndeProductosTerminadosVendidos.xhtml"/>
                                 <f:param name="titulo" value="Registrar Devolución de Productos Terminados Vendidos"/>
+                            </h:commandLink>
+                            </li>
+                            <li>
+                            <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consultar Viajante">
+                                <f:param name="includePath" value="/WEB-INF/content/ventas/consultarViajante.xhtml"/>
+                                <f:param name="titulo" value="Consltar Viajante"/>
                             </h:commandLink>
                             </li>
 
@@ -129,6 +141,10 @@
                             <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consultar Producto">
                                 <f:param name="includePath" value="/WEB-INF/content/deposito/consultarProducto.xhtml"/>
                                 <f:param name="titulo" value="Consultar Producto"/>
+                            </h:commandLink></li>
+                            <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Modificar Producto">
+                                <f:param name="includePath" value="/WEB-INF/content/deposito/consultarProducto.xhtml"/>
+                                <f:param name="titulo" value="Modificar Producto"/>
                             </h:commandLink></li>
 
                         </ul>

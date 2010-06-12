@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 import javax.ejb.EJB;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
@@ -24,7 +25,7 @@ import jsf.util.JsfUtil;
 import jsf.util.PaginationHelper;
 
 @ManagedBean(name = "provinciaController")
-@SessionScoped
+@RequestScoped
 public class ProvinciaController {
 
     @EJB

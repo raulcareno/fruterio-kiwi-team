@@ -73,6 +73,9 @@
                                     <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consultar">
                                         <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/mostrarPedido.xhtml"/>
                                     </h:commandLink>
+                                    <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Seleccionar">
+                                        <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/anularPedido.xhtml"/>
+                                    </h:commandLink>
                                 </h:column>
                             </h:dataTable>
                         </div>
@@ -84,9 +87,8 @@
             <h:commandButton value="Salir" action="//TODO"/>
 
 
+
         </h:form>
-
-
     </ui:composition>
 
 </html>

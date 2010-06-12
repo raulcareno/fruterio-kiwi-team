@@ -15,21 +15,23 @@
                                     <h:panelGrid columns="2">
                                         <span>CUIT:</span>
                                         <h:panelGroup>
-                                            <h:inputText id="cuit" value="clienteBean.cuit"/>
+                                            <h:inputText id="cuit" value="#{empresaClienteController.empresaCliente.cuit}"/>
                                             <h:commandButton id="buscar" value="Buscar" action="//TODO"/>
                                         </h:panelGroup>
                                         <span>Razón Social:</span>
-                                        <h:inputText value="#clienteBean.razonSocial"/>
+                                        <h:inputText value="#{empresaClienteController.empresaCliente.razonSocial}"/>
                                         <span>Condición IVA:</span>
-                                        <h:selectOneMenu value="//TODO"/>
+                                        <h:selectOneMenu value="#{empresaClienteController.condicionIVA}">
+                                            <f:selectItems value="#{condicionIvaController.condicionesIVA}"/>
+                                        </h:selectOneMenu>
                                         <span>Teléfono:</span>
-                                        <h:inputText value="//TODO"/>
+                                        <h:inputText value="#{empresaClienteController.empresaCliente.telefono}"/>
                                         <span>Celular:</span>
-                                        <h:inputText value="//TODO"/>
+                                        <h:inputText value="#{empresaClienteController.empresaCliente.celular}"/>
                                         <span>Fax:</span>
-                                        <h:inputText value="//TODO"/>
+                                        <h:inputText value="#{empresaClienteController.empresaCliente.fax}"/>
                                         <span>Mail:</span>
-                                        <h:inputText value="//TODO"/>
+                                        <h:inputText value="#{empresaClienteController.empresaCliente.mail}"/>
 
                                     </h:panelGrid>
                                 </div>
@@ -88,15 +90,15 @@
                                 <f:selectItems value="#{provinciaController.localidades}"/>
                             </h:selectOneMenu>
                             <span>Barrio:</span>
-                            <h:inputText value="//TODO"/>
+                            <h:inputText value="#{empresaClienteController.barrio.nombre}"/>
                             <span>Calle:</span>
                             <h:panelGroup>
-                                <h:inputText value="//TODO"/>
+                                <h:inputText value="#{empresaClienteController.domicilio.nombreCalle}"/>
                                 <span>Altura:</span>
-                                <h:inputText value="//TODO"/>
+                                <h:inputText value="#{empresaClienteController.domicilio.altura}"/>
                             </h:panelGroup>
                             <span>CP:</span>
-                            <h:inputText value="//TODO"/>
+                            <h:inputText value="#{empresaClienteController.domicilio.codPostal}"/>
 
                         </h:panelGrid>
 

@@ -1,0 +1,76 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition>
+        <h:form>
+            <div class="hoja">
+                <h1><span>Pedido</span><h:outputLabel value="//TODO"/></h1>
+                <div class="seccion">
+                    <h2>Datos del Pedido</h2>
+                    <h:panelGrid columns="2">
+                        <span>CUIT:</span>
+                        <h:outputText value="2-322278946/5"/>
+                        <span>Razón Social:</span>
+                        <h:outputText value="//TODO"/>
+                        <span>Domicilio de entrega:</span>
+                        <h:outputText value="MiDireccion 2123"/>
+                        <span>Responsable:</span>
+                        <h:outputText value="Responsable"/>
+                        <span>Fecha de Pedido:</span>
+                        <h:outputText value="11/02/1988"/>
+                        <span>Fecha Estimada de Entrega:</span>
+                        <h:outputText value="11/02/2010"/>
+                        <span>Descuento:</span>
+                        <h:outputText value="20%"/>
+                    </h:panelGrid>
+                </div>
+                <div class="seccion">
+                    <h2>Detalle del Pedido</h2>
+                    <h:dataTable styleClass="listado" rowClasses="mrow1 mrow2" var="detPedido" value="//TODOdetallePedidoCollection">
+                        <h:column>
+                            <f:facet name="header">Código</f:facet>
+                            00012
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Marca</f:facet>
+                            Marca 1
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Modelo</f:facet>
+                            Modelo 1
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Tamaño</f:facet>
+                            1
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Color</f:facet>
+                            azul
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Precio</f:facet>
+                            12
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Cantidad</f:facet>
+                            00
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Subtotal</f:facet>
+                            10
+                        </h:column>
+                    </h:dataTable>
+                </div>
+
+
+
+            </div>
+            <h:commandButton actionListener="#{navigationBean.navigationPathChange}" value="Volver">
+                <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/consultarPedido.xhtml"/>
+            </h:commandButton>
+        </h:form>
+
+    </ui:composition>
+
+</html>

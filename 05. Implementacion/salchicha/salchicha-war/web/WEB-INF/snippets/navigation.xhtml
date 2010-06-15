@@ -1,0 +1,215 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition>
+
+        <h:form>
+            <div id="Accordion1" class="Accordion" tabindex="0">
+                <div class="AccordionPanel">
+                    <div class="AccordionPanelTab">Ventas</div>
+                    <div class="AccordionPanelContent">
+                        <div id="Accordion2" class="Accordion" tabindex="0">
+                            <div class="AccordionPanel">
+                                <div class="AccordionPanelTab2">Cliente</div>
+                                <div class="AccordionPanelContent2">
+                                    <ul>
+                                        <li>
+                                        <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Nuevo Cliente">
+                                            <f:param name="includePath" value="/WEB-INF/content/ventas/registrarCliente.xhtml"/>
+                                            <f:param name="titulo" value="Nuevo Cliente"/>
+                                        </h:commandLink>
+                                        </li>
+                                        <li>
+                                        <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consultar Cliente">
+                                            <f:param name="includePath" value="/WEB-INF/content/ventas/consultarCliente.xhtml"/>
+                                            <f:param name="titulo" value="Consultar Cliente"/>
+                                        </h:commandLink>
+                                        </li>
+                                        <li>
+                                        <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Modificar Cliente">
+                                            <f:param name="includePath" value="/WEB-INF/content/ventas/consultarCliente.xhtml"/>
+                                            <f:param name="titulo" value="Modificar Cliente"/>
+                                        </h:commandLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="AccordionPanel">
+                                <div class="AccordionPanelTab2">Catalogo</div>
+                                <div class="AccordionPanelContent2">
+                                    <ul>
+                                        <li>
+                                        <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consultar Catalogo">
+                                            <f:param name="includePath" value="/WEB-INF/content/ventas/consultarCatalogo.xhtml"/>
+                                            <f:param name="titulo" value="Consultar Catalogo"/>
+                                        </h:commandLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="AccordionPanel">
+                                <div class="AccordionPanelTab2">Pedido</div>
+                                <div class="AccordionPanelContent2">
+                                    <ul>
+                                        <li>
+                                        <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Nuevo Pedido">
+                                            <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/registrarPedido.xhtml"/>
+                                            <f:param name="titulo" value="Nuevo Pedido"/>
+                                        </h:commandLink>
+                                        </li>
+                                        <li>
+                                        <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consultar Pedido">
+                                            <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/consultarPedido.xhtml"/>
+                                            <f:param name="titulo" value="Consultar Pedido"/>
+                                        </h:commandLink>
+                                        </li>
+                                        <li>
+                                        <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Modificar Pedido">
+                                            <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/consultarPedido.xhtml"/>
+                                            <f:param name="titulo" value="Modificar Pedido"/>
+                                        </h:commandLink>
+                                        </li>
+                                        <li>
+                                        <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Venta">
+                                            <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/registrarVenta.xhtml"/>
+                                            <f:param name="titulo" value="Registrar Venta"/>
+                                        </h:commandLink>
+                                        </li>
+                                        <li>
+                                        <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Anular Pedido">
+                                            <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/anularPedido.xhtml"/>
+                                            <f:param name="titulo" value="Anular Pedido"/>
+                                        </h:commandLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="AccordionPanel">
+                                <div class="AccordionPanelTab2">Viajante</div>
+                                <div class="AccordionPanelContent2">
+                                    <ul>
+                                        <li>
+                                        <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Rendicion de ventas a viajante">
+                                            <f:param name="includePath" value="/WEB-INF/content/ventas/registrarRendicionDeVentasAViajante.xhtml"/>
+                                            <f:param name="titulo" value="Registrar Rendicion de ventas a viajante"/>
+                                        </h:commandLink>
+                                        </li>
+                                       
+                                        <li>
+                                        <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consultar Viajante">
+                                            <f:param name="includePath" value="/WEB-INF/content/ventas/consultarViajante.xhtml"/>
+                                            <f:param name="titulo" value="Consultar Viajante"/>
+                                        </h:commandLink>
+                                        </li>
+                                        <li>
+                                        <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Devolucion De Venta">
+                                            <f:param name="includePath" value="/WEB-INF/content/ventas/registrarDevolucionDeVenta.xhtml"/>
+                                            <f:param name="titulo" value="Registrar Devolucion De Venta"/>
+                                        </h:commandLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="AccordionPanel">
+                    <div class="AccordionPanelTab">Deposito</div>
+                    <div class="AccordionPanelContent">
+                        <div id="Accordion3" class="Accordion" tabindex="0">
+                            <div class="AccordionPanel">
+                                <div class="AccordionPanelTab2">Pedido</div>
+                                <div class="AccordionPanelContent2">
+                                    <ul>
+                                        <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Salida de Pedido">
+                                            <f:param name="includePath" value="/WEB-INF/content/deposito/registrarSalidaDePedido.xhtml"/>
+                                            <f:param name="titulo" value="Registrar Salida De Pedido"/>
+                                        </h:commandLink></li>
+                                        <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Armado de Pedido">
+                                            <f:param name="includePath" value="/WEB-INF/content/deposito/registrarArmadoDePedido.xhtml"/>
+                                            <f:param name="titulo" value="Registrar Armado de Pedido"/>
+                                        </h:commandLink></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="AccordionPanel">
+                                <div class="AccordionPanelTab2">Producto</div>
+                                <div class="AccordionPanelContent2">
+                                    <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Ingreso De Productos Importados">
+                                        <f:param name="includePath" value="/WEB-INF/content/deposito/registrarIngresoDeProductosImportados.xhtml"/>
+                                        <f:param name="titulo" value="Registar Ingreso de Productos Importados"/>
+                                    </h:commandLink></li>
+
+
+                                    <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Reaprovisionamiento Interno">
+                                        <f:param name="includePath" value="/WEB-INF/content/deposito/registrarReaprovisionamientoInterno.xhtml"/>
+                                        <f:param name="titulo" value="Registrar Reaprovisionamiento Interno"/>
+                                    </h:commandLink></li>
+
+                                    <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Salida De Produccion">
+                                        <f:param name="includePath" value="/WEB-INF/content/deposito/registrarSalidaDeProduccion.xhtml"/>
+                                        <f:param name="titulo" value="Registrar Salida De Produccion"/>
+                                    </h:commandLink></li>
+
+                                    <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Producto">
+                                        <f:param name="includePath" value="/WEB-INF/content/deposito/registrarProducto.xhtml"/>
+                                        <f:param name="titulo" value="Registrar Producto"/>
+                                    </h:commandLink></li>
+                                    <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consultar Producto">
+                                        <f:param name="includePath" value="/WEB-INF/content/deposito/consultarProducto.xhtml"/>
+                                        <f:param name="titulo" value="Consultar Producto"/>
+                                    </h:commandLink></li>
+                                    <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Modificar Producto">
+                                        <f:param name="includePath" value="/WEB-INF/content/deposito/consultarProducto.xhtml"/>
+                                        <f:param name="titulo" value="Modificar Producto"/>
+                                    </h:commandLink></li>
+                                     <li>
+                                        <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Devolución de Productos Terminados">
+                                            <f:param name="includePath" value="/WEB-INF/content/deposito/registrarDevolucióndeProductosTerminados.xhtml"/>
+                                            <f:param name="titulo" value="Registrar Devolución de Productos Terminados"/>
+                                        </h:commandLink>
+                                        </li>
+                                </div>
+                            </div>
+                            <div class="AccordionPanel">
+                                <div class="AccordionPanelTab2">Materia Prima</div>
+                                <div class="AccordionPanelContent2">
+                                    <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Salida De Materia Prima">
+                                        <f:param name="includePath" value="/WEB-INF/content/deposito/registrarSalidaDeMateriaPrima.xhtml"/>
+                                        <f:param name="titulo" value="Registar Salida De Materia Prima"/>
+                                    </h:commandLink></li>
+                                    <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Ingreso De Materia Prima">
+                                        <f:param name="includePath" value="/WEB-INF/content/deposito/registrarIngresoDeMateriaPrima.xhtml"/>
+                                        <f:param name="titulo" value="Registar Ingreso De Materia Prima"/>
+                                    </h:commandLink></li>
+                                </div>
+                            </div>
+                            <div class="AccordionPanel">
+                                <div class="AccordionPanelTab2">Stock</div>
+                                <div class="AccordionPanelContent2">
+                                    <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Pedido De Reabastecimiento">
+                                        <f:param name="includePath" value="/WEB-INF/content/deposito/registrarPedidoDeReabastecimiento.xhtml"/>
+                                        <f:param name="titulo" value="Registrar Pedido De Reabastecimiento"/>
+                                    </h:commandLink></li>
+                                    <li><h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Registrar Inconsistencia De Deposito">
+                                        <f:param name="includePath" value="/WEB-INF/content/deposito/registrarInconsistenciaDeDeposito.xhtml"/>
+                                        <f:param name="titulo" value="Registrar Inconsistencia De Deposito"/>
+                                    </h:commandLink></li>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </h:form>
+        <script type="text/javascript">
+        var Accordion1 = new Spry.Widget.Accordion("Accordion1");
+        var Accordion2 = new Spry.Widget.Accordion("Accordion2");
+        var Accordion3 = new Spry.Widget.Accordion("Accordion3");
+        </script>
+    </ui:composition>
+</html>

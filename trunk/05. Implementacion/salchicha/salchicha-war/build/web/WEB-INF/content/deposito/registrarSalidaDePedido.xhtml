@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition>
+        <h:form>
+            <div class="ventana">
+                <h1>Seleccione los Pedidos a Retirar</h1>
+                <div id="agregarpedidos" class="formulario">
+                    <table>
+                        <tr>
+                            <td>
+                        <h:selectOneListbox id="pedidosxfechaLista" value="#{id_pedido}" size="5">
+                            <f:selectItems value="#{arreglo_de_pedidos.fecha}" />
+                            <f:ajax render="cabeceraPedido pedidosListado"/>
+                        </h:selectOneListbox>
+                        </td>
+                        <td>
+                        <h:panelGrid id="cabeceraPedido" columns="2">
+                            <span>Nro Pedido:</span><h:outputLabel value="//TODO"/>
+                            <span>Fecha de Pedido:</span><h:outputLabel value="//TODO"/>
+                            <span>Fecha Estimada de Entrega:</span><h:outputLabel value="//TODO"/>
+                            <span>Cliente:</span><h:outputLabel value="//TODO"/>
+                            <span>Viajante:</span><h:outputLabel value="//TODO"/>
+                        </h:panelGrid>
+                        </td>
+                        </tr>
+                    </table>
+                    <h:commandButton value="Agregar"/>
+                </div>
+            </div>
+            <div class="ventana">
+                <h1>Pedidos a retirar</h1>
+                <div class="formulario">
+                    <h:dataTable id="pedidosListado" styleClass="tabla_listado" rowClasses="alterna1 alterna2" value="//TODO(pedidosaretrar)" var="prodcto">
+                        <h:column>
+                            <f:facet name="header">Nro Pedido</f:facet>
+                            0012
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Fecha Pedido</f:facet>
+                            29/05/2010
+                        </h:column><h:column>
+                            <f:facet name="header">Fecha Estimada De Entrega</f:facet>
+                            15/06/2010
+                        </h:column>
+
+                    </h:dataTable>
+                </div>
+            </div>
+            <p><h:commandButton value="Registrar Salida de Pedidos"/><h:commandButton value="Cancelar"/></p>
+        </h:form>
+    </ui:composition>
+</html>
+
+

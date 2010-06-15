@@ -1,0 +1,164 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition>
+
+        <h:form>
+            <div id="superior">
+                <table id="superior_tabla">
+                    <tr>
+                        <td>
+                            <div class="ventana">
+                                <h1>Pedido</h1>
+                                <div class="formulario">
+                                    <h:panelGrid columns="2">
+                                        <span>Nro Pedido:</span>
+                                        <h:panelGroup>                                            
+                                            <h:inputText value="//TODO"/>
+                                            <h:commandButton value="Cargar" action="//TODO"/>
+                                            <h:commandButton actionListener="#{navigationBean.navigationPathChange}" value="Buscar">
+                                                <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/consultarPedido.xhtml"/>
+                                            </h:commandButton>
+                                        </h:panelGroup>
+                                        <span>Viajante:</span>
+                                        <h:outputText value="//TODO Viajante"/>
+                                        <span>Cliente:</span>
+                                        <h:outputText value="//TODO Cliente"/>
+                                        <span>Fecha Estimada de Entrega:</span>
+                                        <h:outputText value="//TODO Nosey"/>
+                                        <span>Fecha Real de Entrega:</span>
+                                        <h:inputText value="//TODO Today"/>
+                                    </h:panelGrid>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ventana">
+                                <h1>Detalle del Pedido</h1>
+                                <div class="formulario">
+                                    <div class="contenedor_tabla_listado">
+                                        <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="detallePedido" value="//TODODetalles">
+                                            <h:column>
+                                                <f:facet name="header">Código</f:facet>
+                                                0f23
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Nombre</f:facet>
+                                                CH Cardinal Rojo Mediano
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Precio Unitario</f:facet>
+                                                20$
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Cantidad Pedido</f:facet>
+                                                50
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Cantidad Entregado</f:facet>
+                                                <h:inputText value="//TODO">
+                                                    <f:ajax event="blur" render="subtotal"/>
+                                                </h:inputText>
+                                            </h:column>
+                                            <h:column id="subtotal">
+                                                <f:facet name="header">Subtotal</f:facet>
+                                                800
+                                            </h:column>         
+                                            <h:outputText value="Total: 50$"/>
+                                        </h:dataTable>
+                                    </div>
+                                </div>
+
+
+                                <h2>Agregar Producto</h2>
+                                <div class="formulario">
+                                    <h:panelGroup>
+                                        <span>Código:</span>
+                                        <h:inputText value="//TODO"/>
+                                        <span>Cantidad:</span>
+                                        <h:inputText value="//TODO"/>
+                                        <h:commandButton actionListener="#{navigationBean.navigationPathChange}" value="Buscar">
+                                            <f:param name="includePath" value="/WEB-INF/content/deposito/consultarProducto.xhtml"/>
+                                        </h:commandButton>
+                                        <h:commandButton value="Agregar" />
+                                    </h:panelGroup>
+                                    <h:commandButton value="Calcular Total">
+                                        <!--<f:ajax render=""/>-->
+                                    </h:commandButton><br/>
+                                    <span>Total a pagar:</span><h:inputText value="//TODO"/>
+                                </div>
+
+                            </div>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="inferior">
+
+                <div class="ventana">
+                    <h1>Pagos</h1>
+                    <div class="formulario">
+                        <h:panelGrid columns="2">
+                            <span>Forma de Pago:</span>
+                            <h:selectOneMenu value="//TODOformaPago"/>
+                            <span>Nro Cheque:</span>
+                            <h:inputText value="//TODO Nro Cheque"/>
+                            <span>Banco:</span>
+                            <h:panelGroup>
+                                <h:inputText value="//TODO Banco"/>
+                                <span>Sucursal:</span>
+                                <h:inputText value="//TODO Sucursal"/>
+                            </h:panelGroup>
+                            <span>Nombre Emisor:</span>
+                            <h:inputText value="//TODO Nombre Emisor"/>
+                            <span>Fecha de Emisión:</span>
+                            <h:inputText value="//TODO FechaEmisión"/>
+                            <span>Fecha de Cobro:</span>
+                            <h:inputText value="//TODO FechaCobro"/>
+                            <span>Nombre Cobrador::</span>
+                            <h:inputText value="//TODO Nombre Cobrador"/>
+                            <span>Monto:</span>
+                            <h:inputText value="//TODO Monto"/>
+                        </h:panelGrid>
+                        <h:commandButton value="Agregar" action="//TODO"/>
+                    </div>
+
+
+
+                    <div class="contenedor_tabla_listado">
+                        <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="detallePago" value="//TODODetalles">
+                            <h:column>
+                                <f:facet name="header">Indice</f:facet>
+                                001
+                            </h:column>
+                             <h:column>
+                                <f:facet name="header">Tipo</f:facet>
+                                <f:facet name="footer"><p style="text-align: right">Total</p></f:facet>
+                                Nota de Credito
+                            </h:column>
+                             <h:column>
+                                 <f:facet name="header">Monto</f:facet>
+                                300$
+                                <f:facet name="footer">300$</f:facet>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Acciones</f:facet>
+                                <h:commandLink value="Eliminar"/>
+                            </h:column>
+                        </h:dataTable>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <h:commandButton  value="Guardar" action="//TODO"/>
+            <h:commandButton  value="Cancelar" action="//TODO"/>
+
+        </h:form>
+    </ui:composition>
+
+</html>

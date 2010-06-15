@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition>
+        <h:form>
+            <div class="ventana">
+                <h1>Seleccione un Pedido</h1>
+                <div id="importaciones" class="formulario">
+                    <table>
+                        <tr>
+                            <td>
+                        <h:selectOneListbox id="importacionesLista" value="#{id_pedido}" size="8">
+                            <f:selectItems value="#{arreglo_de_pedidos}" />
+                            <f:ajax render="cabeceraPedido detallePedido"/>
+                        </h:selectOneListbox>
+                        </td>
+                        <td>
+                        <h:panelGrid id="cabeceraPedido" columns="2">
+                            <span>Nro Pedido:</span><h:outputLabel value="//TODO"/>
+                            <span>Fecha de Pedido:</span><h:outputLabel value="//TODO"/>
+                            <span>Fecha Estimada de Entrega:</span><h:outputLabel value="//TODO"/>
+                            <span>Cliente:</span><h:outputLabel value="//TODO"/>
+                            <span>Viajante:</span><h:outputLabel value="//TODO"/>
+                        </h:panelGrid>
+                        </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="ventana">
+                <h1>Detalle</h1>
+                <div class="formulario">
+                    <h:dataTable id="detallePedido" styleClass="tabla_listado" rowClasses="alterna1 alterna2" value="//TODO(resultadodebsqueda)" var="prodcto">
+                        <h:column>
+                            <f:facet name="header">Codigo</f:facet>
+                            producto.código
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Nombre</f:facet>
+                            producto.código
+                        </h:column><h:column>
+                            <f:facet name="header">Marca</f:facet>
+                            producto.marca
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Modelo</f:facet>
+                            producto.modelo
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Tamaño</f:facet>
+                            producto.tamaño
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Color</f:facet>
+                            producto.color
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Cantidad Pedida</f:facet>
+                            detalle.producto.cantidadpedida
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Cantidad Incluida en el Pedido</f:facet>
+                            <h:inputText value="//TODO"/>
+                        </h:column>
+                    </h:dataTable>
+                </div>
+            </div>
+            <p><h:commandButton value="Registrar Armado Pedido"/><h:commandButton value="Cancelar"/></p>
+        </h:form>
+    </ui:composition>
+</html>

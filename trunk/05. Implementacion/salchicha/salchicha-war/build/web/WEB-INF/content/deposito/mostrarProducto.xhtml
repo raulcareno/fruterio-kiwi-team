@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition>
+        <h:form>
+            <div class="hoja">
+                <h1> - Producto <h:outputLabel id="identificador" value="//TODO"/> - </h1>
+                <div class="seccion">
+                    <h2>Producto</h2>
+                    <h:panelGrid columns="2">
+
+                        <h:panelGroup><span>Codigo: </span><h:outputLabel id="CUIT" value="//TODO"/></h:panelGroup>
+                        <h:panelGroup><span>Nombre:</span><h:outputLabel id="razonsocial" value="//TODO"/></h:panelGroup>
+                        <h:panelGroup><span>Marca:</span> <h:outputLabel id="condicioniva" value="//TODO"/> </h:panelGroup>
+                        <h:panelGroup><span>Modelo:</span> <h:outputLabel id="telefono" value="//TODO"/> </h:panelGroup>
+                        <h:panelGroup><span>Tamaño:</span> <h:outputLabel id="celular" value="//TODO"/> </h:panelGroup>
+                        <h:panelGroup><span>Color:</span> <h:outputLabel id="fax" value="//TODO"/> </h:panelGroup>
+                        <h:panelGroup><span>Stock:</span> <h:outputLabel id="mail" value="//TODO"/> </h:panelGroup>
+                    </h:panelGrid>
+                </div>
+                <div class="seccion">
+                    <h2>Estadisticas</h2>
+                    //TODO(Logistica)
+                </div>
+
+            </div>
+            <h:commandButton actionListener="#{navigationBean.navigationPathChange}" value="&lt; Volver">
+                            <f:param name="includePath" value="/WEB-INF/content/deposito/consultarProducto.xhtml"/>
+            </h:commandButton>
+        </h:form>
+    </ui:composition>
+</html>

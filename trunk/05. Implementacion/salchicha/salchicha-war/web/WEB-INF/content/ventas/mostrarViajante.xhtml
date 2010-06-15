@@ -1,0 +1,103 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition>
+        <h:form>
+            <div class="hoja">
+                <h1> - Viajante <h:outputLabel id="identificador" value="//TODO"/> - </h1>
+                <div class="seccion">
+                    <h2>Datos de Viajanate</h2>
+                    <h:panelGrid columns="4">
+
+                        <span>Tipo DNI: </span><h:outputLabel id="tipodni" value="//TODO"/>
+                        <span>Nro. DNI: </span><h:outputLabel id="nrodni" value="//TODO"/>
+                        <span>Apellido: </span><h:outputLabel id="apellido" value="//TODO"/>
+                        <span>Nombre: </span><h:outputLabel id="nombre" value="//TODO"/>
+                        <span>Telefono: </span><h:outputLabel id="telefono" value="//TODO"/>
+                        <span>Celular: </span><h:outputLabel id="celular" value="//TODO"/>
+                        <span>Mail: </span><h:outputLabel id="mail" value="//TODO"/>
+                        <span>Comision %: </span><h:outputLabel id="comision" value="//TODO"/>
+
+
+
+                    </h:panelGrid>
+                </div>
+
+                <div class="seccion">
+                    <h2>Domicilios</h2>
+                    <h:dataTable styleClass="listado" rowClasses="alterna1 alterna2" var="domicilio" value="//TODOdomicilios">
+                        <h:column>
+                            <f:facet name="header">Provincia</f:facet>
+                            Cordoba
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Localidad</f:facet>
+                            Capital
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Barrio</f:facet>
+                            Barrio
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Calle</f:facet>
+                            Calle
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Altura</f:facet>
+                            Altura
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">CP</f:facet>
+                            CP
+                        </h:column>
+
+                    </h:dataTable>
+                </div>
+                <div class="seccion">
+                    <h2>Clientes</h2>
+                    <h:dataTable styleClass="listado" rowClasses="alterna1 alterna2" var="cliente" value="//TODOclientes">
+                        <h:column>
+                            <f:facet name="header">CUIT</f:facet>
+                            25-32002356/6
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Razón Social</f:facet>
+                            La Torre
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Condicion de iva</f:facet>
+                            Inscripto
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Celular</f:facet>
+                            356-2345678
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Mail</f:facet>
+                            latorre@nosvemos.com
+                        </h:column>
+                    </h:dataTable>
+                </div>
+                <div class="seccion">
+                    <h2>Zonas de venta</h2>
+                    <h:dataTable styleClass="listado" rowClasses="alterna1 alterna2" var="cliente" value="//TODOclientes">
+                        <h:column>
+                            <f:facet name="header">Nombre</f:facet>
+                            Jesus Maria
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Codigo Postal</f:facet>
+                            5223
+                        </h:column>
+                    </h:dataTable>
+                </div>
+            </div>
+            <h:commandButton actionListener="#{navigationBean.navigationPathChange}" value="&lt; Volver">
+                <f:param name="includePath" value="/WEB-INF/content/ventas/consultarViajante.xhtml"/>
+            </h:commandButton>
+        </h:form>
+    </ui:composition>
+</html>
+
+

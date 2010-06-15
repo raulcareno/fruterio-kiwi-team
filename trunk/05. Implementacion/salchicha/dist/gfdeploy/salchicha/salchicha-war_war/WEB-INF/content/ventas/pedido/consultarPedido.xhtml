@@ -1,0 +1,94 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition>
+        <h:form>
+            <div id="superior">
+                <table id="superior_tabla">
+                    <tr>
+                        <td>
+                            <div class="ventana">
+                                <h1>Búsqueda</h1>
+                                <div class="formulario">
+                                    <h:panelGrid columns="2">
+                                        <span>Nro Pedido:</span>
+                                        <h:inputText value="//TODO"/>
+                                    </h:panelGrid>
+                                    <h:panelGroup><h:selectBooleanCheckbox value="true" onclick="mostrar_ocultar(this.checked,'filtros');"/><span>Filtros de Búsqueda</span></h:panelGroup>
+                                    <div id="filtros">
+                                        <h:panelGrid columns="2">
+                                            <span>Viajante:</span>
+                                            <h:selectOneMenu value="//TODO"/>
+                                            <span>Cliente:</span>
+                                            <h:selectOneMenu value="//TODO"/>
+                                            <span>Fecha Estimada Entrega:</span>
+                                            <h:inputText onclick='scwShow(this,event);' value="//TODO"/>
+                                            <span>Fecha Cancelación:</span>
+                                            <h:inputText onclick='scwShow(this,event);' value="//TODO"/>
+                                            <span>Estado:</span>
+                                            <h:selectOneMenu value="//TODO"/>
+                                        </h:panelGrid>
+                                    </div>
+                                    <h:commandButton value="Buscar" action="//TODO"/>
+
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="inferior">
+                <div class="ventana">
+                    <h1>Pedidos</h1>
+                    <div class="formulario">
+                        <div class="contenedor_tabla_listado">
+                            <h:dataTable styleClass="tabla_listado" rowClasses="alterna1 alterna2" var="pedido" value="//TODOPedidos">
+                                <h:column>
+                                    <f:facet name="header">Nro</f:facet>
+                                    Nro
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Vendedor</f:facet>
+                                    Vendedor
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Cliente</f:facet>
+                                    Cliente
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">FechaEstEntrega</f:facet>
+                                    FechaEstEntrega
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">FechaCancelación</f:facet>
+                                    FechaCancelación
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Estado</f:facet>
+                                    Estado
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Acciones</f:facet>
+                                    <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Consultar">
+                                        <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/mostrarPedido.xhtml"/>
+                                    </h:commandLink>
+                                    <h:commandLink actionListener="#{navigationBean.navigationPathChange}" value="Seleccionar">
+                                        <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/anularPedido.xhtml"/>
+                                    </h:commandLink>
+                                </h:column>
+                            </h:dataTable>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <h:commandButton value="Salir" action="//TODO"/>
+
+
+
+        </h:form>
+    </ui:composition>
+
+</html>

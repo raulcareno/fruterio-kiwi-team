@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:composition>
+        <h:form>
+            <div class="ventana">
+                <h1>Buscar pedido</h1>
+                <div class="formulario">
+                    <span>Nro Pedido</span>
+                    <h:inputText value="//TODO (nro pedido)"/>
+                    <h:commandButton value="Cargar"/>
+                    <h:commandButton actionListener="#{navigationBean.navigationPathChange}" value="Muscar">
+                        <f:param name="includePath" value="/WEB-INF/content/ventas/pedido/consultarPedido.xhtml"/>
+                        <f:param name="titulo" value="Anular Pedido"/>
+                    </h:commandButton>
+                </div>
+            </div>
+            <div class="ventana">
+                <h1>Pedido a Anular</h1>
+                <div class="formulario">
+                    <h:panelGrid columns="4">
+                        <span>Cliente:</span>
+                        <h:outputText value="//TODO"/>
+                        <span>Domicilio de entrega:</span>
+                        <h:outputText value="MiDireccion 2123"/>
+                        <span>Responsable:</span>
+                        <h:outputText value="Responsable"/>
+                        <span>Fecha de Pedido:</span>
+                        <h:outputText value="11/02/1988"/>
+                        <span>Fecha Estimada de Entrega:</span>
+                        <h:outputText value="11/02/2010"/>
+                        <span>Descuento:</span>
+                        <h:outputText value="20%"/>
+                        <span>Estado:</span>
+                        <h:outputText value="Pendiente"/>
+                        <span>Motivo de Estado:</span>
+                        <h:outputText value="Registrado"/>
+                        <span>Fecha de anulacion:</span>
+                        <h:inputText value="TODO"/>
+                        <span>Motivo de anulacion:</span>
+                        <h:inputText value="TODO"/>
+
+
+                    </h:panelGrid>
+                </div>
+            </div>
+            <p><h:commandButton value="Anular"/><h:commandButton value="Cancelar"/></p>
+        </h:form>
+    </ui:composition>
+</html>

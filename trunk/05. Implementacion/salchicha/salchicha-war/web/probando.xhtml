@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:head>
+
+        <title>jQuery UI Dialog - Modal form</title>
+
+        <script type="text/javascript" src="resources/scripts/jquery.js"></script>
+        <script type="text/javascript" src="resources/scripts/jquery_ui.js"></script>
+        <script type="text/javascript" src="resources/scripts/utils.js"></script>
+        <h:outputStylesheet name="css/jquery_ui_smoothness.css"/>
+
+
+    </h:head>
+    <h:body>
+
+
+
+        <div id="dialog-form" title="Buscar Producto">
+
+            <h:form>
+                <fieldset>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+                    <label for="email">Email</label>
+
+                    <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all" />
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all" />
+                </fieldset>
+                
+            </h:form>
+        </div>
+
+
+
+        <h:outputText id="textoSalida" value="Hola mundo cruel!"/>
+
+        <button id="create-user">Create new user</button>
+
+
+
+
+    </h:body>
+</html>

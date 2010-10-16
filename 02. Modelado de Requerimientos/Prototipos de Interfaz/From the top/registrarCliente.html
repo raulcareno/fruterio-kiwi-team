@@ -1,0 +1,444 @@
+<html>
+    <head>        
+	
+        <link  type="text/css" rel="stylesheet" href="../css/masterPage.css"/>
+        <link  type="text/css" rel="stylesheet" href="../css/formulario.css"/>
+        <link  type="text/css" rel="stylesheet" href="../css/jquery_ui_smoothness.css"/>
+        <link  type="text/css" rel="stylesheet" href="../css/mostrar.css"/>
+        <link  type="text/css" rel="stylesheet" href="../css/popup.css"/>
+        <link  type="text/css" rel="stylesheet" href="../css/menuTree.css"/>
+        <link  type="text/css" rel="stylesheet" href="../css/jquery.notice.css"/>
+
+        <script language="JavaScript" src="../scripts/Notificaciones.js"></script>
+        <script language="JavaScript" src="../scripts/jquery.js"></script>
+        <script language="JavaScript" src="../scripts/jquery_ui.js"></script>
+        <script language="JavaScript" src="../scripts/DocReady.js"></script>
+        <script language="JavaScript" src="../scripts/AjaxLoader.js"></script>
+        <script language="JavaScript" src="../scripts/popup.js"></script>
+        <script language="JavaScript" src="../scripts/treeMenu.js"></script>
+        <script language="JavaScript" src="../scripts/jquery.notice.js"></script>
+        <script language="JavaScript" src="../scripts/SpryAccordion.js"></script>
+        <script language="JavaScript" src="../scripts/utiles.js"></script>
+
+
+
+        <title>
+            Registrar Cliente
+        </title>
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="top">
+                <div id="top_menu">
+                   <span class="nombre_usuario">Juan Citó</span>
+				   <a Class="top_menu_item">Configurar Cuenta</a>
+			<a Class="top_menu_item">Salir</a>
+            
+                </div>
+                <span>Sistema Estrategico Eben Ezer</span>
+            </div>
+            <div id="cuerpo">
+                <table id="cuerpo_tabla">
+                    <tr>
+                        <td id="celda_izquierda">
+                            <div id="barra_lateral_izquierda">
+                                <div id="logo">
+                                </div>
+                                <div id="contenedor_menu_navegacion">
+                                    <ul id="menu_navegacion">
+                                         <ul id="menuTree">
+                <li><span>Ventas</span>
+                    <ul>
+                        <li><span>Cliente</span>
+                            <ul>
+                                <li><a>Registrar Cliente</a></li>
+                        <li><a>Consultar Cliente</a></li>
+                <li><a>Modificar Cliente</a></li>
+            </ul>
+            </li>
+            <li><span>Catalogo</span>
+                <ul>
+                    <li><a>Consultar Catalogo</a></li>
+            	</ul>
+            </li>
+            <li><span>Pedido</span>
+                <ul>
+                    <li><a>Registrar Pedido</a></li>
+            		<li><a>Consultar Pedido</a></li>
+            		<li><a>Modificar Pedido</a></li>
+            		<li><a>Registrar Venta</a></li>
+            		<li><a>Anular Pedido</a></li>
+            	</ul>
+            </li>
+            <li><span>Viajante</span>
+                <ul>
+                    <li><a>Registrar Rendicion de ventas a viajante</a></li>
+		            <li><a>Consultar Viajante</a></li>
+            		<li><a>Registrar Devolucion de Venta</a></li>
+	            </ul>
+            </li>
+         </ul>
+       </li>
+       <li><span>Deposito</span>
+         <ul>
+            <li><span>Pedido</span>
+               	<ul>
+                   <li><a>Registrar Salida de Pedido</a></li>
+                   <li><a>Registrar Armado de Pedido</a></li>
+            	</ul>
+            </li>
+            <li><span>Producto</span>
+                <ul>
+                    <li><a>Registrar Ingreso de Productos Importados</a></li>
+		            <li><a>Registrar Reaprovisionamiento Interno</a></li>
+					<li><a>Registrar Salida de Produccion</a></li>
+		            <li><a>Registrar Producto</a></li>
+        		    <li><a>Consultar Producto</a></li>
+            		<li><a>Modificar Producto</a></li>
+            		<li><a>Registrar Devolución de Productos Terminados</a></li>
+            	</ul>
+            </li>
+            <li><span>Materia Prima</span>
+                <ul>
+                    <li><a>Registrar Salida de Materia Prima</a></li>
+           		 	<li><a>Registrar Ingreso de Materia Prima</a></li>
+            	</ul>
+            </li>
+            <li><span>Stock</span>
+                <ul>
+                    <li><a>Registrar Pedido de Reabastecimiento</a></li>
+            		<li><a>Registrar Inconsistencia de Deposito</a></li>
+            	</ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+                <script type="text/javascript">
+                setMenuTree('Registrar Cliente');
+        		</script>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="copyrights">
+                                <span>Kiwi SW! (c) 2010</span>
+                            </div>
+                        </td>
+                        <td id="contenido">
+                            <div id="aplicacion_top">
+                                <div id="titulo_aplicacion_top"> 
+                                    Registrar Cliente
+									<img src="../images/spinner.gif" id="ajaxIndicator" style="position:absolute;right: 1px ;top:43px;display:none"/>
+                                </div>
+                                
+                                <div id="top_contenido_menu">
+                                    <a>Guardar</a>
+									<a>Imprimir</a>
+									<a>Ayuda!</a>
+                                </div>
+                            </div>
+                            <div id="aplicacion_area">
+                                <form>
+                <div id="superior">
+                    <table id="superior_tabla">
+                        <tr>
+                            <td>
+                                <div class="ventana">
+                                    <h1>Empresa Cliente</h1>
+                                    <div class="formulario"><table>
+
+<tbody>
+<tr>
+<td>
+                                            <span>CUIT:</span></td>
+<td><input type="text"  style="width:60px" /><input type="submit"  value="Buscar CUIT" title="Click aqui si el cliente no conoce su CUIT" /></td>
+</tr>
+<tr>
+<td>
+                                            <span>Razón Social:</span></td>
+<td><input type="text"/></td>
+</tr>
+<tr>
+<td>
+
+                                            <span>Condición IVA:</span></td>
+<td><select name="todo:j_idt145" size="1" style="width:145px">	<option value="10">Monotributista</option>
+	<option value="11">Responsable Inscripto</option>
+	<option value="12">Exento</option>
+	<option value="13">IVA No Responsable</option>
+	<option value="14">R.I. Agente de RetenciÃ³n</option>
+
+	<option value="15">Sujeto No Categorizado</option>
+</select></td>
+</tr>
+<tr>
+<td>
+                                            <span>Teléfono:</span></td>
+<td><input type="text" name="todo:j_idt148" /></td>
+</tr>
+<tr>
+<td>
+                                            <span>Celular:</span></td>
+
+<td><input type="text" name="todo:j_idt150" /></td>
+</tr>
+<tr>
+<td>
+                                            <span>Fax:</span></td>
+<td><input type="text" name="todo:j_idt152" /></td>
+</tr>
+<tr>
+<td>
+                                            <span>e-Mail:</span></td>
+<td><input id="todo:mail" type="text" name="todo:mail" /></td>
+</tr>
+</tbody>
+
+</table>
+
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ventana">
+                                    <h1>Contacto</h1>
+                                    <div class="formulario"><table>
+
+<tbody>
+<tr>
+<td><input id="todo:btnNuevoResp" type="submit" name="todo:btnNuevoResp" value="Registrar Responsable" /></td>
+</tr>
+</tbody>
+</table>
+
+        <div class="contenedor_tabla_listado"><table id="todo:idTablaResp" class="tabla_listado">
+<thead>
+<tr>
+<th scope="col">Nombre</th>
+<th scope="col">DNI</th>
+<th scope="col">Telefono</th>
+
+<th scope="col">e-Mail</th>
+<th scope="col">Acciones</th>
+</tr>
+</thead>
+<tbody>
+<tr class="alterna1">
+<td>Federico Nafría</td>
+<td>940980977</td>
+<td>3516432716</td>
+<td><a href="mailto:federiconafria@hotmail.com">federiconafria@hotmail.com</a></td>
+<td><a href="#">Eliminar</a></td>
+</tr>
+<tr class="alterna2">
+<td>Santiago Waisman</td>
+<td>11523125</td>
+<td>35144668028</td>
+<td><a href="mailto:santihombresabio@hotmail.com"> santihombresabio@hotmail.com</a></td>
+<td><a href="#">Eliminar</a></td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+                                    </div>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="inferior">
+                    <div class="ventana">
+                        <h1>Domicilio</h1>
+
+                        <div class="formulario"><table>
+<tbody>
+<tr>
+<td>
+            <span>Provincia:</span></td>
+<td><select id="todo:provincia" style="width:145px" name="todo:provincia" size="1" >
+	<option value="1">Buenos Aires</option>
+	<option value="2">Catamarca</option>
+	<option value="3">Chaco</option>
+
+	<option value="4">Chubut</option>
+
+	<option value="5">Cordoba</option>
+	<option value="6">Corrientes</option>
+	<option value="7">Entre Rios</option>
+	<option value="8">Formosa</option>
+	<option value="9">Jujuy</option>
+
+	<option value="10">La Pampa</option>
+	<option value="11">La Rioja</option>
+	<option value="12">Mendoza</option>
+	<option value="13">Misiones</option>
+	<option value="14">Neuquen</option>
+	<option value="15">Rio Negro</option>
+
+	<option value="16">Salta</option>
+	<option value="17">San Juan</option>
+	<option value="18">San Luis</option>
+	<option value="19">Santa Cruz</option>
+	<option value="20">Santa Fe</option>
+	<option value="21">Santiago del Estero</option>
+
+	<option value="22">Tierra del Fuego</option>
+	<option value="23">Tucuman</option>
+</select></td>
+
+<td>
+            <span>Localidad:</span></td>
+<td><select id="localidad" name="localidad" size="1" style="width:145px"></select></td>
+</tr>
+<tr>
+<td>
+            <span>CP:</span></td>
+<td><input id="todo:cp" type="text" name="todo:cp" value="0" /></td>
+<td>
+
+            <span>Barrio:</span></td>
+<td><input id="todo:barrio" type="text" name="todo:barrio" /></td>
+
+</tr>
+<tr>
+<td><span>Calle:</span></td>
+<td><input id="todo:calle" type="text" name="todo:calle" /></td>
+<td><span>Altura:</span></td>
+<td><input id="todo:altura" type="text" name="todo:altura" style="width:70px" value="0" /></td>
+</tr>
+<tr>
+<td>
+
+            <span>Depto:</span></td>
+<td><input id="todo:depto" type="text" name="todo:depto" /></td>
+
+<td>
+            <span>Descripcion:</span></td>
+<td><input type="text" /></td>
+</tr>
+</tbody>
+</table>
+<input type="button" value="Agregar" />
+<div class="contenedor_tabla_listado">
+<table id="idTablaDom" class="tabla_listado">
+<thead>
+<tr>
+<th>Provincia</th>
+<th>Localidad</th>
+<th>CP</th>
+<th>Barrio</th>
+<th>Calle</th>
+<th>Altura</th>
+<th>Depto</th>
+<th>Descripción</th>
+<th>Acciones</th>
+</tr>
+
+
+</thead>
+<tbody>
+<tr class="alterna1">
+<td>Córdoba</td>
+<td>Carlos Paz</td>
+<td>5042</td>
+<td>barrio 1</td>
+<td>Calle Falsa</td>
+<td>123</td>
+<td> - </td>
+<td>Deposito</td>
+<td><a href="#">Eliminar</a><select size="1"><option>Sin responsable</option><option>Federico Nafría</option><option>Santiago Waisman</option></select></td>
+</tr>
+<tr class="alterna2">
+<td>San Juan</td>
+<td>Rivadavia</td>
+<td>5400</td>
+<td>Porres</td>
+<td>Azcuenaga</td>
+<td>1332</td>
+<td> - </td>
+<td>Sucursal San Juan</td>
+<td><a href="#">Eliminar</a><select size="1"><option>Sin responsable</option><option>Federico Nafría</option><option>Santiago Waisman</option></select></td>
+</tr>
+</table>
+
+
+        </div>
+                        </div>
+                    </div>
+                </div>
+                <p><input type="submit" name="todo:j_idt212" value="Aceptar" /><input type="submit" name="todo:j_idt213" value="Cancelar" />
+                </p>
+
+                <div class="ventana pop" id="newResp">
+                    <h1>Nuevo Responsable</h1>
+                    <div class="formulario"><table>
+<tbody>
+<tr>
+<td>
+            <span>Tipo Documento:</span></td>
+<td><select id="todo:tipodoc" name="todo:tipodoc" size="1"></select></td>
+</tr>
+<tr>
+<td>
+
+            <span>Nro Documento:</span></td>
+<td><input id="todo:nroDoc" type="text" name="todo:nroDoc" value="TODO" /></td>
+</tr>
+<tr>
+<td>
+            <span>Nombre:</span></td>
+<td><input id="todo:nombre" type="text" name="todo:nombre" value="//TODO" /></td>
+</tr>
+<tr>
+<td>
+            <span>Apellido:</span></td>
+
+<td><input id="todo:apellido" type="text" name="todo:apellido" value="//TODO" /></td>
+</tr>
+<tr>
+<td>
+            <span>e-Mail:</span></td>
+<td><input id="todo:emal" type="text" name="todo:emal" value="//TODO" /></td>
+</tr>
+<tr>
+<td>
+            <span>Telefono:</span></td>
+<td><input id="todo:telefono" type="text" name="todo:telefono" value="//TODO" /></td>
+</tr>
+<tr>
+
+<td>
+            <span>Celular:</span></td>
+<td><input id="todo:celular" type="text" name="todo:celular" value="//TODO" /></td>
+</tr>
+</tbody>
+</table>
+<input id="todo:j_idt224" type="submit" name="todo:j_idt224" value="Aceptar" onClick="mojarra.ab(this,event,'action','@form','todo:idTablaResp',{'onevent':showAjaxIndicator});return false" /><input type="submit" name="todo:j_idt225" value="Cancelar" />
+                    </div>
+                </div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="8085387026734498129:3132974305789156863" autocomplete="off" />
+</form>
+
+            <script type="text/javascript">
+            $("input[value='Registrar Responsable']").click(function(event){
+                event.preventDefault();
+                mostrarPopUp('newResp');
+                });
+            if($("div:contains('Registrar Cliente')").length!=0)
+            {
+                Disable("todo:buscar");
+                Disable("todo:cuit");
+            }
+
+            </script>
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </body>
+</html>

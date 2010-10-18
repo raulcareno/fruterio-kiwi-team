@@ -25,8 +25,12 @@
         <title>
             Registrar Pedido
         </title>
-
-    </head>
+        <style type="text/css">
+<!--
+.Estilo1 {font-size: 14px}
+-->
+        </style>
+</head>
     <body>
         <div id="wrapper">
             <div id="top">
@@ -43,7 +47,7 @@
                     <tr>
                         <td id="celda_izquierda">
                             <div id="barra_lateral_izquierda">
-                                <div id="logo">                                </div>
+                                <div id="logo">:                                </div>
                                 <div id="contenedor_menu_navegacion">
                                     <ul id="menu_navegacion">
                                          <ul id="menuTree">
@@ -142,18 +146,21 @@
                       </table>
                         <div id="cliente">
                             <div class="bloque">
-                                <span>CUIT:</span><input type="text" value=""/>
+                                <span>CUIT:</span><input type="text" value="30-61922183-0"/>
                                 <input type="button" value="Cargar" /><br/>
                                 <input type="button"  value="Buscar Cliente"/>
                                                                    
                                 <input type="button"  value="Registrar Cliente"/>
                             </div>
-                            <div class="bloque"><span>Razón Social:</span>
-                                <label>La Torre</label> </div>
-                            <div class="bloque"><span>Domicilio de entrega:</span>
-                                <select size="1"><option>Calle falsa 123 barrio uno</option><option>Calle 2 666, barrio orriab</option><option>calle jon 000 barrio barrió</option></select>
-                                <div class="poper" id="nuevodomicilio">Nuevo Domicilio</div>
-                            </div>
+                          <div class="bloque Estilo1"><strong>Catamara Optica S.A. </strong></div>
+                            <div class="bloque"><span><strong>Domicilio de entrega:</strong></span>
+                                <select size="1">
+                                  <option>Bv San Juan 545, Nva Cba, C&oacute;rdoba, C&oacute;rdoba</option>
+                                  <option>Calle 2 666, barrio orriab</option>
+                                  <option>calle jon 000 barrio barri&oacute;</option>
+                                </select>
+                                <div class="poper" id="nuevodomicilio"><input type="button" value="Nuevo Domicilio"/></div>
+                          </div>
                         
                         <h2>Responsables</h2>
                     <div class="contenedor_tabla_listado">
@@ -166,35 +173,39 @@
                           <th>Acciones</th>
                         </tr>
                         <tr class="alterna1">
-                          <td>Juan Pepe</td>
+                          <td>Juan Gonzalez </td>
                           <td>33456890</td>
                           <td>3514984038</td>
                           <td><a href="mailto:juanpe@hotmail.com">juanpe@hotmail.com</a></td>
                           <td><a href="#">Consultar</a></td>
                         </tr>
                         <tr class="alterna2">
-                          <td>Jose Pedro</td>
+                          <td>Jose Parodi </td>
                           <td>33453902</td>
                           <td>3514590274</td>
                           <td><a href="mailto:josepe@hotmail.com">josepe@hotmail.com</a></td>
                           <td><a href="#">Consultar</a></td>
                         </tr>
                       </table></div></div>
-					  <span>Fecha de Pedido:</span><input type="text" id="fecha" class="datepick" value="fechadehoy" disabled="true"/>               
-                            <span>Fecha Estimada de Entrega:</span><input type="text" class="datepick" value="__/__/__"/>
-                    </div>
+					  <span>Fecha de Pedido:</span><input type="text" id="fecha" class="datepick" value="18/10/2010" disabled="true"/>               
+                            <span>Fecha Estimada de Entrega:</span><input type="text" class="datepick" value="11/02/2011"/>
+                  </div>
                 </div><!--fin de la ventana 'datos de entrega'-->
                 <div class="ventana">
                     <h1>Detalles</h1>
-                    <div class="formulario">
+                  <div class="formulario">
                         <table>
-                            <tr><td><span>Codigo Producto:</span></td><td><input type="text"/>
+                            <tr><td><span>Codigo Producto:</span></td><td><input type="text" value="2"/>
                             <input type="button" value="Cargar"/>
                             <input type="button" value="Buscar Producto"/></td></tr>
                             <tr><td><span>Cantidad Solicitada:</span></td>
-                            <td><input type="text"/><span> de <label id="lblCantidadDisp"> XX</label> unidades disponibles</span>                            </td>
+                            <td><input type="text" value="1"/>
+                            <span> de <label id="lblCantidadDisp"> 25 </label>
+                                 unidades disponibles</span>                            </td>
                             </tr>
-                            <tr><td><span>Precio:</span></td><td><label>$ XX</label>
+                            <tr>
+                              <td><span>Precio Sugerido:</span></td>
+                              <td><label>$ 25 </label>
                             </td></tr>
                         </table><input type="button" value="Agregar Producto"/>
                         <div class="contenedor_tabla_listado" >
@@ -205,33 +216,56 @@
                                 <th>Modelo</th>
                                 <th>Tamaño</th>
                                 <th>Color</th>
-                                <th>Precio Unitario </th>
                                 <th>Cantidad</th>
+                                <th>Precio Unitario </th>
+                                <th>Subtotal</th>
                                 <th>Acciones</th>
                               </tr>
                               <tr class="alterna1">
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <td>1</td>
+                                <td>Dimodica</td>
+                                <td>8080S</td>
+                                <td>S</td>
+                                <td>Merlot</td>
+                                <td>2</td>
+                                <td>$50</td>
+                                <td>$100</td>
                                 <td><a href="#">Eliminar</a></td>
                               </tr>
                               <tr class="alterna2">
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
+                                <td>2</td>
+                                <td>Dimodica</td>
+                                <td>7898M</td>
+                                <td>M</td>
+                                <td>Azul Metalico </td>
+                                <td>1</td>
+                                <td>$25</td>
+                                <td>$125</td>
                                 <td><a href="#">Eliminar</a></td>
                               </tr>
+							  <tfoot>
+							  <tr>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+<td bordercolor="#F0F0F0"><p style="text-align: right"><strong>Total:</strong></p></td>
+<td><strong>$125</strong></td>
+<td></td>
+</tr>
+
+
+							  <tr>
+<td></td><td></td><td></td><td></td>
+<td><div align="right"><span>Descuento:</span></div></td><td><span class="bloque">
+  <select name="select" size="1">
+    <option>15%</option>
+  </select>
+</span></td>
+<td bordercolor="#F0F0F0"><p style="text-align: right"><strong>Total con Descuento: </strong></p></td>
+<td><strong>$106,25</strong></td>
+<td></td>
+</tr>
+</tfoot>
                             </table>
                         </div>
-                        <span>Descuento:</span> <input type="text"/>
                     </div>
                 </div><!--fin de la ventana detalles-->
                 <p class="botonera">
@@ -279,23 +313,25 @@
 
 <td>
             <span>Localidad:</span></td>
-<td><select id="localidad" name="localidad" size="1" style="width:145px"></select></td>
+<td><select id="localidad" name="localidad" size="1" style="width:145px">
+  <option>Capital</option>
+</select></td>
 </tr>
 <tr>
 <td>
             <span>CP:</span></td>
-<td><input id="todo:cp" type="text" name="todo:cp" value="0" /></td>
+<td><input id="todo:cp" type="text" name="todo:cp" value="4000" /></td>
 <td>
 
             <span>Barrio:</span></td>
-<td><input id="todo:barrio" type="text" name="todo:barrio" /></td>
+<td><input name="todo:barrio" type="text" id="todo:barrio" value="Matienzo" /></td>
 
 </tr>
 <tr>
 <td><span>Calle:</span></td>
-<td><input id="todo:calle" type="text" name="todo:calle" /></td>
+<td><input name="todo:calle" type="text" id="todo:calle" value="Los Alamos" /></td>
 <td><span>Altura:</span></td>
-<td><input id="todo:altura" type="text" name="todo:altura" style="width:70px" value="0" /></td>
+<td><input id="todo:altura" type="text" name="todo:altura" style="width:70px" value="555" /></td>
 </tr>
 <tr>
 <td>

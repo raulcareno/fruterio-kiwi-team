@@ -145,32 +145,34 @@
                                     <div id="superior">
                                         <table id="superior_tabla">
                                             <tr>
-                                                <td>
+                                                <td width="185">
                                                     <div class="ventana">
                                                         <h1>Cliente</h1>
                                                         <div class="formulario">
-                                                            <select size="6"><option>La torre</option><option>Soler</option><option>Bertoncheli</option><option>Ratatrampa</option><option>Optimus Prime</option></select>
+                                                          <select name="select2" size="6">
+                                                            <option>Catamarca Optica S.A.</option>
+                                                            <option>Soler S.R.L.</option>
+                                                            <option>Bertoncheli S.A.</option>
+                                                            <option>Ratatrampa S.A.</option>
+                                                          </select>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td>
+                                                    </div>                                                </td>
+                                                <td width="304">
                                                     <div class="ventana">
                                                         <h1>Pedidos</h1>
                                                       <div class="formulario">
                                                             <div class="contenedor_tabla_listado">
-                                                                <table class="tabla_listado">
+                                                                <table width="116%" class="tabla_listado">
                                                               <tr class="alterna1">
                                                                 <th scope="col">Nro Pedido </th>
                                                                 <th scope="col">Fecha Entrega </th>
                                                                 <th scope="col">Seleccionar</th>
-                                                                
                                                               </tr>
                                                               <tr>
                                                                 <td>125</td>
                                                                 <td>12/12/2010</td>
                                                                 <td>
-                                                                  <input name="radiobutton" type="radio" value="radiobutton">
-                                                                </td>
+                                                                  <input name="radiobutton" type="radio" value="radiobutton" checked>                                                                </td>
                                                               </tr>
                                                               <tr class="alterna2">
                                                                 <td>348</td>
@@ -179,65 +181,99 @@
                                                               </tr>
                                                             </table>
                                                             </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </td>
+                                                            <p><span class="formulario avanzado">
+                                                              <input name="button" type="button" value="Cargar"/>
+                                                        </span></p>
+                                                      </div>
+                                                    </div>                                                </td>
                                             </tr>
                                         </table>
                                         <div class="ventana">
                                             <h1>Detalle del Pedido</h1>
 
                                             <div class="formulario">
-                                                <div class="contenedor_tabla_listado"><table id="j_idt228:detallePedido" class="tabla_listado">
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="col">Código</th>
-                                                                <th scope="col">Nombre</th>
-                                                                <th scope="col">Precio Unitario</th>
-                                                                <th scope="col">Cantidad Pedido</th>
-                                                                <th scope="col">Cantidad Entregado</th>
-                                                                <th scope="col">Subtotal</th>
+                                                <div class="contenedor_tabla_listado">
+												  <table class="tabla_listado">
+                              <tr>
+                                <th width="8%">Codigo</th>
+                                <th width="9%">Marca</th>
+                                <th width="9%">Modelo</th>
+                                <th width="9%">Tamaño</th>
+                                <th width="13%">Color</th>
+                                <th width="9%">Cantidad</th>
+                                <th width="24%">Precio Unitario </th>
+                                <th width="9%">Subtotal</th>
+                                <th width="10%">Acciones</th>
+                              </tr>
+                              <tr class="alterna1">
+                                <td>1</td>
+                                <td>Dimodica</td>
+                                <td>8080S</td>
+                                <td>S</td>
+                                <td>Merlot</td>
+                                <td><input type="text" value="2" size="5" maxlength="5"/></td>
+                                <td>$50</td>
+                                <td>$100</td>
+                                <td><a href="#">Eliminar</a></td>
+                              </tr>
+                              <tr class="alterna2">
+                                <td>2</td>
+                                <td>Dimodica</td>
+                                <td>7898M</td>
+                                <td>M</td>
+                                <td>Azul Metalico </td>
+                                <td><input name="text4" type="text" value="1" size="5"/></td>
+                                <td>$25</td>
+                                <td>$125</td>
+                                <td><a href="#">Eliminar</a></td>
+                              </tr>
+							  <tfoot>
+							  <tr>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+<td bordercolor="#F0F0F0"><p style="text-align: right"><strong>Total:</strong></p></td>
+<td><strong>$125</strong></td>
+<td></td>
+</tr>
 
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr class="alterna1 alterna2">
-                                                                <td>
-                                                                    0f23
-                                                                </td>
-                                                                <td>
-                                                                    CH Cardinal Rojo Mediano
-                                                                </td>
-                                                                <td>
-                                                                    20$
-                                                                </td>
-                                                                <td>
 
-                                                                    50
-                                                                </td>
-                                                                <td><input id="j_idt228:detallePedido:0:j_idt260" type="text" name="j_idt228:detallePedido:0:j_idt260" onblur="mojarra.ab(this,event,'blur',0,'j_idt228:detallePedido:0:subtotal')" /></td>
-                                                                <td>
-                                                                    800
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+							  <tr>
+<td></td><td></td><td></td><td></td>
+<td><div align="right"><span>Descuento:</span></div></td><td><span class="bloque">
+  <select name="select" size="1">
+    <option>15%</option>
+  </select>
+</span></td>
+<td bordercolor="#F0F0F0"><p style="text-align: right"><strong>Total con Descuento: </strong></p></td>
+<td><strong>$106,25</strong></td>
+<td></td>
+</tr>
+</tfoot>
+                            </table>
 
                                                 </div>
                                             </div>
 
                                             
-											<div class="exp"><img src="../images/icons/003_39.png" height="11px" width="11px" ><h2 style="display:inline">Agregar Producto</h2></div>
-                                            <div class="formulario avanzado">
-                                                <span>Código:</span><input type="text" /><input type="submit" value="Buscar Producto" />
-                                                <span>Cantidad:</span><input type="text"/></br>
-												<input type="button" value="Agregar"/>
-                                            </div>
-											<div class="formulario">
-											<input type="button" value="Calcular Total"/>
-											<span>Total a pagar:</span><input type="text" value="//TODO" />
+											<div class="exp"><img src="../images/icons/003_39.png" height="11px" width="11px" >
+											<h2 style="display:inline">Productos</h2>
 											</div>
+                                            <div class="formulario avanzado">
+                                                  <table>
+                            <tr><td><span>Codigo Producto:</span></td><td><input type="text" value="2"/>
+                            <input type="button" value="Cargar"/>
+                            <input type="button" value="Buscar Producto"/></td></tr>
+                            <tr><td><span>Cantidad Solicitada:</span></td>
+                            <td><input type="text" value="1"/>
+                            <span> de <label id="lblCantidadDisp"> 25 </label>
+                                 unidades disponibles</span>                            </td>
+                            </tr>
+                            <tr>
+                              <td><span>Precio Sugerido:</span></td>
+                              <td><label>$ 25 </label>
+                            </td></tr>
+                        </table><input type="button" value="Agregar Producto"/>
+                                            </div>
+										
 
                                         </div>
 
@@ -252,42 +288,38 @@
                                                 <tr>
                                                   <td><span>Forma de Pago:
                                                     <select name="select" size="1" style="width:145px">
-                                                      <option>Nota de credito</option>
                                                       <option>Efectivo</option>
-                                                      <option>Cheque</option>
+                                                      <option selected>Cheque</option>
                                                     </select>
                                                   </span></th>
                                                 </tr>
                                                 <tr>
                                                   <td><table>
-                                                    <tr>
-                                                      <td><fieldset><legend style="font-size:12px">Nota de Credito</legend>
-													  <span>Monto de Nota: $</span><label>XX.XX</label>
-                                                          </fieldset> </th>
+                                                    
                                                     <td><fieldset><legend style="font-size:12px">Cheque</legend>
                                                         <table>
                                                           <tbody>
                                                             <tr>
                                                               <td><span>Nro Cheque:</span></td>
-                                                              <td><input type="text" name="j_idt228:j_idt285" value="//TODO Nro Cheque" /></td>
+                                                              <td><input type="text" name="j_idt228:j_idt285" value="89898089" /></td>
                                                             </tr>
                                                             <tr>
                                                               <td><span>Banco:</span></td>
-                                                              <td><input name="text" type="text"/></td>
+                                                              <td><input name="text" type="text" value="Banco Naci&oacute;n"/></td>
                                                               <td><span>Sucursal:</span></td>
-                                                              <td><input name="text2" type="text"/></td>
+                                                              <td><input name="text2" type="text" value="C&oacute;rdoba"/></td>
                                                             </tr>
                                                             <tr>
                                                               <td><span>Nombre Emisor:</span></td>
-                                                              <td><input type="text" name="j_idt228:j_idt292" value="//TODO Nombre Emisor" /></td>
+                                                              <td><input type="text" name="j_idt228:j_idt292" value="Roberto S&aacute;nchez" /></td>
                                                               <td><span>Nombre Cobrador:</span></td>
-                                                              <td><input type="text" name="j_idt228:j_idt298" value="//TODO Nombre Cobrador" /></td>
+                                                              <td><input type="text" name="j_idt228:j_idt298" value="Eben ezer" /></td>
                                                             </tr>
                                                             <tr>
                                                               <td><span>Fecha de Emisión:</span></td>
-                                                              <td><input type="text" name="j_idt228:j_idt294" value="//TODO FechaEmisión" /></td>
+                                                              <td><input type="text" name="j_idt228:j_idt294" value="18/10/2010" /></td>
                                                               <td><span>Fecha de Cobro:</span></td>
-                                                              <td><input type="text" name="j_idt228:j_idt296" value="//TODO FechaCobro" /></td>
+                                                              <td><input type="text" name="j_idt228:j_idt296" value="12/12/2010" /></td>
                                                             </tr>
                                                           </tbody>
                                                         </table>
@@ -296,7 +328,7 @@
                                                 </tr>
                                                 <tr>
                                                   <td><span>Monto de Pago:
-                                                      <input name="text3" type="text" />
+                                                      <input name="text3" type="text" value="$50" />
                                                   </span></td>
                                                 </tr>
                                               </table>
@@ -306,7 +338,7 @@
 
 
 
-                                            <div class="contenedor_tabla_listado"><table class="tabla_listado">
+                                          <div class="contenedor_tabla_listado"><table class="tabla_listado">
                                                     <thead>
                                                         <tr>
                                                             <th scope="col">Indice</th>
@@ -320,27 +352,35 @@
                                                         <tr>
                                                             <td></td>
                                                             <td><p style="text-align: right">Total</p></td>
-                                                            <td>400$</td>
+                                                            <td>$ 106,25 </td>
                                                             <td></td>
                                                         </tr>
                                                     </tfoot>
                                                     <tbody>
                                                         <tr class="alterna1">
                                                           <td>001 </td>
-                                                          <td>Nota de Credito </td>
-                                                          <td>$ 100 </td>
-                                                          <td><a href="#" onclick="mojarra.jsfcljs(document.getElementById('j_idt228'),{'j_idt228:j_idt303:0:j_idt317':'j_idt228:j_idt303:0:j_idt317'},'');return false">Eliminar</a></td>
+                                                          <td>Nota de Cr&eacute;dito </td>
+                                                          <td>$ 50 </td>
+                                                          <td><a href="#" onClick="mojarra.jsfcljs(document.getElementById('j_idt228'),{'j_idt228:j_idt303:0:j_idt317':'j_idt228:j_idt303:0:j_idt317'},'');return false"></a></td>
                                                         </tr>
                                                         <tr class="alterna2">
                                                             <td>002</td>
+                                                            <td>Cheque</td>
+                                                            <td>
+                                                                $ 50 </td>
+                                                            <td><a href="#" onClick="mojarra.jsfcljs(document.getElementById('j_idt228'),{'j_idt228:j_idt303:0:j_idt317':'j_idt228:j_idt303:0:j_idt317'},'');return false">Eliminar</a><a href="#" onClick="mojarra.jsfcljs(document.getElementById('j_idt228'),{'j_idt228:j_idt303:0:j_idt317':'j_idt228:j_idt303:0:j_idt317'},'');return false">Modificar </a></td>
+                                                        </tr>
+														<tr class="alterna1">
+                                                            <td>002</td>
                                                             <td>Efectivo</td>
                                                             <td>
-                                                                $ 300</td>
-                                                            <td><a href="#" onclick="mojarra.jsfcljs(document.getElementById('j_idt228'),{'j_idt228:j_idt303:0:j_idt317':'j_idt228:j_idt303:0:j_idt317'},'');return false">Eliminar</a></td>
+                                                                $ 6,25 </td>
+                                                            <td><a href="#" onClick="mojarra.jsfcljs(document.getElementById('j_idt228'),{'j_idt228:j_idt303:0:j_idt317':'j_idt228:j_idt303:0:j_idt317'},'');return false">Eliminar</a><a href="#" onClick="mojarra.jsfcljs(document.getElementById('j_idt228'),{'j_idt228:j_idt303:0:j_idt317':'j_idt228:j_idt303:0:j_idt317'},'');return false">Modificar </a></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
 
+                                              <p>*Si existe Nota de Cr&eacute;dito del Cliente, se agrega autom&aacute;ticamente un registro a esta tabla.</p>
                                             </div>
 
 

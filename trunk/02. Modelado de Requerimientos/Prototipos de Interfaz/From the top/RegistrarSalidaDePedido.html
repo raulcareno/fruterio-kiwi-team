@@ -25,7 +25,6 @@
         <title>
             Registrar Salida de Pedido
         </title>
-
     </head>
     <body>
         <div id="wrapper">
@@ -140,65 +139,83 @@
                             <div id="aplicacion_area">
                                 <form id="todo">
             <div class="ventana">
-                <h1>Indique el viajante</h1>
-                <div class="formulario">
-				<select>
-				<option>juan</option>
-				<option>pepe</option>
-				<option>jose</option>
-				<option>mario</option>
-				</select>
-                    <input type="button" value="Cargar"/>
-                        
-<!--                    <panelGrid columns="2" id="viajanteDetalle">
+                <h1>Viajantes</h1>
+                <div class="formulario"><!--                    <panelGrid columns="2" id="viajanteDetalle">
                         <span>Tipo documento</span><outputText value="DNI"/>
                         <span>Nro Docuento</span><outputText value="33333333"/>
                         <span>Zona de venta</span><outputText value="Valentina alsina"/>
                     </panelGrid>-->
 
+                <table width="200" border="0">
+                  <tr>
+                    <td><span>Viajante:</span></td>
+                    <td><select name="select">
+                      <option>Juan Perez</option>
+                      <option>pepe</option>
+                      <option>jose</option>
+                      <option>mario</option>
+                    </select></td>
+                    <td><div align="left">
+                      <input name="button" type="button" value="Cargar"/>
+                    </div></td>
+                  </tr>
+                </table>
                 </div>
             </div>
             <div class="ventana">
-                <h1>Seleccione los Pedidos a Retirar</h1>
+                <h1>Pedidos Armados </h1>
                 <div id="agregarpedidos" class="formulario">
                     <table >
                         <tr>
-                            <td><table width="146" border="1" class="tabla_listado">
+                            <td width="285"><table width="82%" border="1" class="tabla_listado">
                               <tr>
-                                <th colspan="2">Fecha Pedido </th>
+                                <th colspan="2">Fecha Pedido</th>
+                                <th>Acci&oacute;n</th>
                               </tr>
                               <tr class="alterna1">
-                                <td width="29"><input type="checkbox" name="checkbox" value="checkbox"></td>
-                                <td width="101">11/10/2008</td>
+                                <td width="48"><input name="checkbox" type="checkbox" value="checkbox" checked></td>
+                                <td width="111">11/10/2008</td>
+                                <td width="96"><a href="#">Ver</a></td>
                               </tr>
                               <tr class="alterna2">
-                                <td><input type="checkbox" name="checkbox2" value="checkbox"></td>
+                                <td><input name="checkbox2" type="checkbox" value="checkbox" checked></td>
                                 <td>12/08/2009</td>
+                                <td><a href="#">Ver</a></td>
                               </tr>
                               <tr class="alterna1">
-                                <td><input type="checkbox" name="checkbox3" value="checkbox"></td>
+                                <td><input name="checkbox3" type="checkbox" value="checkbox" checked></td>
                                 <td>05/03/2010</td>
+                                <td><a href="#">Ver</a></td>
                               </tr>
                               <tr class="alterna2">
                                 <td><input type="checkbox" name="checkbox4" value="checkbox"></td>
                                 <td>01/08/2010</td>
+                                <td><a href="#">Ver</a></td>
                               </tr>
                               <tr class="alterna1">
                                 <td><input type="checkbox" name="checkbox5" value="checkbox"></td>
                                 <td>12/08/2010</td>
+                                <td><a href="#">Ver</a></td>
                               </tr>
                             </table>
 							
                         
                         </td>
-						<td>
-                        	<table id="cabeceraPedido">
-							<tr><td><span>Nro Pedido:</span><label>315</label></td></tr>
-							<tr><td><span>Fecha de Pedido:</span><label>11/10/2008</label></td></tr>
-                            <tr><td><span>Fecha Estimada de Entrega:</span><label>01/12/2010</label></td></tr>
-                            <tr><td><span>Cliente:</span><label>Luigi Bros</label></td></tr>
-                            <tr><td><span>Viajante:</span><label>juan</label></td></tr>
-							</table>
+						<td width="291">
+                        	<table width="254" id="cabeceraPedido">
+							<tr><td width="243"><span>Nro Pedido:</span>
+							<label> 315</label></td></tr>
+							<tr><td><span>Fecha de Pedido:</span>
+							<label> 11/10/2008</label></td></tr>
+                            <tr>
+                              <td><span>Fecha Estimada de Entrega: </span>
+                                <label>01/12/2010</label></td></tr>
+                            <tr>
+                              <td><span>Cliente: </span>
+                                <label>Luigi Bros</label></td></tr>
+                            <tr><td><span>Viajante:</span>
+                            <label> Juan Perez </label></td></tr>
+						  </table>
                         </td>
                         </tr>
                     </table>
@@ -206,7 +223,7 @@
                 </div>
             </div>
             <div class="ventana">
-                <h1>Pedidos a retirar</h1>
+                <h1>Pedidos a Retirar </h1>
 				
                 <div class="formulario">
 				<div class="contenedor_tabla_listado">

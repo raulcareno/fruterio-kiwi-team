@@ -134,7 +134,7 @@
                                 <div id="top_contenido_menu">
                                     <a>Guardar</a>
 									<a>Imprimir</a>
-									<a>Ayuda!</a>
+									<a>Ayuda!s</a>
                                 </div>
                             </div>
                             <div id="aplicacion_area">
@@ -145,60 +145,49 @@
                             <td>
                                 <div class="ventana">
                                     <h1>Empresa Cliente</h1>
-                                    <div class="formulario"><table>
-
-<tbody>
-<tr>
-<td>
-                                            <span>CUIT:</span></td>
-<td><input type="text"  style="width:60px" /><input type="submit"  value="Buscar CUIT" title="Click aqui si el cliente no conoce su CUIT" /></td>
-</tr>
-<tr>
-<td>
-                                            <span>Razón Social:</span></td>
-<td><input type="text"/></td>
-</tr>
-<tr>
-<td>
-
-                                            <span>Condición IVA:</span></td>
-<td><select name="todo:j_idt145" size="1" style="width:145px">	<option value="10">Monotributista</option>
-	<option value="11">Responsable Inscripto</option>
-	<option value="12">Exento</option>
-	<option value="13">IVA No Responsable</option>
-	<option value="14">R.I. Agente de RetenciÃ³n</option>
-
-	<option value="15">Sujeto No Categorizado</option>
-</select></td>
-</tr>
-<tr>
-<td>
-                                            <span>Teléfono:</span></td>
-<td><input type="text" name="todo:j_idt148" /></td>
-</tr>
-<tr>
-<td>
-                                            <span>Celular:</span></td>
-
-<td><input type="text" name="todo:j_idt150" /></td>
-</tr>
-<tr>
-<td>
-                                            <span>Fax:</span></td>
-<td><input type="text" name="todo:j_idt152" /></td>
-</tr>
-<tr>
-<td>
-                                            <span>e-Mail:</span></td>
-<td><input id="todo:mail" type="text" name="todo:mail" /></td>
-</tr>
-</tbody>
-
-</table>
-
+                                    <div class="formulario">
+                                      <table>
+                                        <tbody>
+                                          <tr>
+                                            <td><span>CUIT:</span></td>
+                                            <td><input name="text" type="text"  value="30-61922183-0" />
+                                                <input name="submit" type="submit" title="Click aqui si el cliente no conoce su CUIT"  value="Buscar CUIT" /></td>
+                                          </tr>
+                                          <tr>
+                                            <td><span>Razón Social:</span></td>
+                                            <td><input name="text" type="text" value="Catamarca Lentes SA"/></td>
+                                          </tr>
+                                          <tr>
+                                            <td><span>Condición IVA:</span></td>
+                                            <td><select name="todo:j_idt145" size="1" style="width:145px">
+                                                <option value="10">Monotributista</option>
+                                                <option value="11">Responsable Inscripto</option>
+                                                <option value="12">Exento</option>
+                                                <option value="13">IVA No Responsable</option>
+                                                <option value="14">R.I. Agente de RetenciÃ³n</option>
+                                                <option value="15">Sujeto No Categorizado</option>
+                                            </select></td>
+                                          </tr>
+                                          <tr>
+                                            <td><span>Teléfono:</span></td>
+                                            <td><input name="todo:j_idt148" type="text" value="03833454647" /></td>
+                                          </tr>
+                                          <tr>
+                                            <td><span>Celular:</span></td>
+                                            <td><input type="text" name="todo:j_idt150" /></td>
+                                          </tr>
+                                          <tr>
+                                            <td><span>Fax:</span></td>
+                                            <td><input type="text" name="todo:j_idt152" /></td>
+                                          </tr>
+                                          <tr>
+                                            <td><span>e-Mail:</span></td>
+                                            <td><input name="todo:mail" type="text" id="todo:mail" value="catamarcalentes@hotmail.com" /></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
                                     </div>
-                                </div>
-                            </td>
+                                </div>                            </td>
                             <td>
                                 <div class="ventana">
                                     <h1>Contacto</h1>
@@ -239,12 +228,9 @@
 </tr>
 </tbody>
 </table>
-
         </div>
                                     </div>
-
-                                </div>
-                            </td>
+                                </div>                            </td>
                         </tr>
                     </table>
                 </div>
@@ -259,7 +245,7 @@
             <span>Provincia:</span></td>
 <td><select id="todo:provincia" style="width:145px" name="todo:provincia" size="1" >
 	<option value="1">Buenos Aires</option>
-	<option value="2">Catamarca</option>
+	<option value="2" selected>Catamarca</option>
 	<option value="3">Chaco</option>
 
 	<option value="4">Chubut</option>
@@ -290,23 +276,36 @@
 
 <td>
             <span>Localidad:</span></td>
-<td><select id="localidad" name="localidad" size="1" style="width:145px"></select></td>
+<td><select id="localidad" name="localidad" size="1" style="width:145px">
+  <option>Capital</option>
+</select></td>
+<td><span>Responsable:</span></td>
+<td><select name="select" size="1">
+  <option>Sin responsable</option>
+  <option>Federico Nafr&iacute;a</option>
+  <option>Santiago Waisman</option>
+</select>
+</td>
 </tr>
 <tr>
 <td>
             <span>CP:</span></td>
-<td><input id="todo:cp" type="text" name="todo:cp" value="0" /></td>
+<td><input id="todo:cp" type="text" name="todo:cp" value="4700" /></td>
 <td>
 
             <span>Barrio:</span></td>
-<td><input id="todo:barrio" type="text" name="todo:barrio" /></td>
+<td><input name="todo:barrio" type="text" id="todo:barrio" value="Centro" /></td>
 
+<td>&nbsp;</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><span>Calle:</span></td>
-<td><input id="todo:calle" type="text" name="todo:calle" /></td>
+<td><input name="todo:calle" type="text" id="todo:calle" value="Chacabuco" /></td>
 <td><span>Altura:</span></td>
-<td><input id="todo:altura" type="text" name="todo:altura" style="width:70px" value="0" /></td>
+<td><input id="todo:altura" type="text" name="todo:altura" style="width:70px" value="200" /></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td>
@@ -317,11 +316,12 @@
 <td>
             <span>Descripcion:</span></td>
 <td><input type="text" /></td>
+<td>&nbsp;</td>
+<td><input name="button" type="button" value="Agregar" style="width:100px"/></td>
 </tr>
 </tbody>
 </table>
-<input type="button" value="Agregar" />
-<div class="contenedor_tabla_listado">
+                          <div class="contenedor_tabla_listado">
 <table id="idTablaDom" class="tabla_listado">
 <thead>
 <tr>
@@ -343,12 +343,12 @@
 <td>Córdoba</td>
 <td>Carlos Paz</td>
 <td>5042</td>
-<td>barrio 1</td>
+<td>Los Naranjos</td>
 <td>Calle Falsa</td>
 <td>123</td>
 <td> - </td>
 <td>Deposito</td>
-<td><a href="#">Eliminar</a><select size="1"><option>Sin responsable</option><option>Federico Nafría</option><option>Santiago Waisman</option></select></td>
+<td><a href="#">Eliminar</a></td>
 </tr>
 <tr class="alterna2">
 <td>San Juan</td>
@@ -359,7 +359,7 @@
 <td>1332</td>
 <td> - </td>
 <td>Sucursal San Juan</td>
-<td><a href="#">Eliminar</a><select size="1"><option>Sin responsable</option><option>Federico Nafría</option><option>Santiago Waisman</option></select></td>
+<td><a href="#">Eliminar</a></td>
 </tr>
 </table>
 
@@ -378,40 +378,41 @@
 <tr>
 <td>
             <span>Tipo Documento:</span></td>
-<td><select id="todo:tipodoc" name="todo:tipodoc" size="1"></select></td>
+<td><select id="todo:tipodoc" name="todo:tipodoc" size="1"><option value="10">DNI
+</option></select></td>
 </tr>
 <tr>
 <td>
 
             <span>Nro Documento:</span></td>
-<td><input id="todo:nroDoc" type="text" name="todo:nroDoc" value="TODO" /></td>
+<td><input id="todo:nroDoc" type="text" name="todo:nroDoc" value="33598580" /></td>
 </tr>
 <tr>
 <td>
             <span>Nombre:</span></td>
-<td><input id="todo:nombre" type="text" name="todo:nombre" value="//TODO" /></td>
+<td><input id="todo:nombre" type="text" name="todo:nombre" value="Marcos" /></td>
 </tr>
 <tr>
 <td>
             <span>Apellido:</span></td>
 
-<td><input id="todo:apellido" type="text" name="todo:apellido" value="//TODO" /></td>
+<td><input id="todo:apellido" type="text" name="todo:apellido" value="Barrera" /></td>
 </tr>
 <tr>
 <td>
             <span>e-Mail:</span></td>
-<td><input id="todo:emal" type="text" name="todo:emal" value="//TODO" /></td>
+<td><input id="todo:emal" type="text" name="todo:emal" value="marcosb@gmail.com" /></td>
 </tr>
 <tr>
 <td>
             <span>Telefono:</span></td>
-<td><input id="todo:telefono" type="text" name="todo:telefono" value="//TODO" /></td>
+<td><input id="todo:telefono" type="text" name="todo:telefono" value="4664758" /></td>
 </tr>
 <tr>
 
 <td>
             <span>Celular:</span></td>
-<td><input id="todo:celular" type="text" name="todo:celular" value="//TODO" /></td>
+<td><input id="todo:celular" type="text" name="todo:celular" value="0383315484758" /></td>
 </tr>
 </tbody>
 </table>

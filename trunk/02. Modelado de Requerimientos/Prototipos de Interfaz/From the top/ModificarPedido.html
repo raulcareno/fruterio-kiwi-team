@@ -1,0 +1,375 @@
+<html>
+    <head>        
+	
+        <link  type="text/css" rel="stylesheet" href="../css/masterPage.css"/>
+        <link  type="text/css" rel="stylesheet" href="../css/formulario.css"/>
+        <link  type="text/css" rel="stylesheet" href="../css/jquery_ui_smoothness.css"/>
+        <link  type="text/css" rel="stylesheet" href="../css/mostrar.css"/>
+        <link  type="text/css" rel="stylesheet" href="../css/popup.css"/>
+        <link  type="text/css" rel="stylesheet" href="../css/menuTree.css"/>
+        <link  type="text/css" rel="stylesheet" href="../css/jquery.notice.css"/>
+
+        <script language="JavaScript" src="../scripts/Notificaciones.js"></script>
+        <script language="JavaScript" src="../scripts/jquery.js"></script>
+        <script language="JavaScript" src="../scripts/jquery_ui.js"></script>
+        <script language="JavaScript" src="../scripts/DocReady.js"></script>
+        <script language="JavaScript" src="../scripts/AjaxLoader.js"></script>
+        <script language="JavaScript" src="../scripts/popup.js"></script>
+        <script language="JavaScript" src="../scripts/treeMenu.js"></script>
+        <script language="JavaScript" src="../scripts/jquery.notice.js"></script>
+        <script language="JavaScript" src="../scripts/SpryAccordion.js"></script>
+        <script language="JavaScript" src="../scripts/utiles.js"></script>
+
+
+
+        <title>
+            Registrar Pedido
+        </title>
+        <style type="text/css">
+<!--
+.Estilo1 {font-size: 14px}
+-->
+        </style>
+</head>
+    <body>
+        <div id="wrapper">
+            <div id="top">
+                <div id="top_menu">
+                   <span class="nombre_usuario">Juan Citó</span>
+				   <a Class="top_menu_item">Configurar Cuenta</a>
+			<a Class="top_menu_item">Salir</a>
+            
+                </div>
+                <span>Sistema Estrategico Eben Ezer</span>
+            </div>
+            <div id="cuerpo">
+                <table id="cuerpo_tabla">
+                    <tr>
+                        <td id="celda_izquierda">
+                            <div id="barra_lateral_izquierda">
+                                <div id="logo">:                                </div>
+                                <div id="contenedor_menu_navegacion">
+                                    <ul id="menu_navegacion">
+                                         <ul id="menuTree">
+                <li><span>Ventas</span>
+                    <ul>
+                        <li><span>Cliente</span>
+                            <ul>
+                                <li><a>Registrar Cliente</a></li>
+                        <li><a>Consultar Cliente</a></li>
+                <li><a>Modificar Cliente</a></li>
+            </ul>
+            </li>
+            <li><span>Catalogo</span>
+                <ul>
+                    <li><a>Consultar Catalogo</a></li>
+            	</ul>
+            </li>
+            <li><span>Pedido</span>
+                <ul>
+                    <li><a>Registrar Pedido</a></li>
+            		<li><a>Consultar Pedido</a></li>
+            		<li><a>Modificar Pedido</a></li>
+            		<li><a>Registrar Venta</a></li>
+            		<li><a>Anular Pedido</a></li>
+            	</ul>
+            </li>
+            <li><span>Viajante</span>
+                <ul>
+                    <li><a>Registrar Rendicion de ventas a viajante</a></li>
+		            <li><a>Consultar Viajante</a></li>
+            		<li><a>Registrar Devolucion de Venta</a></li>
+	            </ul>
+            </li>
+         </ul>
+       </li>
+       <li><span>Deposito</span>
+         <ul>
+            <li><span>Pedido</span>
+               	<ul>
+                   <li><a>Registrar Salida de Pedido</a></li>
+                   <li><a>Registrar Armado de Pedido</a></li>
+            	</ul>
+            </li>
+            <li><span>Producto</span>
+                <ul>
+                    <li><a>Registrar Ingreso de Productos Importados</a></li>
+		            <li><a>Registrar Reaprovisionamiento Interno</a></li>
+					<li><a>Registrar Salida de Produccion</a></li>
+		            <li><a>Registrar Producto</a></li>
+        		    <li><a>Consultar Producto</a></li>
+            		<li><a>Modificar Producto</a></li>
+            		<li><a>Registrar Devolución de Productos Terminados</a></li>
+            	</ul>
+            </li>
+            <li><span>Materia Prima</span>
+                <ul>
+                    <li><a>Registrar Salida de Materia Prima</a></li>
+           		 	<li><a>Registrar Ingreso de Materia Prima</a></li>
+            	</ul>
+            </li>
+            <li><span>Stock</span>
+                <ul>
+                    <li><a>Registrar  Pedido de Reabastecimiento</a></li>
+            		<li><a>Registrar Inconsistencia de Deposito</a></li>
+            	</ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+                <script type="text/javascript">
+                setMenuTree('Registrar Pedido');
+        		</script>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="copyrights">
+                                <span>Kiwi SW! (c) 2010</span>                            </div>                        </td>
+                        <td id="contenido">
+                            <div id="aplicacion_top">
+                                <div id="titulo_aplicacion_top"> 
+                                    Modificar Pedido</div>
+                                
+                                <div id="top_contenido_menu">
+                                    <a>Guardar</a>
+									<a>Imprimir</a>
+									<a>Ayuda!</a>                                </div>
+                            </div>
+                            <div id="aplicacion_area">
+                                <form id="todo">
+                <div class="ventana">
+                    <h1>Datos de Entrega</h1>
+                  <div class="formulario">
+                        <table>
+                            <tr>
+                              <td><span>Nro del Pedido: 
+                                <input name="text" type="text" value="2"/>
+                                <span class="poper">
+                                <input name="button" type="button" value="Cargar"/>
+                                <input name="button2" type="button" value="Buscar"/>
+                              </span></span></td>
+                            </tr>
+                      </table>
+                        <div id="cliente">
+                          <div class="bloque">
+                                <span>CUIT:</span><input type="text" value="30-61922183-0" disabled="true"/>
+                                <br/>
+                            </div>
+                          <div class="bloque Estilo1"><strong>Catamara Optica S.A. </strong></div>
+                            <div class="bloque"><span><strong>Domicilio de entrega:</strong></span>
+                                <select size="1">
+                                  <option>Bv San Juan 545, Nva Cba, C&oacute;rdoba, C&oacute;rdoba</option>
+                                  <option>Calle 2 666, barrio orriab</option>
+                                  <option>calle jon 000 barrio barri&oacute;</option>
+                                </select>
+                                <div class="poper" id="nuevodomicilio"><input type="button" value="Nuevo Domicilio"/></div>
+                          </div>
+                        
+                        <h2>Responsables</h2>
+                    <div class="contenedor_tabla_listado">
+                      <table class="tabla_listado">
+                        <tr>
+                          <th>Nombre</th>
+                          <th>Documento</th>
+                          <th>Telefono</th>
+                          <th>e-Mail</th>
+                          <th>Acciones</th>
+                        </tr>
+                        <tr class="alterna1">
+                          <td>Juan Gonzalez </td>
+                          <td>33456890</td>
+                          <td>3514984038</td>
+                          <td><a href="mailto:juanpe@hotmail.com">juanpe@hotmail.com</a></td>
+                          <td><a href="#">Consultar</a></td>
+                        </tr>
+                        <tr class="alterna2">
+                          <td>Jose Parodi </td>
+                          <td>33453902</td>
+                          <td>3514590274</td>
+                          <td><a href="mailto:josepe@hotmail.com">josepe@hotmail.com</a></td>
+                          <td><a href="#">Consultar</a></td>
+                        </tr>
+                      </table></div></div>
+					  <span>Fecha de Pedido:</span><input type="text" id="fecha" class="datepick" value="18/10/2010" disabled="true"/>               
+                            <span>Fecha Estimada de Entrega:</span><input type="text" class="datepick" value="11/02/2011"/>
+                  </div>
+                </div><!--fin de la ventana 'datos de entrega'-->
+                <div class="ventana">
+                    <h1>Detalles</h1>
+                  <div class="formulario">
+                        <table>
+                            <tr><td><span>Codigo Producto:</span></td><td><input type="text" value="2"/>
+                            <input type="button" value="Cargar"/>
+                            <input type="button" value="Buscar Producto"/></td></tr>
+                            <tr><td><span>Cantidad Solicitada:</span></td>
+                            <td><input type="text" value="1"/>
+                            <span> de <label id="lblCantidadDisp"> 25 </label>
+                                 unidades disponibles</span>                            </td>
+                            </tr>
+                            <tr>
+                              <td><span>Precio Sugerido:</span></td>
+                              <td><label>$ 25 </label>
+                            </td></tr>
+                        </table><input type="button" value="Agregar Producto"/>
+                        <div class="contenedor_tabla_listado" >
+						    <table class="tabla_listado">
+                              <tr>
+                                <th>Codigo</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Tamaño</th>
+                                <th>Color</th>
+                                <th>Cantidad</th>
+                                <th>Precio Unitario </th>
+                                <th>Subtotal</th>
+                                <th>Acciones</th>
+                              </tr>
+                              <tr class="alterna1">
+                                <td>1</td>
+                                <td>Dimodica</td>
+                                <td>8080S</td>
+                                <td>S</td>
+                                <td>Merlot</td>
+                                <td>2</td>
+                                <td>$50</td>
+                                <td>$100</td>
+                                <td><a href="#">Eliminar</a></td>
+                              </tr>
+                              <tr class="alterna2">
+                                <td>2</td>
+                                <td>Dimodica</td>
+                                <td>7898M</td>
+                                <td>M</td>
+                                <td>Azul Metalico </td>
+                                <td>1</td>
+                                <td>$25</td>
+                                <td>$125</td>
+                                <td><a href="#">Eliminar</a></td>
+                              </tr>
+							  <tfoot>
+							  <tr>
+<td></td><td></td><td></td><td></td><td></td><td></td>
+<td bordercolor="#F0F0F0"><p style="text-align: right"><strong>Total:</strong></p></td>
+<td><strong>$125</strong></td>
+<td></td>
+</tr>
+
+
+							  <tr>
+<td></td><td></td><td></td><td></td>
+<td><div align="right"><span>Descuento:</span></div></td><td><span class="bloque">
+  <select name="select" size="1">
+    <option>15%</option>
+  </select>
+</span></td>
+<td bordercolor="#F0F0F0"><p style="text-align: right"><strong>Total con Descuento: </strong></p></td>
+<td><strong>$106,25</strong></td>
+<td></td>
+</tr>
+</tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div><!--fin de la ventana detalles-->
+                <p class="botonera">
+                <input type="button" value="Aceptar" />
+                <input type="button" value="Cancelar"/>
+                </p>
+                <div class="ventana pop" id="newDom">
+                    <h1>Nuevo Domicilio</h1>
+                    <div class="formulario">
+                        <table>
+<tbody>
+<tr>
+<td>
+            <span>Provincia:</span></td>
+<td><select id="todo:provincia" style="width:145px" name="todo:provincia" size="1" >
+	<option value="1">Buenos Aires</option>
+	<option value="2">Catamarca</option>
+	<option value="3">Chaco</option>
+
+	<option value="4">Chubut</option>
+
+	<option value="5">Cordoba</option>
+	<option value="6">Corrientes</option>
+	<option value="7">Entre Rios</option>
+	<option value="8">Formosa</option>
+	<option value="9">Jujuy</option>
+
+	<option value="10">La Pampa</option>
+	<option value="11">La Rioja</option>
+	<option value="12">Mendoza</option>
+	<option value="13">Misiones</option>
+	<option value="14">Neuquen</option>
+	<option value="15">Rio Negro</option>
+
+	<option value="16">Salta</option>
+	<option value="17">San Juan</option>
+	<option value="18">San Luis</option>
+	<option value="19">Santa Cruz</option>
+	<option value="20">Santa Fe</option>
+	<option value="21">Santiago del Estero</option>
+
+	<option value="22">Tierra del Fuego</option>
+	<option value="23">Tucuman</option>
+</select></td>
+
+<td>
+            <span>Localidad:</span></td>
+<td><select id="localidad" name="localidad" size="1" style="width:145px">
+  <option>Capital</option>
+</select></td>
+</tr>
+<tr>
+<td>
+            <span>CP:</span></td>
+<td><input id="todo:cp" type="text" name="todo:cp" value="4000" /></td>
+<td>
+
+            <span>Barrio:</span></td>
+<td><input name="todo:barrio" type="text" id="todo:barrio" value="Matienzo" /></td>
+
+</tr>
+<tr>
+<td><span>Calle:</span></td>
+<td><input name="todo:calle" type="text" id="todo:calle" value="Los Alamos" /></td>
+<td><span>Altura:</span></td>
+<td><input id="todo:altura" type="text" name="todo:altura" style="width:70px" value="555" /></td>
+</tr>
+<tr>
+<td>
+
+            <span>Depto:</span></td>
+<td><input id="todo:depto" type="text" name="todo:depto" /></td>
+
+<td>
+            <span>Descripcion:</span></td>
+<td><input type="text" /></td>
+</tr>
+</tbody>
+</table>
+                        <input type="submit" value="Agregar" />
+                        <input type="submit" value="Cancelar" />
+                    </div>
+                </div>
+            </form>
+            <script type="text/javascript">
+                $('#nuevodomicilio').click(function(event){
+                    event.preventDefault();
+                    mostrarPopUp('newDom');
+                    });
+                if($("div:contains('Registrar Cliente')").length!=0)
+                {
+                    Disable("#:tipo");
+                    Disable("#:fecha");
+                }
+
+                </script>
+                            </div>                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </body>
+</html>

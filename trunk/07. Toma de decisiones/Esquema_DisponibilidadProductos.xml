@@ -1,0 +1,84 @@
+<Schema name="DisponibilidadProductos">
+  <Dimension type="StandardDimension" highCardinality="false" name="Color">
+    <Hierarchy name="Color" hasAll="true" primaryKey="id">
+      <Table name="color">
+      </Table>
+      <Level name="Color" column="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Marca">
+    <Hierarchy name="Marca" hasAll="true" primaryKey="id">
+      <Table name="marca">
+      </Table>
+      <Level name="Marca" column="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Tama&#241;o">
+    <Hierarchy name="Tama&#241;o" hasAll="true" primaryKey="id">
+      <Table name="tama&#241;o">
+      </Table>
+      <Level name="Tama&#241;o" column="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="TimeDimension" highCardinality="false" name="Tiempo">
+    <Hierarchy name="Tiempo" hasAll="true" primaryKey="id">
+      <Table name="tiempo">
+      </Table>
+      <Level name="A&#241;o" column="a&#241;o" type="Integer" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
+      </Level>
+      <Level name="Trimestre" column="trimestre" type="String" uniqueMembers="false" levelType="TimeQuarters" hideMemberIf="Never">
+      </Level>
+      <Level name="Mes" column="mes_desc" type="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
+      </Level>
+      <Level name="Dia" column="dia_del_mes" type="String" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never">
+      </Level>
+      <Level name="NombreDia" column="dia_de_la_semana_desc" type="String" uniqueMembers="false" levelType="TimeDays" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Modelo">
+    <Hierarchy name="Modelo" hasAll="true" primaryKey="id">
+      <Table name="modelo">
+      </Table>
+      <Level name="Modelo" column="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" name="NumeroProducto">
+    <Hierarchy name="NumeroProducto" hasAll="true" primaryKey="id">
+      <Table name="disponibilidadproductos" alias="">
+      </Table>
+      <Level name="NumeroProducto" column="nroProducto" type="String" uniqueMembers="false" levelType="Regular">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="DisponibilidadProductos" cache="true" enabled="true">
+    <Table name="disponibilidadproductos">
+    </Table>
+    <DimensionUsage source="Modelo" name="Modelo" foreignKey="idModelo" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Marca" name="Marca" foreignKey="idMarca" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tama&#241;o" name="Tama&#241;o" foreignKey="idTama&#241;o" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tiempo" name="FechaIngreso" foreignKey="idFechaIngreso" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tiempo" name="Fecha" foreignKey="idFechaFoto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="NumeroProducto" name="NumeroProducto" foreignKey="id">
+    </DimensionUsage>
+    <Measure name="CantidadDeProductos" column="nroProducto" datatype="Integer" aggregator="distinct count" visible="true">
+    </Measure>
+    <Measure name="CantTotalProdEnDeposito" column="cantidadProductos" datatype="Integer" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="CantProdEnDepProdImportado" column="cantidadEnDepositoProdImportado" datatype="Integer" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="CantProdEnDepProdTerminado" column="cantidadEnDepositoProdTerminado" datatype="Integer" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="CantProdEnManosProveedor" column="cantidadEnProveedor" datatype="Integer" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

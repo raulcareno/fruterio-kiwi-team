@@ -23,7 +23,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="TimeDimension" highCardinality="false" name="Tiempo" caption="Dimension Tiempo" description="Utilizada en el Cubo de Disponibilidad de Productos, Disponibilidad Materia Prima y Compras">
+  <Dimension type="TimeDimension" highCardinality="false" name="Tiempo" caption="Dimension Tiempo" description="Utilizada en el Cubo de Disponibilidad de Productos, Disponibilidad Materia Prima, Compras y Pedido/Venta">
     <Hierarchy name="Tiempo" hasAll="true" allMemberName="Todos los a&#241;os" primaryKey="id" caption="A&#241;o - Trimestre - Mes - Dia">
       <Table name="tiempo">
       </Table>
@@ -91,6 +91,74 @@
       </Level>
     </Hierarchy>
   </Dimension>
+  <Dimension type="StandardDimension" name="ProductoVendido" caption="Producto" description="Utilizada en el Cubo de Pedido/Venta">
+    <Hierarchy name="Producto" hasAll="true" allMemberName="Todos los productos" primaryKey="idProducto" caption="Productos">
+      <Table name="pedidos_ventas">
+      </Table>
+      <Level name="Numero" column="nroProducto" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nroProducto">
+      </Level>
+      <Level name="Nombre" column="nombreProducto" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombreProducto">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" name="Cliente" caption="Cliente" description="Utilizada en el Cubo de Pedido/Venta">
+    <Hierarchy name="Cliente" hasAll="true" allMemberName="Todos los clientes" primaryKey="id" caption="Clientes">
+      <Table name="cliente" alias="">
+      </Table>
+      <Level name="RazonSocial" column="razonSocial" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="razonSocial">
+      </Level>
+      <Level name="Mail" column="mail" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="mail">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" name="Pedido" caption="Pedido" description="Utilizada en el Cubo de Pedido/Venta">
+    <Hierarchy name="NumeroPedido" hasAll="true" allMemberName="Todos los pedidos" primaryKey="nroPedido" caption="Numero de Pedido">
+      <Table name="pedidos_ventas" alias="">
+      </Table>
+      <Level name="Numero" column="nroPedido" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nroPedido">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" name="Viajante" caption="Viajante" description="Utilizada en el Cubo de Pedido/Venta">
+    <Hierarchy name="Viajante" hasAll="true" allMemberName="Todos los viajantes" primaryKey="id" caption="Viajante">
+      <Table name="viajante" alias="">
+      </Table>
+      <Level name="NombreApellido" column="nombreApellido" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombreApellido">
+      </Level>
+      <Level name="Telefono" column="telefono" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="telefono">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" name="Domicilio" caption="Domicilio" description="Utilizada en el Cubo de Pedido/Venta">
+    <Hierarchy name="Domicilio" hasAll="true" allMemberName="Todos los domicilios" primaryKey="id" caption="Barrio - Calle - Altura - Departamento">
+      <Table name="domicilio" alias="">
+      </Table>
+      <Level name="Barrio" column="barrio" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="barrio">
+      </Level>
+      <Level name="Calle" column="calle" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="calle">
+      </Level>
+      <Level name="Altura" column="altura" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="altura">
+      </Level>
+      <Level name="Departamento" column="depto" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="depto">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" name="Provincia" caption="Provincia" description="Utilizada en el Cubo de Pedido/Venta">
+    <Hierarchy name="Provincia" hasAll="true" allMemberName="Todas las provincias" primaryKey="id" caption="Provincias">
+      <Table name="provincia" alias="">
+      </Table>
+      <Level name="Nombre" column="nombre" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombre">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" name="Localidad" caption="Localidad" description="Utilizada en el Cubo de Pedido/Venta">
+    <Hierarchy name="Localidad" hasAll="true" allMemberName="Todas las localidades" primaryKey="id" caption="Localidades">
+      <Table name="localidad">
+      </Table>
+      <Level name="Nombre" column="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="nombre">
+      </Level>
+    </Hierarchy>
+  </Dimension>
   <Cube name="DisponibilidadProductos" caption="Cubo Disponibilidad Productos" description="Cubo de Disponibilidad de Productos" cache="true" enabled="true">
     <Table name="disponibilidadproductos">
     </Table>
@@ -145,6 +213,44 @@
     <Measure name="Importe" column="importe" datatype="Numeric" aggregator="sum" caption="Importe Comprado" visible="true">
     </Measure>
     <CalculatedMember name="PrecioProducto" caption="Precio de Producto" formula="[Measures].[Importe] / [Measures].[CantidadComprada]" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="PedidosVentas" caption="Cubo Pedidos/Ventas" description="Cubo de Pedidos/Ventas" cache="true" enabled="true">
+    <Table name="pedidos_ventas" alias="">
+    </Table>
+    <DimensionUsage source="Pedido" name="Pedido" caption="Numero de Pedido" foreignKey="nroPedido">
+    </DimensionUsage>
+    <DimensionUsage source="ProductoVendido" name="Producto" caption="Producto" foreignKey="idProducto">
+    </DimensionUsage>
+    <DimensionUsage source="Cliente" name="Cliente" caption="Cliente" foreignKey="idCliente">
+    </DimensionUsage>
+    <DimensionUsage source="Viajante" name="Viajante" caption="Viajante" foreignKey="idViajante">
+    </DimensionUsage>
+    <DimensionUsage source="Tiempo" name="FechaPedido" caption="Fecha de Pedido" foreignKey="idFechaPedido">
+    </DimensionUsage>
+    <DimensionUsage source="Tiempo" name="FechaVenta" caption="Fecha de Venta" foreignKey="idFechaVenta">
+    </DimensionUsage>
+    <DimensionUsage source="Tiempo" name="FechaFoto" caption="Fecha de An&#225;lisis" foreignKey="idFechaFoto">
+    </DimensionUsage>
+    <DimensionUsage source="Provincia" name="Provincia" caption="Provincia" foreignKey="idProvincia">
+    </DimensionUsage>
+    <DimensionUsage source="Localidad" name="Localidad" caption="Localidad" foreignKey="idLocalidad">
+    </DimensionUsage>
+    <DimensionUsage source="Domicilio" name="Domicilio" caption="Domicilio" foreignKey="idDomicilioEnvio">
+    </DimensionUsage>
+    <Measure name="CantidadPedidos" column="nroPedido" datatype="Numeric" aggregator="distinct-count" caption="Cantidad de Pedidos Realizados" visible="true">
+    </Measure>
+    <Measure name="CantidadVentas" column="cantidadVentas" datatype="Numeric" aggregator="sum" caption="Cantidad de Ventas Realizadas" visible="true">
+    </Measure>
+    <Measure name="CantidadPedida" column="cantidadPedida" datatype="Numeric" aggregator="sum" caption="Cantidad Pedida de Producto" visible="true">
+    </Measure>
+    <Measure name="CantidadVendida" column="cantidadVendida" datatype="Numeric" aggregator="sum" caption="Cantidad Vendida de Producto" visible="true">
+    </Measure>
+    <Measure name="Importe" column="importe" datatype="Numeric" aggregator="sum" caption="Importe por Ventas" visible="true">
+    </Measure>
+    <Measure name="CantidadClientes" column="idCliente" datatype="Numeric" aggregator="distinct-count" caption="Cantidad de Clientes" visible="true">
+    </Measure>
+    <CalculatedMember name="PromedioVenta" formatString="" caption="Precio Promedio de Venta" formula="[Measures].[Importe]/[Measures].[CantidadVendida]" dimension="Measures" visible="true">
     </CalculatedMember>
   </Cube>
 </Schema>

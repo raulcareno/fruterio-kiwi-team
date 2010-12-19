@@ -91,7 +91,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" name="ProductoVendido" caption="Producto" description="Utilizada en el Cubo de Pedido/Venta">
+  <Dimension type="StandardDimension" highCardinality="false" name="ProductoVendido" caption="Producto" description="Utilizada en el Cubo de Pedido/Venta">
     <Hierarchy name="Producto" hasAll="true" allMemberName="Todos los productos" primaryKey="idProducto" caption="Productos">
       <Table name="pedidos_ventas">
       </Table>
@@ -101,9 +101,9 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" name="Cliente" caption="Cliente" description="Utilizada en el Cubo de Pedido/Venta">
+  <Dimension type="StandardDimension" highCardinality="false" name="Cliente" caption="Cliente" description="Utilizada en el Cubo de Pedido/Venta">
     <Hierarchy name="Cliente" hasAll="true" allMemberName="Todos los clientes" primaryKey="id" caption="Clientes">
-      <Table name="cliente" alias="">
+      <Table name="cliente">
       </Table>
       <Level name="RazonSocial" column="razonSocial" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="razonSocial">
       </Level>
@@ -111,17 +111,17 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" name="Pedido" caption="Pedido" description="Utilizada en el Cubo de Pedido/Venta">
+  <Dimension type="StandardDimension" highCardinality="false" name="Pedido" caption="Pedido" description="Utilizada en el Cubo de Pedido/Venta">
     <Hierarchy name="NumeroPedido" hasAll="true" allMemberName="Todos los pedidos" primaryKey="nroPedido" caption="Numero de Pedido">
-      <Table name="pedidos_ventas" alias="">
+      <Table name="pedidos_ventas">
       </Table>
       <Level name="Numero" column="nroPedido" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nroPedido">
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" name="Viajante" caption="Viajante" description="Utilizada en el Cubo de Pedido/Venta">
+  <Dimension type="StandardDimension" highCardinality="false" name="Viajante" caption="Viajante" description="Utilizada en el Cubo de Pedido/Venta">
     <Hierarchy name="Viajante" hasAll="true" allMemberName="Todos los viajantes" primaryKey="id" caption="Viajante">
-      <Table name="viajante" alias="">
+      <Table name="viajante">
       </Table>
       <Level name="NombreApellido" column="nombreApellido" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombreApellido">
       </Level>
@@ -129,9 +129,9 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" name="Domicilio" caption="Domicilio" description="Utilizada en el Cubo de Pedido/Venta">
+  <Dimension type="StandardDimension" highCardinality="false" name="Domicilio" caption="Domicilio" description="Utilizada en el Cubo de Pedido/Venta">
     <Hierarchy name="Domicilio" hasAll="true" allMemberName="Todos los domicilios" primaryKey="id" caption="Barrio - Calle - Altura - Departamento">
-      <Table name="domicilio" alias="">
+      <Table name="domicilio">
       </Table>
       <Level name="Barrio" column="barrio" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="barrio">
       </Level>
@@ -143,15 +143,15 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" name="Provincia" caption="Provincia" description="Utilizada en el Cubo de Pedido/Venta">
+  <Dimension type="StandardDimension" highCardinality="false" name="Provincia" caption="Provincia" description="Utilizada en el Cubo de Pedido/Venta">
     <Hierarchy name="Provincia" hasAll="true" allMemberName="Todas las provincias" primaryKey="id" caption="Provincias">
-      <Table name="provincia" alias="">
+      <Table name="provincia">
       </Table>
       <Level name="Nombre" column="nombre" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombre">
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" name="Localidad" caption="Localidad" description="Utilizada en el Cubo de Pedido/Venta">
+  <Dimension type="StandardDimension" highCardinality="false" name="Localidad" caption="Localidad" description="Utilizada en el Cubo de Pedido/Venta">
     <Hierarchy name="Localidad" hasAll="true" allMemberName="Todas las localidades" primaryKey="id" caption="Localidades">
       <Table name="localidad">
       </Table>
@@ -216,27 +216,27 @@
     </CalculatedMember>
   </Cube>
   <Cube name="PedidosVentas" caption="Cubo Pedidos/Ventas" description="Cubo de Pedidos/Ventas" cache="true" enabled="true">
-    <Table name="pedidos_ventas" alias="">
+    <Table name="pedidos_ventas">
     </Table>
-    <DimensionUsage source="Pedido" name="Pedido" caption="Numero de Pedido" foreignKey="nroPedido">
+    <DimensionUsage source="Pedido" name="Pedido" caption="Numero de Pedido" foreignKey="nroPedido" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="ProductoVendido" name="Producto" caption="Producto" foreignKey="idProducto">
+    <DimensionUsage source="ProductoVendido" name="Producto" caption="Producto" foreignKey="idProducto" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Cliente" name="Cliente" caption="Cliente" foreignKey="idCliente">
+    <DimensionUsage source="Cliente" name="Cliente" caption="Cliente" foreignKey="idCliente" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Viajante" name="Viajante" caption="Viajante" foreignKey="idViajante">
+    <DimensionUsage source="Viajante" name="Viajante" caption="Viajante" foreignKey="idViajante" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Tiempo" name="FechaPedido" caption="Fecha de Pedido" foreignKey="idFechaPedido">
+    <DimensionUsage source="Tiempo" name="FechaPedido" caption="Fecha de Pedido" foreignKey="idFechaPedido" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Tiempo" name="FechaVenta" caption="Fecha de Venta" foreignKey="idFechaVenta">
+    <DimensionUsage source="Tiempo" name="FechaVenta" caption="Fecha de Venta" foreignKey="idFechaVenta" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Tiempo" name="FechaFoto" caption="Fecha de An&#225;lisis" foreignKey="idFechaFoto">
+    <DimensionUsage source="Tiempo" name="FechaFoto" caption="Fecha de An&#225;lisis" foreignKey="idFechaFoto" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Provincia" name="Provincia" caption="Provincia" foreignKey="idProvincia">
+    <DimensionUsage source="Provincia" name="Provincia" caption="Provincia" foreignKey="idProvincia" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Localidad" name="Localidad" caption="Localidad" foreignKey="idLocalidad">
+    <DimensionUsage source="Localidad" name="Localidad" caption="Localidad" foreignKey="idLocalidad" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Domicilio" name="Domicilio" caption="Domicilio" foreignKey="idDomicilioEnvio">
+    <DimensionUsage source="Domicilio" name="Domicilio" caption="Domicilio" foreignKey="idDomicilioEnvio" highCardinality="false">
     </DimensionUsage>
     <Measure name="CantidadPedidos" column="nroPedido" datatype="Numeric" aggregator="distinct-count" caption="Cantidad de Pedidos Realizados" visible="true">
     </Measure>
@@ -250,7 +250,7 @@
     </Measure>
     <Measure name="CantidadClientes" column="idCliente" datatype="Numeric" aggregator="distinct-count" caption="Cantidad de Clientes" visible="true">
     </Measure>
-    <CalculatedMember name="PromedioVenta" formatString="" caption="Precio Promedio de Venta" formula="[Measures].[Importe]/[Measures].[CantidadVendida]" dimension="Measures" visible="true">
+    <CalculatedMember name="PromedioVenta" caption="Precio Promedio de Venta" formula="[Measures].[Importe]/[Measures].[CantidadVendida]" dimension="Measures" visible="true">
     </CalculatedMember>
   </Cube>
 </Schema>

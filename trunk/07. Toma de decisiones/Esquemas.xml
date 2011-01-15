@@ -23,7 +23,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="TimeDimension" highCardinality="false" name="Tiempo" caption="Dimension Tiempo" description="Utilizada en el Cubo de Disponibilidad de Productos, Disponibilidad Materia Prima, Compras y Pedido/Venta">
+  <Dimension type="TimeDimension" highCardinality="false" name="Tiempo" caption="Dimension Tiempo" description="Utilizada en el Cubo de Disponibilidad de Productos, Disponibilidad Materia Prima, Compras, Pedido/Venta y Pagos">
     <Hierarchy name="Tiempo" hasAll="true" allMemberName="Todos los a&#241;os" primaryKey="id" caption="A&#241;o - Trimestre - Mes - Dia">
       <Table name="tiempo">
       </Table>
@@ -101,7 +101,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" highCardinality="false" name="Cliente" caption="Cliente" description="Utilizada en el Cubo de Pedido/Venta">
+  <Dimension type="StandardDimension" highCardinality="false" name="Cliente" caption="Cliente" description="Utilizada en el Cubo de Pedido/Venta y Pagos">
     <Hierarchy name="Cliente" hasAll="true" allMemberName="Todos los clientes" primaryKey="id" caption="Clientes">
       <Table name="cliente">
       </Table>
@@ -119,7 +119,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" highCardinality="false" name="Viajante" caption="Viajante" description="Utilizada en el Cubo de Pedido/Venta">
+  <Dimension type="StandardDimension" highCardinality="false" name="Viajante" caption="Viajante" description="Utilizada en el Cubo de Pedido/Venta y Pagos">
     <Hierarchy name="Viajante" hasAll="true" allMemberName="Todos los viajantes" primaryKey="id" caption="Viajante">
       <Table name="viajante">
       </Table>
@@ -156,6 +156,24 @@
       <Table name="localidad">
       </Table>
       <Level name="Nombre" column="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="nombre">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Proveedor_Pago" caption="Proveedor" description="Utilizada en el Cubo de Pagos">
+    <Hierarchy name="Proveedor" hasAll="true" allMemberName="Todos los proveedores" primaryKey="id" caption="Proveedores">
+      <Table name="proveedor">
+      </Table>
+      <Level name="RazonSocial" column="razonSocial" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="razonSocial">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="PagosDatos" caption="Datos del pago" description="Utilizada en el Cubo de Pagos">
+    <Hierarchy name="New Hierarchy 0" hasAll="true" allMemberName="Todos los Datos" primaryKey="id" caption="Nro Pago - Estado">
+      <Table name="cobroventa">
+      </Table>
+      <Level name="NroPago" column="nroFactura" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="nroFactura">
+      </Level>
+      <Level name="Estado" column="estado" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="estado">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -252,5 +270,25 @@
     </Measure>
     <CalculatedMember name="PromedioVenta" caption="Precio Promedio de Venta" formula="[Measures].[Importe]/[Measures].[CantidadVendida]" dimension="Measures" visible="true">
     </CalculatedMember>
+  </Cube>
+  <Cube name="Pagos" caption="Cubo Pagos" description="Cubo de Pagos" cache="true" enabled="true">
+    <Table name="cobroventa">
+    </Table>
+    <DimensionUsage source="Proveedor_Pago" name="Proveedor" caption="Proveedor" foreignKey="idProveedor" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cliente" name="Cliente" caption="Cliente" foreignKey="idCliente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Viajante" name="Viajante" caption="Viajante" foreignKey="idViajante" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tiempo" name="FechaPago" caption="Fecha de Pago" foreignKey="idFechaCobro" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="PagosDatos" name="DatosPago" caption="Datos del Pago" foreignKey="id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="CantidadPagos" column="nroFactura" datatype="Numeric" aggregator="distinct-count" caption="Cantidad de Pagos Totales" visible="true">
+    </Measure>
+    <Measure name="CantidadPagosPorVentas" column="cantidadCobros" datatype="Numeric" aggregator="distinct-count" caption="Cantidad de Pagos Por Ventas" visible="true">
+    </Measure>
+    <Measure name="Importe" column="importe" datatype="Numeric" aggregator="sum" caption="Importe por Pagos" visible="true">
+    </Measure>
   </Cube>
 </Schema>

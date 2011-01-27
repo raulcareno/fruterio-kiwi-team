@@ -1,4 +1,4 @@
-<Schema name="EbenEzerBI" description="Esquema de BI de Eben-Ezer">
+<Schema name="Eben Ezer BI" description="Esquema de BI de Eben-Ezer">
   <Dimension type="StandardDimension" highCardinality="false" name="Color" caption="Dimension Color" description="Utilizada en el Cubo de Disponibilidad de Productos">
     <Hierarchy name="Color" hasAll="true" allMemberName="Todos los Colores" primaryKey="id" caption="Colores">
       <Table name="color">
@@ -23,7 +23,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="TimeDimension" highCardinality="false" name="Tiempo" caption="Dimension Tiempo" description="Utilizada en el Cubo de Disponibilidad de Productos, Disponibilidad Materia Prima, Compras, Pedido/Venta y Pagos">
+  <Dimension type="TimeDimension" highCardinality="false" name="Tiempo" caption="Dimension Tiempo" description="Utilizada en el Cubo de Disponibilidad de Productos, Disponibilidad Materia Prima, Compras, Pedido/Venta,  Pagos y RendimientoProducto">
     <Hierarchy name="Tiempo" hasAll="true" allMemberName="Todos los a&#241;os" primaryKey="id" caption="A&#241;o - Trimestre - Mes - Dia">
       <Table name="tiempo">
       </Table>
@@ -69,7 +69,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" highCardinality="false" name="MateriaPrimaProducto" caption="Materias Primas_Productos" description="Utilizada en el Cubo de Compras">
+  <Dimension type="StandardDimension" highCardinality="false" name="MateriaPrimaProducto" caption="Materias Primas_Productos" description="Utilizada en el Cubo de Compras y RendimientoProducto">
     <Hierarchy name="MateriaPrimaProducto" hasAll="true" allMemberName="Todas las Materias Primas_Productos Importados" primaryKey="id" caption="Materias Primas_Productos">
       <Table name="materiaprimaproducto">
       </Table>
@@ -168,12 +168,24 @@
     </Hierarchy>
   </Dimension>
   <Dimension type="StandardDimension" highCardinality="false" name="PagosDatos" caption="Datos del pago" description="Utilizada en el Cubo de Pagos">
-    <Hierarchy name="New Hierarchy 0" hasAll="true" allMemberName="Todos los Datos" primaryKey="id" caption="Nro Pago - Estado">
+    <Hierarchy name="Pagos" hasAll="true" allMemberName="Todos los Datos" primaryKey="id" caption="Nro Pago - Estado">
       <Table name="cobroventa">
       </Table>
       <Level name="NroPago" column="nroFactura" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="nroFactura">
       </Level>
       <Level name="Estado" column="estado" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="estado">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="ProductoRendimiento" caption="Datos del pago" description="Utilizada en el Cubo de Rendimiento de Producto">
+    <Hierarchy name="RendimientoProducto" hasAll="true" allMemberName="Todos los Rendimientos" primaryKey="id" caption="Balance Ventas - Rendimiento">
+      <Table name="rendimientoproducto">
+      </Table>
+      <Level name="BalanceVtasSSobrante" column="balanceVtasSinSobranteHist" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="balanceVtasSinSobranteHist">
+      </Level>
+      <Level name="BalanceVtasCSobrante" column="balaneVtasSobranteHist" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="balaneVtasSobranteHist">
+      </Level>
+      <Level name="Rendimiento" column="rendimientoHistorico" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="rendimientoHistorico">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -289,6 +301,24 @@
     <Measure name="CantidadPagosPorVentas" column="cantidadCobros" datatype="Numeric" aggregator="distinct-count" caption="Cantidad de Pagos Por Ventas" visible="true">
     </Measure>
     <Measure name="Importe" column="importe" datatype="Numeric" aggregator="sum" caption="Importe por Pagos" visible="true">
+    </Measure>
+  </Cube>
+  <Cube name="RendimientoProducto" caption="Cubo Rendimiento Producto" description="Cubo de Rendimiento Producto" cache="true" enabled="true">
+    <Table name="rendimientoproducto">
+    </Table>
+    <DimensionUsage source="MateriaPrimaProducto" name="Producto" caption="Producto" foreignKey="idProducto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tiempo" name="Fecha" caption="Fecha de An&#225;lisis" foreignKey="idFecha" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="ProductoRendimiento" name="RendimientoHistorico" caption="Rendimiento Historico" foreignKey="id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="CantidadProductos" column="idProducto" datatype="Numeric" aggregator="distinct-count" caption="Cantidad de Productos" visible="true">
+    </Measure>
+    <Measure name="BalanceVtasCSobrante" column="balaneVtasSobranteAct" datatype="Numeric" aggregator="sum" caption="Balance Vtas Con Sobrante" visible="true">
+    </Measure>
+    <Measure name="BalanceVtasSSobrante" column="balanceVtasSinSobranteAct" datatype="Numeric" aggregator="sum" caption="Balance Vtas Sin Sobrante" visible="true">
+    </Measure>
+    <Measure name="RendimientoProducto" column="rendimientoActual" datatype="Numeric" aggregator="avg" caption="Rendimiento de Producto" visible="true">
     </Measure>
   </Cube>
 </Schema>

@@ -1,0 +1,250 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+  <head>
+    <meta name="generator" content="HelpNDoc Freeware Edition">
+    <link rel="StyleSheet" href="toc.css" type="text/css"/>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.cookie.js"></script>
+    <script type="text/javascript" src="jquery.treeview.min.js"></script>
+    <script type="text/javascript" src="jquery.rich-array-hnd.js"></script>
+    <script type="text/javascript" src="searchdata.js"></script>
+    <script type="text/javascript"><!--
+      $(document).ready(function(){
+        $("#toc").treeview(
+        {collapsed: true}
+        )
+        $("#keywords").treeview({collapsed: true});
+        $(document.body).click(function(e){var $target = $(e.target); if($target.is("a")) return; hidePopup();});
+        $(function(){var tabContainers = $("div.tabs > div");tabContainers.hide().filter(":first").show();$("div.tabs ul.tabNavigation a").click(function(){tabContainers.hide();
+        tabContainers.filter(this.hash).show();$("div.tabs ul.tabNavigation a").removeClass("selected");$(this).addClass("selected");return false;}).filter(":first").click();});
+      });
+      function hidePopup() {if($("#popupMenu")) $("#popupMenu").remove();}
+      function showPopup(oSender,aLinks){hidePopup();if (aLinks==0) return true;var oParentDiv=document.createElement("DIV");oParentDiv.id="popupMenu";var oLink,oBr=null;
+      for (var nCnt=0;nCnt<aLinks.length;nCnt++){oLink=document.createElement("A");oLink.innerHTML=aLinks[nCnt][0];oLink.href=aLinks[nCnt][1];oLink.target="FrameMain";oLink.onclick=hidePopup;
+      oParentDiv.appendChild(oLink);if (nCnt<aLinks.length-1){oBr=document.createElement("BR");oParentDiv.appendChild(oBr);}}document.body.appendChild(oParentDiv);var pos=$(oSender).offset(); 
+      var height=$(oSender).height();$(oParentDiv).css({"backgroundColor": "#EEEEEE","border": "1px solid #999999","position": "absolute","left": (pos.left+20)+"px","top": (pos.top+height+5)+"px",
+      "padding": 5+"px"});$(oParentDiv).show();return false;}
+      function performSearch(){sValue = $("#search_value").val().toLowerCase();var aValues = sValue.split(" ");var aFinalResults = [];for (var nValue = 0; nValue < aValues.length; nValue++){if (aValues[nValue] == "") continue;var aResults = oSearchData[aValues[nValue]];if (aResults && aResults.length > 0){if (nValue == 0) aFinalResults = aResults
+else aFinalResults = jQuery.richArray.intersect(aFinalResults, aResults);}else{aFinalResults = [];break;}}if (aFinalResults.length > 0){$("#search_results").html("Found " + aFinalResults.length + " results");for (var nCnt = 0; nCnt < aFinalResults.length; nCnt++){var oElmt = document.createElement("DIV");oElmt.innerHTML = "<a href='" + aFinalResults[nCnt][0] + "?search=" + sValue + "' target='FrameMain'>" + aFinalResults[nCnt][1] + "</a> (" + aFinalResults[nCnt][2] + ")<br/>";$(oElmt).appendTo($("#search_results"));}}else{$("#search_results").html("No result found");}}
+    //--></script>
+    <style type="text/css">
+      ul.tabNavigation{list-style: none;margin: 0;padding: 10px;}ul.tabNavigation li{display: inline;}ul.tabNavigation li A{padding: 3px 5px;background-color: #ccc;color: #000;
+      text-decoration: none;}ul.tabNavigation li A.selected,ul.tabNavigation li A:hover{background-color: #333;color: #fff;}ul.tabNavigation li A:focus{outline: 0;}
+      </style>
+  </head>
+
+  <body>
+  
+    <div class="tabs">
+      <ul class="tabNavigation">
+        <li><a href="#tab_toc">Contents</a></li>
+        <li><a href="#tab_keywords">Index</a></li>
+        <li><a href="#tab_search">Search</a></li>
+      </ul>
+      <div id="tab_toc">
+        <ul id="toc" class="filetree">
+          
+          <li>
+            <a href="Inicio7.html" class="folder" target="FrameMain">Inicio</a>
+            <ul>
+              
+              <li>
+                <a href="Empresa7.html" class="file" target="FrameMain">Empresa</a>
+              </li>
+              
+              <li>
+                <a href="Contacto7.html" class="file" target="FrameMain">Contacto</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li>
+            <a href="Compras7.html" class="folder" target="FrameMain">Compras</a>
+            <ul>
+              
+              <li>
+                <a href="Proveedor7.html" class="folder" target="FrameMain">Proveedor</a>
+                <ul>
+                  
+                  <li>
+                    <a href="RegistrarProveedor7.html" class="file" target="FrameMain">Registrar Proveedor</a>
+                  </li>
+                  
+                  <li>
+                    <a href="ConsultarProveedor7.html" class="file" target="FrameMain">Consultar Proveedor</a>
+                  </li>
+                  
+                  <li>
+                    <a href="ModificarProveedor7.html" class="file" target="FrameMain">Modificar Proveedor</a>
+                  </li>
+                  
+                  <li>
+                    <a href="RegistrarPagoaProveedores7.html" class="file" target="FrameMain">Registrar Pago a Proveedores</a>
+                  </li>
+                  
+                  <li>
+                    <a href="ConsultarDeudaaProveedor7.html" class="file" target="FrameMain">Consultar Deuda a Proveedor</a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li>
+                <a href="Transporte7.html" class="folder" target="FrameMain">Transporte</a>
+                <ul>
+                  
+                  <li>
+                    <a href="RegistrarEmpresadeTransporte7.html" class="file" target="FrameMain">Registrar Empresa de Transporte</a>
+                  </li>
+                  
+                  <li>
+                    <a href="ConsultarEmpresadeTransporte7.html" class="file" target="FrameMain">Consultar Empresa de Transporte</a>
+                  </li>
+                  
+                  <li>
+                    <a href="ModificarEmpresadeTransporte7.html" class="file" target="FrameMain">Modificar Empresa de Transporte</a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li>
+                <a href="OrdendeCompra7.html" class="folder" target="FrameMain">Orden de Compra</a>
+                <ul>
+                  
+                  <li>
+                    <a href="GenerarOrdendeCompra7.html" class="file" target="FrameMain">Generar Orden de Compra</a>
+                  </li>
+                  
+                  <li>
+                    <a href="AnularOrdendeCompra7.html" class="file" target="FrameMain">Anular Orden de Compra</a>
+                  </li>
+                  
+                  <li>
+                    <a href="RegistrarReclamoOrdendeCompra7.html" class="file" target="FrameMain">Registrar Reclamo Orden de Compra</a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li>
+                <a href="ConsultarSeguimientodeMercader7.html" class="file" target="FrameMain">Consultar Seguimiento de Mercadería</a>
+              </li>
+              
+              <li>
+                <a href="GenerarInformePedidoporProveed7.html" class="file" target="FrameMain">Generar Informe Pedido por Proveedor</a>
+              </li>
+              
+              <li>
+                <a href="GenerarInformedeEstadoDeudaPro7.html" class="file" target="FrameMain">Generar Informe de Estado Deuda Proveedor</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li>
+            <a href="Ventas7.html" class="folder" target="FrameMain">Ventas</a>
+            <ul>
+              
+              <li>
+                <a href="Pedido8.html" class="folder" target="FrameMain">Pedido</a>
+                <ul>
+                  
+                  <li>
+                    <a href="RegistrarPedido7.html" class="file" target="FrameMain">Registrar Pedido</a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li>
+                <a href="RegistrarVenta7.html" class="file" target="FrameMain">Registrar Venta</a>
+              </li>
+              
+              <li>
+                <a href="Viajante7.html" class="folder" target="FrameMain">Viajante</a>
+                <ul>
+                  
+                  <li>
+                    <a href="Logstica7.html" class="folder" target="FrameMain">Logística</a>
+                    <ul>
+                      
+                      <li>
+                        <a href="CrearHojadeRuta7.html" class="file" target="FrameMain">Crear Hoja de Ruta</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          
+          <li>
+            <a href="Depsito7.html" class="folder" target="FrameMain">Depósito</a>
+            <ul>
+              
+              <li>
+                <a href="Pedido27.html" class="folder" target="FrameMain">Pedido</a>
+                <ul>
+                  
+                  <li>
+                    <a href="RegistrarArmadodePedido7.html" class="file" target="FrameMain">Registrar Armado de Pedido</a>
+                  </li>
+                  
+                  <li>
+                    <a href="RegistrarSalidadePedido7.html" class="file" target="FrameMain">Registrar Salida de Pedido</a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li>
+                <a href="ProductosTerminados7.html" class="folder" target="FrameMain">Productos Terminados</a>
+                <ul>
+                  
+                  <li>
+                    <a href="RegistrarProducto7.html" class="file" target="FrameMain">Registrar Producto</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          
+          <li>
+            <a href="Finanzas7.html" class="folder" target="FrameMain">Finanzas</a>
+            <ul>
+              
+              <li>
+                <a href="ConsultarCheques7.html" class="file" target="FrameMain">Consultar Cheques</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li>
+            <a href="TomadeDecisiones7.html" class="folder" target="FrameMain">Toma de Decisiones</a>
+            <ul>
+              
+              <li>
+                <a href="CalcularProyecciondeVentas7.html" class="file" target="FrameMain">Calcular Proyeccion de Ventas</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li>
+            <a href="RRHH7.html" class="folder" target="FrameMain">RR HH</a>
+            <ul>
+              
+              <li>
+                <a href="RegistrarViajante7.html" class="file" target="FrameMain">Registrar Viajante</a>
+              </li>
+            </li>
+        </ul>
+      </div>
+      
+      <div id="tab_keywords">
+        <ul id="keywords" class="filetree">
+        </ul>
+      </div>
+      <div id="tab_search" style="padding:10px">
+        Search: <form onsubmit="performSearch(); return false;"><input id="search_value"></input><input type="submit" value="search"/></form><div id="search_results"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

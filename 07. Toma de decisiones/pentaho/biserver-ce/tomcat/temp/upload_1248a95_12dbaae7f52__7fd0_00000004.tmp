@@ -1,0 +1,324 @@
+<Schema name="EbenEzerBI" description="Esquema de BI de Eben-Ezer">
+  <Dimension type="StandardDimension" highCardinality="false" name="Color" caption="Dimension Color" description="Utilizada en el Cubo de Disponibilidad de Productos">
+    <Hierarchy name="Color" hasAll="true" allMemberName="Todos los Colores" primaryKey="id" caption="Colores">
+      <Table name="color">
+      </Table>
+      <Level name="Color" column="nombre" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombre">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Marca" caption="Marcas" description="Utilizada en el Cubo de Disponibilidad de Productos">
+    <Hierarchy name="Marca" hasAll="true" allMemberName="Todas las Marcas" primaryKey="id" caption="Marcas">
+      <Table name="marca">
+      </Table>
+      <Level name="Marca" column="nombre" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombre">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Tama&#241;o" caption="Tama&#241;os" description="Utilizada en el Cubo de Disponibilidad de Productos">
+    <Hierarchy name="Tama&#241;o" hasAll="true" allMemberName="Todos los Tama&#241;os" primaryKey="id" caption="Tama&#241;os">
+      <Table name="tama&#241;o">
+      </Table>
+      <Level name="Tama&#241;o" column="nombre" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombre">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="TimeDimension" highCardinality="false" name="Tiempo" caption="Dimension Tiempo" description="Utilizada en el Cubo de Disponibilidad de Productos, Disponibilidad Materia Prima, Compras, Pedido/Venta,  Pagos y RendimientoProducto">
+    <Hierarchy name="Tiempo" hasAll="true" allMemberName="Todos los a&#241;os" primaryKey="id" caption="A&#241;o - Trimestre - Mes - Dia">
+      <Table name="tiempo">
+      </Table>
+      <Level name="A&#241;o" column="a&#241;o" type="Integer" uniqueMembers="true" levelType="TimeYears" hideMemberIf="Never" captionColumn="a&#241;o">
+      </Level>
+      <Level name="Trimestre" column="trimestre" type="String" uniqueMembers="true" levelType="TimeQuarters" hideMemberIf="Never" captionColumn="trimestre">
+      </Level>
+      <Level name="Mes" column="mes_desc" type="String" uniqueMembers="true" levelType="TimeMonths" hideMemberIf="Never" captionColumn="mes_desc">
+      </Level>
+      <Level name="Dia" column="dia_de_la_semana_completa" type="String" uniqueMembers="true" levelType="TimeDays" hideMemberIf="Never" captionColumn="dia_de_la_semana_completa">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Modelo" caption="Modelos" description="Utilizada en el Cubo de Disponibilidad de Productos">
+    <Hierarchy name="Modelo" hasAll="true" allMemberName="Todos los Modelos" primaryKey="id" caption="Modelos">
+      <Table name="modelo">
+      </Table>
+      <Level name="Modelo" column="nombre" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombre">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="NumeroProducto" caption="Numero de Producto" description="Utilizada en el Cubo de Disponibilidad de Productos">
+    <Hierarchy name="NumeroProducto" hasAll="true" allMemberName="Todos los Productos" primaryKey="id" caption="Numero de Producto">
+      <Table name="disponibilidadproductos">
+      </Table>
+      <Level name="NumeroProducto" column="nroProducto" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nroProducto">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="MateriaPrima" caption="Materia Prima" description="Utilizada en el Cubo de Disponibilidad de Materia Prima">
+    <Hierarchy name="MateriaPrima" hasAll="true" allMemberName="Todas las Materias Primas" primaryKey="id" caption="Materia Prima">
+      <Table name="disponibilidadmateriaprima">
+      </Table>
+      <Level name="Codigo_Nombre" column="nombre" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombre">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Divisa" caption="Divisas" description="Utilizada en el Cubo de Compras">
+    <Hierarchy name="Divisa" hasAll="true" allMemberName="Todas las Divisas" primaryKey="id" caption="Divisa">
+      <Table name="divisa">
+      </Table>
+      <Level name="Divisa" column="nombre" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombre">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="MateriaPrimaProducto" caption="Materias Primas_Productos" description="Utilizada en el Cubo de Compras y RendimientoProducto">
+    <Hierarchy name="MateriaPrimaProducto" hasAll="true" allMemberName="Todas las Materias Primas_Productos Importados" primaryKey="id" caption="Materias Primas_Productos">
+      <Table name="materiaprimaproducto">
+      </Table>
+      <Level name="Nombre" column="nombre" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombre">
+      </Level>
+      <Level name="Tipo" column="tipo" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="tipo">
+      </Level>
+      <Level name="FechaIngreso" column="fecha" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="fecha">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Proveedor" caption="Proveedor" description="Utilizada en el Cubo de Compras">
+    <Hierarchy name="Proveedor" hasAll="true" allMemberName="Todos los Proveedores" primaryKey="id" caption="Proveedores">
+      <Table name="compras">
+      </Table>
+      <Level name="Nombre" column="nombreProveedor" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombreProveedor">
+      </Level>
+      <Level name="Mail" column="mailProveedor" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="mailProveedor">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="ProductoVendido" caption="Producto" description="Utilizada en el Cubo de Pedido/Venta">
+    <Hierarchy name="Producto" hasAll="true" allMemberName="Todos los productos" primaryKey="idProducto" caption="Productos">
+      <Table name="pedidos_ventas">
+      </Table>
+      <Level name="Numero" column="nroProducto" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nroProducto">
+      </Level>
+      <Level name="Nombre" column="nombreProducto" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombreProducto">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Cliente" caption="Cliente" description="Utilizada en el Cubo de Pedido/Venta y Pagos">
+    <Hierarchy name="Cliente" hasAll="true" allMemberName="Todos los clientes" primaryKey="id" caption="Clientes">
+      <Table name="cliente">
+      </Table>
+      <Level name="RazonSocial" column="razonSocial" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="razonSocial">
+      </Level>
+      <Level name="Mail" column="mail" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="mail">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Pedido" caption="Pedido" description="Utilizada en el Cubo de Pedido/Venta">
+    <Hierarchy name="NumeroPedido" hasAll="true" allMemberName="Todos los pedidos" primaryKey="nroPedido" caption="Numero de Pedido">
+      <Table name="pedidos_ventas">
+      </Table>
+      <Level name="Numero" column="nroPedido" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nroPedido">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Viajante" caption="Viajante" description="Utilizada en el Cubo de Pedido/Venta y Pagos">
+    <Hierarchy name="Viajante" hasAll="true" allMemberName="Todos los viajantes" primaryKey="id" caption="Viajante">
+      <Table name="viajante">
+      </Table>
+      <Level name="NombreApellido" column="nombreApellido" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombreApellido">
+      </Level>
+      <Level name="Telefono" column="telefono" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="telefono">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Domicilio" caption="Domicilio" description="Utilizada en el Cubo de Pedido/Venta">
+    <Hierarchy name="Domicilio" hasAll="true" allMemberName="Todos los domicilios" primaryKey="id" caption="Barrio - Calle - Altura - Departamento">
+      <Table name="domicilio">
+      </Table>
+      <Level name="Barrio" column="barrio" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="barrio">
+      </Level>
+      <Level name="Calle" column="calle" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="calle">
+      </Level>
+      <Level name="Altura" column="altura" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="altura">
+      </Level>
+      <Level name="Departamento" column="depto" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="depto">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Provincia" caption="Provincia" description="Utilizada en el Cubo de Pedido/Venta">
+    <Hierarchy name="Provincia" hasAll="true" allMemberName="Todas las provincias" primaryKey="id" caption="Provincias">
+      <Table name="provincia">
+      </Table>
+      <Level name="Nombre" column="nombre" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" captionColumn="nombre">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Localidad" caption="Localidad" description="Utilizada en el Cubo de Pedido/Venta">
+    <Hierarchy name="Localidad" hasAll="true" allMemberName="Todas las localidades" primaryKey="id" caption="Localidades">
+      <Table name="localidad">
+      </Table>
+      <Level name="Nombre" column="nombre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="nombre">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="Proveedor_Pago" caption="Proveedor" description="Utilizada en el Cubo de Pagos">
+    <Hierarchy name="Proveedor" hasAll="true" allMemberName="Todos los proveedores" primaryKey="id" caption="Proveedores">
+      <Table name="proveedor">
+      </Table>
+      <Level name="RazonSocial" column="razonSocial" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="razonSocial">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" highCardinality="false" name="PagosDatos" caption="Datos del pago" description="Utilizada en el Cubo de Pagos">
+    <Hierarchy name="Pagos" hasAll="true" allMemberName="Todos los Datos" primaryKey="id" caption="Nro Pago - Estado">
+      <Table name="cobroventa">
+      </Table>
+      <Level name="NroPago" column="nroFactura" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="nroFactura">
+      </Level>
+      <Level name="Estado" column="estado" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="estado">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" name="ProductoRendimiento" caption="Datos del pago" description="Utilizada en el Cubo de Rendimiento de Producto">
+    <Hierarchy name="RendimientoProducto" hasAll="true" allMemberName="Todos los Rendimientos" primaryKey="id" caption="Balance Ventas - Rendimiento">
+      <Table name="rendimientoproducto" alias="">
+      </Table>
+      <Level name="BalanceVtasSSobrante" column="balanceVtasSinSobranteHist" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="balanceVtasSinSobranteHist">
+      </Level>
+      <Level name="BalanceVtasCSobrante" column="balaneVtasSobranteHist" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="balaneVtasSobranteHist">
+      </Level>
+      <Level name="Rendimiento" column="rendimientoHistorico" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" captionColumn="rendimientoHistorico">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="DisponibilidadProductos" caption="Cubo Disponibilidad Productos" description="Cubo de Disponibilidad de Productos" cache="true" enabled="true">
+    <Table name="disponibilidadproductos">
+    </Table>
+    <DimensionUsage source="Modelo" name="Modelo" foreignKey="idModelo" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Marca" name="Marca" foreignKey="idMarca" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tama&#241;o" name="Tama&#241;o" foreignKey="idTama&#241;o" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tiempo" name="FechaIngreso" caption="Fecha de Ingreso" foreignKey="idFechaIngreso" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tiempo" name="Fecha" caption="Fecha de An&#225;lisis" foreignKey="idFechaFoto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="NumeroProducto" name="NumeroProducto" foreignKey="id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="CantTotalProdEnDeposito" column="cantidadProductos" datatype="Numeric" aggregator="sum" caption="Cantidad Total de Productos en Deposito" visible="true">
+    </Measure>
+    <Measure name="CantProdEnDepProdImportado" column="cantidadEnDepositoProdImportado" datatype="Numeric" aggregator="sum" caption="Cantidad en Deposito de Productos Importados" visible="true">
+    </Measure>
+    <Measure name="CantProdEnDepProdTerminado" column="cantidadEnDepositoProdTerminado" datatype="Numeric" aggregator="sum" caption="Cantidad en Deposito de Productos Terminados" visible="true">
+    </Measure>
+    <Measure name="CantProdEnManosProveedor" column="cantidadEnProveedor" datatype="Numeric" aggregator="sum" caption="Cantidad en Manos de Proveedores" visible="true">
+    </Measure>
+  </Cube>
+  <Cube name="DisponibilidadMateriaPrima" caption="Cubo Disponibilidad Materia Prima" description="Cubo de Disponibilidad de Materia Prima" cache="true" enabled="true">
+    <Table name="disponibilidadmateriaprima">
+    </Table>
+    <DimensionUsage source="Tiempo" name="Fecha" caption="Fecha de An&#225;lisis" foreignKey="idFechaFoto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="MateriaPrima" name="MateriaPrima" caption="Materia Prima" foreignKey="id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="CantidadMateriaPrima" column="cantidadMateriaPrima" datatype="Numeric" aggregator="sum" caption="Cantidad de Materia Prima" visible="true">
+    </Measure>
+  </Cube>
+  <Cube name="Compras" caption="Cubo Compras" description="Cubo de Compras" cache="true" enabled="true">
+    <Table name="compras">
+    </Table>
+    <DimensionUsage source="Tiempo" name="Fecha" caption="Fecha de Compra" foreignKey="idTiempo" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Divisa" name="Divisa" caption="Divisa" foreignKey="idDivisa" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="MateriaPrimaProducto" name="MateriaPrimaProducto" caption="Materia Prima_Producto" foreignKey="idMateriaPrimaProducto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Proveedor" name="Proveedor" caption="Proveedor" foreignKey="id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="CantidadComprada" column="cantidadComprada" datatype="Numeric" aggregator="sum" caption="Cantidad Comprada" visible="true">
+    </Measure>
+    <Measure name="CantidadPagos" column="cantidadPagos" datatype="Numeric" aggregator="count" caption="Cantidad de Pagos" visible="true">
+    </Measure>
+    <Measure name="CantidadProdDefectuoso" column="cantidadProductosDefectuosos" datatype="Numeric" aggregator="sum" caption="Cantidad de Producto Defectuosos" visible="true">
+    </Measure>
+    <Measure name="Importe" column="importe" datatype="Numeric" aggregator="sum" caption="Importe Comprado" visible="true">
+    </Measure>
+    <CalculatedMember name="PrecioProducto" caption="Precio de Producto" formula="[Measures].[Importe] / [Measures].[CantidadComprada]" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="PedidosVentas" caption="Cubo Pedidos/Ventas" description="Cubo de Pedidos/Ventas" cache="true" enabled="true">
+    <Table name="pedidos_ventas">
+    </Table>
+    <DimensionUsage source="Pedido" name="Pedido" caption="Numero de Pedido" foreignKey="nroPedido" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="ProductoVendido" name="Producto" caption="Producto" foreignKey="idProducto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cliente" name="Cliente" caption="Cliente" foreignKey="idCliente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Viajante" name="Viajante" caption="Viajante" foreignKey="idViajante" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tiempo" name="FechaPedido" caption="Fecha de Pedido" foreignKey="idFechaPedido" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tiempo" name="FechaVenta" caption="Fecha de Venta" foreignKey="idFechaVenta" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tiempo" name="FechaFoto" caption="Fecha de An&#225;lisis" foreignKey="idFechaFoto" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Provincia" name="Provincia" caption="Provincia" foreignKey="idProvincia" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Localidad" name="Localidad" caption="Localidad" foreignKey="idLocalidad" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Domicilio" name="Domicilio" caption="Domicilio" foreignKey="idDomicilioEnvio" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="CantidadPedidos" column="nroPedido" datatype="Numeric" aggregator="distinct-count" caption="Cantidad de Pedidos Realizados" visible="true">
+    </Measure>
+    <Measure name="CantidadVentas" column="cantidadVentas" datatype="Numeric" aggregator="sum" caption="Cantidad de Ventas Realizadas" visible="true">
+    </Measure>
+    <Measure name="CantidadPedida" column="cantidadPedida" datatype="Numeric" aggregator="sum" caption="Cantidad Pedida de Producto" visible="true">
+    </Measure>
+    <Measure name="CantidadVendida" column="cantidadVendida" datatype="Numeric" aggregator="sum" caption="Cantidad Vendida de Producto" visible="true">
+    </Measure>
+    <Measure name="Importe" column="importe" datatype="Numeric" aggregator="sum" caption="Importe por Ventas" visible="true">
+    </Measure>
+    <Measure name="CantidadClientes" column="idCliente" datatype="Numeric" aggregator="distinct-count" caption="Cantidad de Clientes" visible="true">
+    </Measure>
+    <CalculatedMember name="PromedioVenta" caption="Precio Promedio de Venta" formula="[Measures].[Importe]/[Measures].[CantidadVendida]" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Pagos" caption="Cubo Pagos" description="Cubo de Pagos" cache="true" enabled="true">
+    <Table name="cobroventa">
+    </Table>
+    <DimensionUsage source="Proveedor_Pago" name="Proveedor" caption="Proveedor" foreignKey="idProveedor" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cliente" name="Cliente" caption="Cliente" foreignKey="idCliente" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Viajante" name="Viajante" caption="Viajante" foreignKey="idViajante" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Tiempo" name="FechaPago" caption="Fecha de Pago" foreignKey="idFechaCobro" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="PagosDatos" name="DatosPago" caption="Datos del Pago" foreignKey="id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="CantidadPagos" column="nroFactura" datatype="Numeric" aggregator="distinct-count" caption="Cantidad de Pagos Totales" visible="true">
+    </Measure>
+    <Measure name="CantidadPagosPorVentas" column="cantidadCobros" datatype="Numeric" aggregator="distinct-count" caption="Cantidad de Pagos Por Ventas" visible="true">
+    </Measure>
+    <Measure name="Importe" column="importe" datatype="Numeric" aggregator="sum" caption="Importe por Pagos" visible="true">
+    </Measure>
+  </Cube>
+  <Cube name="RendimientoProducto" caption="Cubo Rendimiento Producto" description="Cubo de Rendimiento Producto" cache="true" enabled="true">
+    <Table name="rendimientoproducto">
+    </Table>
+    <DimensionUsage source="MateriaPrimaProducto" name="Producto" caption="Producto" foreignKey="idProducto">
+    </DimensionUsage>
+    <DimensionUsage source="Tiempo" name="Fecha" caption="Fecha de An&#225;lisis" foreignKey="idFecha">
+    </DimensionUsage>
+    <DimensionUsage source="ProductoRendimiento" name="RendimientoHistorico" caption="Rendimiento Historico" foreignKey="id">
+    </DimensionUsage>
+    <Measure name="CantidadProductos" column="idProducto" datatype="Numeric" aggregator="distinct-count" caption="Cantidad de Productos" visible="true">
+    </Measure>
+    <Measure name="BalanceVtasCSobrante" column="balaneVtasSobranteAct" datatype="Numeric" aggregator="sum" caption="Balance Vtas C Sobrante" visible="true">
+    </Measure>
+    <Measure name="BalanceVtasSSobrante" column="balanceVtasSinSobranteAct" datatype="Numeric" aggregator="sum" caption="Balance Vtas S Sobrante" visible="true">
+    </Measure>
+    <Measure name="RendimientoProducto" column="rendimientoActual" datatype="Numeric" aggregator="avg" caption="Rendimiento de Producto" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

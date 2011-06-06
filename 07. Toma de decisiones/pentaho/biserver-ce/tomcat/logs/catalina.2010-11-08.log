@@ -1,0 +1,223 @@
+08/11/2010 20:20:50 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files (x86)\Java\jdk1.6.0_20\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\CollabNet\Subversion Client;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\DW WLAN Card;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;c:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\Program Files (x86)\Rational\common;C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;
+08/11/2010 20:20:51 org.apache.coyote.http11.Http11BaseProtocol init
+GRAVE: Error inicializando punto final (endpoint)
+java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:365)
+	at java.net.ServerSocket.bind(ServerSocket.java:319)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:141)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:50)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.initEndpoint(PoolTcpEndpoint.java:293)
+	at org.apache.coyote.http11.Http11BaseProtocol.init(Http11BaseProtocol.java:139)
+	at org.apache.catalina.connector.Connector.initialize(Connector.java:1017)
+	at org.apache.catalina.core.StandardService.initialize(StandardService.java:578)
+	at org.apache.catalina.core.StandardServer.initialize(StandardServer.java:782)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:504)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:267)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:432)
+08/11/2010 20:20:51 org.apache.catalina.startup.Catalina load
+GRAVE: Catalina.start
+LifecycleException:  Falló la inicialización del manejador de protocolo: java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at org.apache.catalina.connector.Connector.initialize(Connector.java:1019)
+	at org.apache.catalina.core.StandardService.initialize(StandardService.java:578)
+	at org.apache.catalina.core.StandardServer.initialize(StandardServer.java:782)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:504)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:267)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:432)
+08/11/2010 20:20:51 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1557 ms
+08/11/2010 20:20:51 org.apache.catalina.core.StandardService start
+INFO: Arrancando servicio Catalina
+08/11/2010 20:20:51 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/5.5.26
+08/11/2010 20:20:51 org.apache.catalina.core.StandardHost start
+INFO: Desactivada la validación XML
+08/11/2010 20:20:59 org.apache.catalina.startup.ContextConfig validateSecurityRoles
+ADVERTENCIA: El nombre de papel de seguridad PENTAHO_ADMIN es usado en un <auth-constraint> sin haber sido definido en <security-role>
+08/11/2010 20:21:20 org.apache.coyote.http11.Http11BaseProtocol start
+GRAVE: Error arrancando punto final (endpoint)
+java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:365)
+	at java.net.ServerSocket.bind(ServerSocket.java:319)
+	at java.net.ServerSocket.<init>(ServerSocket.java:185)
+	at java.net.ServerSocket.<init>(ServerSocket.java:141)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:50)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.initEndpoint(PoolTcpEndpoint.java:293)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.startEndpoint(PoolTcpEndpoint.java:313)
+	at org.apache.coyote.http11.Http11BaseProtocol.start(Http11BaseProtocol.java:151)
+	at org.apache.coyote.http11.Http11Protocol.start(Http11Protocol.java:76)
+	at org.apache.catalina.connector.Connector.start(Connector.java:1090)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:457)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:700)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:552)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:295)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:433)
+08/11/2010 20:21:20 org.apache.catalina.startup.Catalina start
+GRAVE: Catalina.start: 
+LifecycleException:  service.getName(): "Catalina";  Falló el arranque del manejador de protocolo: java.net.SocketException: Unrecognized Windows Sockets error: 0: JVM_Bind
+	at org.apache.catalina.connector.Connector.start(Connector.java:1097)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:457)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:700)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:552)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:295)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:433)
+08/11/2010 20:21:20 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 28801 ms
+08/11/2010 20:25:08 org.apache.catalina.startup.Catalina stopServer
+GRAVE: Catalina.stop: 
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:189)
+	at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:344)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:435)
+08/11/2010 20:25:29 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files (x86)\Java\jdk1.6.0_20\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\CollabNet\Subversion Client;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\DW WLAN Card;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;c:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\Program Files (x86)\Rational\common;C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;
+08/11/2010 20:25:29 org.apache.coyote.http11.Http11BaseProtocol init
+INFO: Inicializando Coyote HTTP/1.1 en puerto http-8080
+08/11/2010 20:25:29 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 498 ms
+08/11/2010 20:25:29 org.apache.catalina.core.StandardService start
+INFO: Arrancando servicio Catalina
+08/11/2010 20:25:29 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/5.5.26
+08/11/2010 20:25:29 org.apache.catalina.core.StandardHost start
+INFO: Desactivada la validación XML
+08/11/2010 20:25:30 org.apache.catalina.startup.ContextConfig validateSecurityRoles
+ADVERTENCIA: El nombre de papel de seguridad PENTAHO_ADMIN es usado en un <auth-constraint> sin haber sido definido en <security-role>
+08/11/2010 20:25:40 org.apache.coyote.http11.Http11BaseProtocol start
+INFO: Arrancando Coyote HTTP/1.1 en puerto http-8080
+08/11/2010 20:25:40 org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+08/11/2010 20:25:40 org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/11  config=null
+08/11/2010 20:25:40 org.apache.catalina.storeconfig.StoreLoader load
+INFO: Find registry server-registry.xml at classpath resource
+08/11/2010 20:25:40 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 11449 ms
+08/11/2010 20:27:28 org.apache.catalina.startup.Catalina stopServer
+GRAVE: Catalina.stop: 
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:189)
+	at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:344)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:435)
+08/11/2010 20:27:53 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files (x86)\Java\jdk1.6.0_20\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\CollabNet\Subversion Client;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\DW WLAN Card;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;c:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\Program Files (x86)\Rational\common;C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;
+08/11/2010 20:27:53 org.apache.coyote.http11.Http11BaseProtocol init
+INFO: Inicializando Coyote HTTP/1.1 en puerto http-8080
+08/11/2010 20:27:53 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 426 ms
+08/11/2010 20:27:53 org.apache.catalina.core.StandardService start
+INFO: Arrancando servicio Catalina
+08/11/2010 20:27:53 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/5.5.26
+08/11/2010 20:27:53 org.apache.catalina.core.StandardHost start
+INFO: Desactivada la validación XML
+08/11/2010 20:27:54 org.apache.catalina.startup.ContextConfig validateSecurityRoles
+ADVERTENCIA: El nombre de papel de seguridad PENTAHO_ADMIN es usado en un <auth-constraint> sin haber sido definido en <security-role>
+08/11/2010 20:28:03 org.apache.coyote.http11.Http11BaseProtocol start
+INFO: Arrancando Coyote HTTP/1.1 en puerto http-8080
+08/11/2010 20:28:03 org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+08/11/2010 20:28:03 org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/13  config=null
+08/11/2010 20:28:03 org.apache.catalina.storeconfig.StoreLoader load
+INFO: Find registry server-registry.xml at classpath resource
+08/11/2010 20:28:03 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 10489 ms
+08/11/2010 20:28:19 org.apache.coyote.http11.Http11BaseProtocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+08/11/2010 20:28:20 org.apache.catalina.core.StandardService stop
+INFO: Parando servicio Catalina
+08/11/2010 20:28:24 org.apache.coyote.http11.Http11BaseProtocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+08/11/2010 20:28:24 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: Failed shutdown of Apache Portable Runtime
+08/11/2010 20:28:29 org.apache.catalina.startup.Catalina stopServer
+GRAVE: Catalina.stop: 
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:333)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:195)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:182)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:189)
+	at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:344)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:435)
+08/11/2010 20:30:27 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files (x86)\Java\jdk1.6.0_20\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\CollabNet\Subversion Client;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Dell\DW WLAN Card;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;c:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\Program Files (x86)\Rational\common;C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;
+08/11/2010 20:30:27 org.apache.coyote.http11.Http11BaseProtocol init
+INFO: Inicializando Coyote HTTP/1.1 en puerto http-8080
+08/11/2010 20:30:27 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 426 ms
+08/11/2010 20:30:28 org.apache.catalina.core.StandardService start
+INFO: Arrancando servicio Catalina
+08/11/2010 20:30:28 org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/5.5.26
+08/11/2010 20:30:28 org.apache.catalina.core.StandardHost start
+INFO: Desactivada la validación XML
+08/11/2010 20:30:29 org.apache.catalina.startup.ContextConfig validateSecurityRoles
+ADVERTENCIA: El nombre de papel de seguridad PENTAHO_ADMIN es usado en un <auth-constraint> sin haber sido definido en <security-role>
+08/11/2010 20:30:38 org.apache.coyote.http11.Http11BaseProtocol start
+INFO: Arrancando Coyote HTTP/1.1 en puerto http-8080
+08/11/2010 20:30:38 org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+08/11/2010 20:30:38 org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/23  config=null
+08/11/2010 20:30:38 org.apache.catalina.storeconfig.StoreLoader load
+INFO: Find registry server-registry.xml at classpath resource
+08/11/2010 20:30:38 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 10918 ms

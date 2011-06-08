@@ -1,0 +1,56 @@
+INFO  05-06 11:11:28,136 - Using "C:\Users\Gabriel\AppData\Local\Temp\vfs_cache" as temporary files store.
+INFO  05-06 11:11:28,758 - Kitchen - Kitchen
+INFO  05-06 11:11:28,760 - Kitchen - Kitchen
+INFO  05-06 11:11:28,794 - RepositoriesMeta - Reading repositories XML file: C:\Users\Gabriel\.kettle\repositories.xml
+ERROR: No repository provided, can't load job.
+INFO  05-06 11:11:28,953 - Compras - Start of job execution
+INFO  05-06 11:11:28,956 - Compras - Starting entry [Dim_Divisa]
+INFO  05-06 11:11:28,959 - Dim_Divisa - Loading transformation from XML file [D:\Gabu\ArchivosBI\Dim_Divisa.ktr]
+INFO  05-06 11:11:29,305 - Dim_Divisa - Dispatching started for transformation [Dim_Divisa]
+INFO  05-06 11:11:29,325 - Dim_Divisa - This transformation can be replayed with replay date: 2011/06/05 11:11:29
+INFO  05-06 11:11:29,671 - Divisa - Finished reading query, closing connection.
+INFO  05-06 11:11:29,673 - Divisa - Finished processing (I=3, O=0, R=0, W=3, U=0, E=0)
+INFO  05-06 11:11:29,686 - Combinacion Divisa - Finished processing (I=3, O=0, R=3, W=3, U=0, E=0)
+INFO  05-06 11:11:29,688 - Compras - Starting entry [Dim_ProductoImportadoComprado]
+INFO  05-06 11:11:29,689 - Dim_ProductoImportadoComprado - Loading transformation from XML file [D:\Gabu\ArchivosBI\Dim_ProductoImportadoComprado.ktr]
+INFO  05-06 11:11:29,746 - Dim_ProductoImportadoComprado - Dispatching started for transformation [Dim_ProductoImportadoComprado]
+INFO  05-06 11:11:29,764 - Dim_ProductoImportadoComprado - This transformation can be replayed with replay date: 2011/06/05 11:11:29
+INFO  05-06 11:11:29,784 - DetalleCompra - Finished reading query, closing connection.
+INFO  05-06 11:11:29,791 - ProductoImportado - Finished reading query, closing connection.
+INFO  05-06 11:11:29,792 - ProductoImportado - Finished processing (I=59, O=0, R=0, W=59, U=0, E=0)
+INFO  05-06 11:11:30,127 - ProductoJoin - Finished processing (I=0, O=0, R=59, W=0, U=0, E=0)
+INFO  05-06 11:11:30,142 - Compras - Starting entry [Dim_MateriaPrimaComprada]
+INFO  05-06 11:11:30,143 - Dim_MateriaPrimaComprada - Loading transformation from XML file [D:\Gabu\ArchivosBI\Dim_MateriaPrimaComprada.ktr]
+INFO  05-06 11:11:30,176 - Dim_MateriaPrimaComprada - Dispatching started for transformation [Dim_MateriaPrimaComprada]
+INFO  05-06 11:11:30,179 - Dim_MateriaPrimaComprada - This transformation can be replayed with replay date: 2011/06/05 11:11:30
+INFO  05-06 11:11:30,203 - DetalleCompraMateriaPrima - Finished reading query, closing connection.
+INFO  05-06 11:11:30,205 - MateriaPrima - Finished reading query, closing connection.
+INFO  05-06 11:11:30,207 - MateriaPrima - Finished processing (I=3, O=0, R=0, W=3, U=0, E=0)
+INFO  05-06 11:11:30,507 - MateriaPrimaJoin - Finished processing (I=0, O=0, R=3, W=0, U=0, E=0)
+INFO  05-06 11:11:30,522 - Compras - Starting entry [Fac_Compras]
+INFO  05-06 11:11:30,523 - Fac_Compras - Loading transformation from XML file [D:\Gabu\ArchivosBI\Fac_Compras.ktr]
+INFO  05-06 11:11:30,572 - Fac_Compras - Dispatching started for transformation [Fac_Compras]
+INFO  05-06 11:11:30,588 - Fac_Compras - This transformation can be replayed with replay date: 2011/06/05 11:11:30
+INFO  05-06 11:11:30,633 - Divisa - Finished reading query, closing connection.
+INFO  05-06 11:11:30,634 - MateriaPrimaProducto - Finished reading query, closing connection.
+INFO  05-06 11:11:30,636 - MateriaPrimaProducto - Finished processing (I=9, O=0, R=0, W=9, U=0, E=0)
+INFO  05-06 11:11:30,637 - ProductosDefectuosos - Finished reading query, closing connection.
+INFO  05-06 11:11:30,637 - DetalleCompra - Finished reading query, closing connection.
+INFO  05-06 11:11:30,639 - Divisa - Finished processing (I=3, O=0, R=0, W=3, U=0, E=0)
+INFO  05-06 11:11:30,923 - Tiempo - Finished reading query, closing connection.
+INFO  05-06 11:11:30,925 - Tiempo - Finished processing (I=5000, O=0, R=0, W=5000, U=0, E=0)
+INFO  05-06 11:11:30,950 - DivisaDetalleCompra - Finished processing (I=0, O=0, R=3, W=0, U=0, E=0)
+INFO  05-06 11:11:31,548 - Merge Join - Finished processing (I=0, O=0, R=9, W=0, U=0, E=0)
+INFO  05-06 11:11:31,853 - FechaCreacion - Finished processing (I=0, O=0, R=5000, W=0, U=0, E=0)
+INFO  05-06 11:11:31,868 - Compras - Starting entry [Eliminar_Filas_Nulas]
+INFO  05-06 11:11:31,891 - Compras - Starting entry [Success]
+INFO  05-06 11:11:31,892 - Compras - Finished job entry [Success] (result=[true])
+INFO  05-06 11:11:31,893 - Compras - Finished job entry [Eliminar_Filas_Nulas] (result=[true])
+INFO  05-06 11:11:31,893 - Compras - Finished job entry [Fac_Compras] (result=[true])
+INFO  05-06 11:11:31,893 - Compras - Finished job entry [Dim_MateriaPrimaComprada] (result=[true])
+INFO  05-06 11:11:31,893 - Compras - Finished job entry [Dim_ProductoImportadoComprado] (result=[true])
+INFO  05-06 11:11:31,893 - Compras - Finished job entry [Dim_Divisa] (result=[true])
+INFO  05-06 11:11:31,894 - Compras - Job execution finished
+INFO  05-06 11:11:31,895 - Kitchen - Kitchen
+INFO  05-06 11:11:31,895 - Kitchen - Kitchen
+INFO  05-06 11:11:31,895 - Kitchen - Kitchen

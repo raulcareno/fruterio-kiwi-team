@@ -1,0 +1,105 @@
+INFO  05-06 11:17:07,439 - Using "C:\Users\Gabriel\AppData\Local\Temp\vfs_cache" as temporary files store.
+INFO  05-06 11:17:08,061 - Kitchen - Kitchen
+INFO  05-06 11:17:08,063 - Kitchen - Kitchen
+INFO  05-06 11:17:08,088 - RepositoriesMeta - Reading repositories XML file: C:\Users\Gabriel\.kettle\repositories.xml
+ERROR: No repository provided, can't load job.
+INFO  05-06 11:17:08,231 - Pedido_Venta - Start of job execution
+INFO  05-06 11:17:08,235 - Pedido_Venta - Starting entry [Dim_Provincia]
+INFO  05-06 11:17:08,237 - Dim_Provincia - Loading transformation from XML file [D:\Gabu\ArchivosBI\Dim_Provincia.ktr]
+INFO  05-06 11:17:08,571 - Dim_Provincia - Dispatching started for transformation [Dim_Provincia]
+INFO  05-06 11:17:08,592 - Dim_Provincia - This transformation can be replayed with replay date: 2011/06/05 11:17:08
+INFO  05-06 11:17:08,932 - Provincia - Finished reading query, closing connection.
+INFO  05-06 11:17:08,935 - Provincia - Finished processing (I=23, O=0, R=0, W=23, U=0, E=0)
+INFO  05-06 11:17:08,973 - Combinacion Provincia - Finished processing (I=23, O=0, R=23, W=23, U=0, E=0)
+INFO  05-06 11:17:08,975 - Pedido_Venta - Starting entry [Dim_Localidad]
+INFO  05-06 11:17:08,976 - Dim_Localidad - Loading transformation from XML file [D:\Gabu\ArchivosBI\Dim_Localidad.ktr]
+INFO  05-06 11:17:09,006 - Dim_Localidad - Dispatching started for transformation [Dim_Localidad]
+INFO  05-06 11:17:09,008 - Dim_Localidad - This transformation can be replayed with replay date: 2011/06/05 11:17:09
+INFO  05-06 11:17:09,130 - Localidad - Finished reading query, closing connection.
+INFO  05-06 11:17:09,131 - Localidad - Finished processing (I=2138, O=0, R=0, W=2138, U=0, E=0)
+INFO  05-06 11:17:11,811 - Combinacion Localidad - Finished processing (I=2138, O=0, R=2138, W=2138, U=0, E=0)
+INFO  05-06 11:17:11,812 - Pedido_Venta - Starting entry [Dim_Domicilio]
+INFO  05-06 11:17:11,813 - Dim_Domicilio - Loading transformation from XML file [D:\Gabu\ArchivosBI\Dim_Domicilio.ktr]
+INFO  05-06 11:17:11,850 - Dim_Domicilio - Dispatching started for transformation [Dim_Domicilio]
+INFO  05-06 11:17:11,857 - Dim_Domicilio - This transformation can be replayed with replay date: 2011/06/05 11:17:11
+INFO  05-06 11:17:11,941 - Domicilio - Finished reading query, closing connection.
+INFO  05-06 11:17:11,944 - Domicilio - Finished processing (I=14, O=0, R=0, W=14, U=0, E=0)
+INFO  05-06 11:17:14,475 - Localidad - Finished reading query, closing connection.
+INFO  05-06 11:17:14,477 - Localidad - Finished processing (I=2138, O=0, R=0, W=2138, U=0, E=0)
+INFO  05-06 11:17:14,755 - DomicilioLocalidad - Finished processing (I=0, O=0, R=2152, W=13, U=0, E=0)
+INFO  05-06 11:17:14,758 - AdecuarDomicilio - Finished processing (I=0, O=0, R=13, W=13, U=0, E=0)
+INFO  05-06 11:17:14,790 - Combinacion Domicilio - Finished processing (I=13, O=4, R=13, W=13, U=0, E=0)
+INFO  05-06 11:17:14,793 - Pedido_Venta - Starting entry [Dim_Cliente]
+INFO  05-06 11:17:14,794 - Dim_Cliente - Loading transformation from XML file [D:\Gabu\ArchivosBI\Dim_Cliente.ktr]
+INFO  05-06 11:17:14,839 - Dim_Cliente - Dispatching started for transformation [Dim_Cliente]
+INFO  05-06 11:17:14,840 - Dim_Cliente - This transformation can be replayed with replay date: 2011/06/05 11:17:14
+INFO  05-06 11:17:14,857 - Cliente - Finished reading query, closing connection.
+INFO  05-06 11:17:14,858 - Cliente - Finished processing (I=6, O=0, R=0, W=6, U=0, E=0)
+INFO  05-06 11:17:14,869 - Combinacion Cliente - Finished processing (I=6, O=0, R=6, W=6, U=0, E=0)
+INFO  05-06 11:17:14,871 - Pedido_Venta - Starting entry [Dim_Viajante]
+INFO  05-06 11:17:14,871 - Dim_Viajante - Loading transformation from XML file [D:\Gabu\ArchivosBI\Dim_Viajante.ktr]
+INFO  05-06 11:17:14,892 - Dim_Viajante - Dispatching started for transformation [Dim_Viajante]
+INFO  05-06 11:17:14,893 - Dim_Viajante - This transformation can be replayed with replay date: 2011/06/05 11:17:14
+INFO  05-06 11:17:14,909 - Viajante - Finished reading query, closing connection.
+INFO  05-06 11:17:14,910 - Viajante - Finished processing (I=2, O=0, R=0, W=2, U=0, E=0)
+INFO  05-06 11:17:14,913 - Adecuar Viajante - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+INFO  05-06 11:17:14,919 - Combinacion Viajante - Finished processing (I=2, O=0, R=2, W=2, U=0, E=0)
+INFO  05-06 11:17:14,921 - Pedido_Venta - Starting entry [Fac_Venta_Pedido]
+INFO  05-06 11:17:14,921 - Fac_Venta_Pedido - Loading transformation from XML file [D:\Gabu\ArchivosBI\Fac_Venta_Pedido.ktr]
+INFO  05-06 11:17:15,054 - Fac_Venta_Pedido - Dispatching started for transformation [Fac_Venta_Pedido]
+INFO  05-06 11:17:15,099 - Fac_Venta_Pedido - This transformation can be replayed with replay date: 2011/06/05 11:17:15
+INFO  05-06 11:17:15,351 - VentasRealizadas - Finished reading query, closing connection.
+INFO  05-06 11:17:15,353 - DetallePedido - Finished reading query, closing connection.
+INFO  05-06 11:17:15,369 - Viajante - Finished reading query, closing connection.
+INFO  05-06 11:17:15,369 - Domicilio - Finished reading query, closing connection.
+INFO  05-06 11:17:15,369 - DetallePedido - Finished processing (I=20, O=0, R=0, W=20, U=0, E=0)
+INFO  05-06 11:17:15,398 - Cliente - Finished reading query, closing connection.
+INFO  05-06 11:17:15,398 - DetalleVenta - Finished reading query, closing connection.
+INFO  05-06 11:17:15,398 - VentasRealizadas - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  05-06 11:17:15,398 - Viajante - Finished processing (I=2, O=0, R=0, W=2, U=0, E=0)
+INFO  05-06 11:17:15,399 - Domicilio - Finished processing (I=13, O=0, R=0, W=13, U=0, E=0)
+INFO  05-06 11:17:15,400 - Cliente - Finished processing (I=6, O=0, R=0, W=6, U=0, E=0)
+INFO  05-06 11:17:15,400 - DetalleVenta - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+INFO  05-06 11:17:15,697 - Tiempo - Finished reading query, closing connection.
+INFO  05-06 11:17:15,699 - Tiempo - Finished processing (I=5000, O=0, R=0, W=15000, U=0, E=0)
+INFO  05-06 11:17:15,703 - ClienteDetallePedido - Finished processing (I=0, O=0, R=26, W=20, U=0, E=0)
+INFO  05-06 11:17:15,706 - AdecuarConCliente - Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+INFO  05-06 11:17:15,708 - OrdenarPorViajante - Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+INFO  05-06 11:17:16,014 - ViajanteDetallePedido - Finished processing (I=0, O=0, R=22, W=20, U=0, E=0)
+INFO  05-06 11:17:16,018 - AdecuarConViajante - Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+INFO  05-06 11:17:16,020 - OrdenarPorPedido - Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+INFO  05-06 11:17:16,325 - Pedido_Ventas_Validas - Finished processing (I=0, O=0, R=21, W=20, U=0, E=0)
+INFO  05-06 11:17:16,327 - AdecuarVentas - Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+INFO  05-06 11:17:16,331 - Filtrar Pedidos/Ventas validas - Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+INFO  05-06 11:17:16,334 - No hace nada - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+INFO  05-06 11:17:16,335 - OrdenarPorDomicilio - Finished processing (I=0, O=0, R=19, W=19, U=0, E=0)
+INFO  05-06 11:17:16,640 - DomicilioPedido - Finished processing (I=0, O=0, R=32, W=19, U=0, E=0)
+INFO  05-06 11:17:16,642 - AdecuarDomicilio - Finished processing (I=0, O=0, R=19, W=19, U=0, E=0)
+INFO  05-06 11:17:16,760 - VentaPorPedido - Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+INFO  05-06 11:17:16,763 - AdecuarVenta - Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+INFO  05-06 11:17:16,765 - Obtener Fecha Foto - Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+INFO  05-06 11:17:16,769 - OrdenarPorFechaHoy - Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+INFO  05-06 11:17:17,086 - FechaFoto - Finished processing (I=0, O=0, R=5020, W=20, U=0, E=0)
+INFO  05-06 11:17:17,088 - AdecuarFechaFoto - Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+INFO  05-06 11:17:17,092 - OrdenarPorFechaPedido - Finished processing (I=0, O=0, R=20, W=20, U=0, E=0)
+INFO  05-06 11:17:17,409 - FechaPedido - Finished processing (I=0, O=0, R=5020, W=19, U=0, E=0)
+INFO  05-06 11:17:17,412 - AdecuarFechaPedido - Finished processing (I=0, O=0, R=19, W=19, U=0, E=0)
+INFO  05-06 11:17:17,416 - Filtrar Pedidos/Ventas - Finished processing (I=0, O=0, R=19, W=19, U=0, E=0)
+INFO  05-06 11:17:17,418 - PrepararPedido - Finished processing (I=0, O=0, R=19, W=19, U=0, E=0)
+INFO  05-06 11:17:17,420 - AdecuarPedidoFinal - Finished processing (I=0, O=0, R=19, W=19, U=0, E=0)
+INFO  05-06 11:17:17,457 - Dimension Pedido - Finished processing (I=19, O=19, R=19, W=19, U=0, E=0)
+INFO  05-06 11:17:17,737 - FechaVenta - Finished processing (I=0, O=0, R=5000, W=0, U=0, E=0)
+INFO  05-06 11:17:17,760 - Pedido_Venta - Starting entry [Eliminar_Filas_Nulas]
+INFO  05-06 11:17:17,776 - Pedido_Venta - Starting entry [Success]
+INFO  05-06 11:17:17,777 - Pedido_Venta - Finished job entry [Success] (result=[true])
+INFO  05-06 11:17:17,777 - Pedido_Venta - Finished job entry [Eliminar_Filas_Nulas] (result=[true])
+INFO  05-06 11:17:17,777 - Pedido_Venta - Finished job entry [Fac_Venta_Pedido] (result=[true])
+INFO  05-06 11:17:17,777 - Pedido_Venta - Finished job entry [Dim_Viajante] (result=[true])
+INFO  05-06 11:17:17,777 - Pedido_Venta - Finished job entry [Dim_Cliente] (result=[true])
+INFO  05-06 11:17:17,777 - Pedido_Venta - Finished job entry [Dim_Domicilio] (result=[true])
+INFO  05-06 11:17:17,777 - Pedido_Venta - Finished job entry [Dim_Localidad] (result=[true])
+INFO  05-06 11:17:17,777 - Pedido_Venta - Finished job entry [Dim_Provincia] (result=[true])
+INFO  05-06 11:17:17,778 - Pedido_Venta - Job execution finished
+INFO  05-06 11:17:17,779 - Kitchen - Kitchen
+INFO  05-06 11:17:17,779 - Kitchen - Kitchen
+INFO  05-06 11:17:17,779 - Kitchen - Kitchen

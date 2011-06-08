@@ -1,0 +1,75 @@
+INFO  05-06 11:10:12,053 - Using "C:\Users\Gabriel\AppData\Local\Temp\vfs_cache" as temporary files store.
+INFO  05-06 11:10:12,730 - Kitchen - Kitchen
+INFO  05-06 11:10:12,732 - Kitchen - Kitchen
+INFO  05-06 11:10:12,757 - RepositoriesMeta - Reading repositories XML file: C:\Users\Gabriel\.kettle\repositories.xml
+ERROR: No repository provided, can't load job.
+INFO  05-06 11:10:12,901 - Cobro_Venta - Start of job execution
+INFO  05-06 11:10:12,905 - Cobro_Venta - Starting entry [Dim_Viajante]
+INFO  05-06 11:10:12,907 - Dim_Viajante - Loading transformation from XML file [D:\Gabu\ArchivosBI\Dim_Viajante.ktr]
+INFO  05-06 11:10:13,252 - Dim_Viajante - Dispatching started for transformation [Dim_Viajante]
+INFO  05-06 11:10:13,275 - Dim_Viajante - This transformation can be replayed with replay date: 2011/06/05 11:10:13
+INFO  05-06 11:10:13,624 - Viajante - Finished reading query, closing connection.
+INFO  05-06 11:10:13,627 - Viajante - Finished processing (I=2, O=0, R=0, W=2, U=0, E=0)
+INFO  05-06 11:10:13,628 - Adecuar Viajante - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+INFO  05-06 11:10:13,638 - Combinacion Viajante - Finished processing (I=2, O=0, R=2, W=2, U=0, E=0)
+INFO  05-06 11:10:13,640 - Cobro_Venta - Starting entry [Dim_Cliente]
+INFO  05-06 11:10:13,641 - Dim_Cliente - Loading transformation from XML file [D:\Gabu\ArchivosBI\Dim_Cliente.ktr]
+INFO  05-06 11:10:13,668 - Dim_Cliente - Dispatching started for transformation [Dim_Cliente]
+INFO  05-06 11:10:13,669 - Dim_Cliente - This transformation can be replayed with replay date: 2011/06/05 11:10:13
+INFO  05-06 11:10:13,687 - Cliente - Finished reading query, closing connection.
+INFO  05-06 11:10:13,688 - Cliente - Finished processing (I=6, O=0, R=0, W=6, U=0, E=0)
+INFO  05-06 11:10:13,700 - Combinacion Cliente - Finished processing (I=6, O=0, R=6, W=6, U=0, E=0)
+INFO  05-06 11:10:13,701 - Cobro_Venta - Starting entry [Dim_Proveedor]
+INFO  05-06 11:10:13,702 - Dim_Proveedor - Loading transformation from XML file [D:\Gabu\ArchivosBI\Dim_Proveedor.ktr]
+INFO  05-06 11:10:13,726 - Dim_Proveedor - Dispatching started for transformation [Dim_Proveedor]
+INFO  05-06 11:10:13,727 - Dim_Proveedor - This transformation can be replayed with replay date: 2011/06/05 11:10:13
+INFO  05-06 11:10:13,747 - Proveedor - Finished reading query, closing connection.
+INFO  05-06 11:10:13,748 - Proveedor - Finished processing (I=5, O=0, R=0, W=5, U=0, E=0)
+INFO  05-06 11:10:13,759 - Combinacion Proveedor - Finished processing (I=5, O=0, R=5, W=5, U=0, E=0)
+INFO  05-06 11:10:13,760 - Cobro_Venta - Starting entry [Dim_Cobros_OtrosGastos]
+INFO  05-06 11:10:13,761 - Dim_Cobros_OtrosGastos - Loading transformation from XML file [D:\Gabu\ArchivosBI\Dim_Cobros_OtrosGastos.ktr]
+INFO  05-06 11:10:13,814 - Dim_Cobros_OtrosGastos - Dispatching started for transformation [Dim_Cobros_OtrosGastos]
+INFO  05-06 11:10:13,832 - Dim_Cobros_OtrosGastos - This transformation can be replayed with replay date: 2011/06/05 11:10:13
+INFO  05-06 11:10:13,849 - OtrosGastos - Finished reading query, closing connection.
+INFO  05-06 11:10:14,145 - Tiempo - Finished reading query, closing connection.
+INFO  05-06 11:10:14,146 - Tiempo - Finished processing (I=5000, O=0, R=0, W=5000, U=0, E=0)
+INFO  05-06 11:10:14,298 - FechaPago - Finished processing (I=0, O=0, R=5000, W=0, U=0, E=0)
+INFO  05-06 11:10:14,315 - Cobro_Venta - Starting entry [Dim_Cobros_Proveedores]
+INFO  05-06 11:10:14,315 - Dim_Cobros_Proveedores - Loading transformation from XML file [D:\Gabu\ArchivosBI\Dim_Cobros_Proveedores.ktr]
+INFO  05-06 11:10:14,341 - Dim_Cobros_Proveedores - Dispatching started for transformation [Dim_Cobros_Proveedores]
+INFO  05-06 11:10:14,351 - Dim_Cobros_Proveedores - This transformation can be replayed with replay date: 2011/06/05 11:10:14
+INFO  05-06 11:10:14,386 - PagoProveedor - Finished reading query, closing connection.
+INFO  05-06 11:10:14,387 - Proveedor - Finished reading query, closing connection.
+INFO  05-06 11:10:14,388 - Proveedor - Finished processing (I=5, O=0, R=0, W=5, U=0, E=0)
+INFO  05-06 11:10:14,541 - Tiempo - Finished reading query, closing connection.
+INFO  05-06 11:10:14,542 - Tiempo - Finished processing (I=5000, O=0, R=0, W=5000, U=0, E=0)
+INFO  05-06 11:10:14,716 - FechaPago - Finished processing (I=0, O=0, R=5000, W=0, U=0, E=0)
+INFO  05-06 11:10:14,996 - Proveedor_Pago - Finished processing (I=0, O=0, R=5, W=0, U=0, E=0)
+INFO  05-06 11:10:15,010 - Cobro_Venta - Starting entry [Dim_Cobros_Viajante]
+INFO  05-06 11:10:15,011 - Dim_Cobros_Viajante - Loading transformation from XML file [D:\Gabu\ArchivosBI\Dim_Cobro_Viajante.ktr]
+INFO  05-06 11:10:15,055 - Dim_Cobros_Viajante - Dispatching started for transformation [Dim_Cobros_Viajante]
+INFO  05-06 11:10:15,062 - Dim_Cobros_Viajante - This transformation can be replayed with replay date: 2011/06/05 11:10:15
+INFO  05-06 11:10:15,104 - PagoViajante - Finished reading query, closing connection.
+INFO  05-06 11:10:15,104 - Viajante - Finished reading query, closing connection.
+INFO  05-06 11:10:15,105 - Cliente - Finished reading query, closing connection.
+INFO  05-06 11:10:15,107 - Viajante - Finished processing (I=2, O=0, R=0, W=2, U=0, E=0)
+INFO  05-06 11:10:15,107 - Cliente - Finished processing (I=6, O=0, R=0, W=6, U=0, E=0)
+INFO  05-06 11:10:15,118 - Tiempo - Finished reading query, closing connection.
+INFO  05-06 11:10:15,119 - Tiempo - Finished processing (I=5000, O=0, R=0, W=5000, U=0, E=0)
+INFO  05-06 11:10:15,421 - FechaPago - Finished processing (I=0, O=0, R=5000, W=0, U=0, E=0)
+INFO  05-06 11:10:15,710 - Cliente_Pago - Finished processing (I=0, O=0, R=6, W=0, U=0, E=0)
+INFO  05-06 11:10:16,016 - Viajante_Pago - Finished processing (I=0, O=0, R=2, W=0, U=0, E=0)
+INFO  05-06 11:10:16,024 - Cobro_Venta - Starting entry [Eliminar_Filas_Nulas]
+INFO  05-06 11:10:16,036 - Cobro_Venta - Starting entry [Success]
+INFO  05-06 11:10:16,037 - Cobro_Venta - Finished job entry [Success] (result=[true])
+INFO  05-06 11:10:16,037 - Cobro_Venta - Finished job entry [Eliminar_Filas_Nulas] (result=[true])
+INFO  05-06 11:10:16,037 - Cobro_Venta - Finished job entry [Dim_Cobros_Viajante] (result=[true])
+INFO  05-06 11:10:16,037 - Cobro_Venta - Finished job entry [Dim_Cobros_Proveedores] (result=[true])
+INFO  05-06 11:10:16,037 - Cobro_Venta - Finished job entry [Dim_Cobros_OtrosGastos] (result=[true])
+INFO  05-06 11:10:16,037 - Cobro_Venta - Finished job entry [Dim_Proveedor] (result=[true])
+INFO  05-06 11:10:16,037 - Cobro_Venta - Finished job entry [Dim_Cliente] (result=[true])
+INFO  05-06 11:10:16,038 - Cobro_Venta - Finished job entry [Dim_Viajante] (result=[true])
+INFO  05-06 11:10:16,038 - Cobro_Venta - Job execution finished
+INFO  05-06 11:10:16,046 - Kitchen - Kitchen
+INFO  05-06 11:10:16,047 - Kitchen - Kitchen
+INFO  05-06 11:10:16,047 - Kitchen - Kitchen

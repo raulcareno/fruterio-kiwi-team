@@ -20,7 +20,7 @@
 
 <html>
 	<head>
-		<title>Pentaho User Console</title>
+		<title>Pentaho User -Console</title>
 		<meta name="gwt:property" content="locale=<%=effectiveLocale%>">
 		<link rel="shortcut icon" href="/pentaho-style/favicon.ico" />
 		<link rel='stylesheet' href='mantle/MantleStyle.css'/>
@@ -50,5 +50,8 @@
 	</body>
 
 	<script language='javascript' src='mantle/mantle.nocache.js'></script>
+		<script language='javascript' >
+		
+		</script>
 
 </html>

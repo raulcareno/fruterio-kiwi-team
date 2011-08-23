@@ -69,7 +69,7 @@ public final class Mantle_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("<html>\r\n");
       out.write("\t<head>\r\n");
-      out.write("\t\t<title>Pentaho User Console</title>\r\n");
+      out.write("\t\t<title>Pentaho User -Console</title>\r\n");
       out.write("\t\t<meta name=\"gwt:property\" content=\"locale=");
       out.print(effectiveLocale);
       out.write("\">\r\n");
@@ -105,6 +105,9 @@ public final class Mantle_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t</body>\r\n");
       out.write("\r\n");
       out.write("\t<script language='javascript' src='mantle/mantle.nocache.js'></script>\r\n");
+      out.write("\t\t<script language='javascript' >\r\n");
+      out.write("\t\t\r\n");
+      out.write("\t\t</script>\r\n");
       out.write("\r\n");
       out.write("</html>\r\n");
     } catch (Throwable t) {

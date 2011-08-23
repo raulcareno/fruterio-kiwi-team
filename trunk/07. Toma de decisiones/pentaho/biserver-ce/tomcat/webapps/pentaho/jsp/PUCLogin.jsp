@@ -64,7 +64,7 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Pentaho User Console - Login</title>
+<title>SEEE - BI 	Login!</title>
 <style type="text/css">
 <!--
 body,td,th {
@@ -145,7 +145,7 @@ A:hover {
 .start_login_title {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 1.2em;
-	color: #7e932f;
+	
 	font-weight: 300;
 	text-align: left;
 	padding: 18px 0px 0px 18px;
@@ -158,6 +158,7 @@ A:hover {
 	text-align: left;
 	vertical-align: bottom;
 	padding: 10px 0px 0px 18px;
+	vertical-align:top;
 }
 
 .btn_login_box {
@@ -198,12 +199,12 @@ A:hover {
 }
 
 .start_footer {
-	background-image: url(/pentaho-style/images/login/start_footer_bg.png);
-	background-repeat: repeat-x;
-	background-position: top;
-	padding: 20px 0px 0px 0px;
-	margin-top: 20px;
-	vertical-align: bottom;
+    background-image: url("/pentaho-style/images/login/start_footer_bg.png");
+    background-position: center 204px;
+    background-repeat: repeat-x;
+    margin-top: 20px;
+    padding: 219px 0 0;
+    vertical-align: bottom;
 }
 
 .footer_txt {
@@ -314,24 +315,20 @@ A:hover {
 		<table width="564" border="0" cellspacing="0" cellpadding="0"
 			style="margin-bottom: 22px;" align="center">
 			<tr>
-				<td class="lrg_box_top"><a href="http://www.pentaho.com"
-					target="_blank"><img
-					src="/pentaho-style/images/login/start_logo.png"
-					alt="Pentaho Corporation" width="210" height="62" border="0" /></a></td>
+				<td class="lrg_box_top"><img
+					src="/pentaho-style/images/named_logo_mono_round_green.png"
+					alt="Pentaho Corporation" width="210" height="62" border="0" /></td>
 			</tr>
 			<tr>
 				<td class="lrg_box_bottom">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0">
 					<tr>
-						<td colspan="2" class="start_login_title">Welcome to the
-						Pentaho User Console</td>
+						<td colspan="2" class="start_login_title">Bienvenido al Modulo de Inteligencia de Negocios de Seee</td>
 					</tr>
 					<tr>
 						<td class="start_content">
-						<p>The Pentaho User Console provides access to powerful
-						Business Intelligence (BI) capabilities found in the Pentaho BI
-						Suite. Login or use the links below to learn more about Pentaho's
-						reporting, analysis, dashboards, data mining and data integration.</p>
+						<p>La Consola de SEEE-BI proporciona acceso a un poderoso conjunto de herramientas
+						de Inteligencia de Negocios (BI) basadas en la Suite de BI de Pentaho.</p>
 						</td>
 						<td><!--Begin Login Button -->
 						<table class="btn_login_box" border="0" cellspacing="0"
@@ -355,7 +352,7 @@ A:hover {
 								} else {
 							%>
 							<tr>
-								<td class="btn_login_title">Pentaho User Console</td>
+								<td class="btn_login_title">-SEEE::BI-</td>
 							</tr>
 							<tr>
 								<td class="btn_login_text"><%=Messages.getString("UI.USER_LOGIN")%></td>
@@ -371,90 +368,7 @@ A:hover {
 			</tr>
 		</table>
 		<!--End First Box Row --> <!--Begin Second Box Row --> <!--Begin Enterprise Boxes -->
-		<table width="564" border="0" cellspacing="0" cellpadding="0"
-			style="margin-bottom: 22px;" align="center">
-			<tr>
-				<td class="sm_box_top">Achieve BI Success</td>
-				<td><img src="/pentaho-style/images/login/spacer.png"
-					width="20" /></td>
-				<td class="sm_box_top">Getting Started</td>
-			</tr>
-			<tr>
-				<td class="sm_box_bottom" height="100%">
-				<table cellspacing="0" cellpadding="0" height="100%" width="100%"
-					border="0">
-					<tr>
-						<td height="100%" valign="top" class="text">Deploy the
-						world's most popular open source BI suite with confidence,
-						security, and far lower total cost of ownership than proprietary
-						alternatives with the Pentaho Enterprise Edition products.<br />
-						</td>
-					</tr>
-					<tr>
-						<td><!-- GUI Button -->
-						<table cellspacing="0" cellpadding="0" border="0" class="button"
-							width="50" onMouseOver="this.className='button_over'"
-							onMouseOut="this.className='button'" align="right"
-							style="margin-top: 6px;"
-							onClick="window.open('http://www.pentaho.com/products/enterprise', '_blank');">
-							<tr>
-								<td width="7" height="27" class="button_left"><img
-									src="/pentaho-style/images/login/spacer.png" width="7"
-									height="27" /><br />
-								</td>
-								<td>
-								<td class="button_middle" width="100%">Learn More</td>
-								<td width="7" height="27" class="button_right"><img
-									src="/pentaho-style/images/login/spacer.png" width="7"
-									height="27" /><br />
-								</td>
-							</tr>
-						</table>
-						</td>
-					</tr>
-				</table>
-				<!-- End button --></td>
-				<td><img src="/pentaho-style/images/login/spacer.png"
-					width="20" /></td>
-				<td class="sm_box_bottom" height="100%">
-
-				<table cellspacing="0" cellpadding="0" height="100%" width="100%"
-					border="0">
-					<tr>
-						<td height="100%" valign="top" class="text">The Pentaho BI
-						Suite provides a full spectrum of BI capabilities. Get a quick
-						overview of how to create and share reports and analytics with the
-						<span style="font-style: italic;">Evaluating Pentaho
-						Reporting</span> guide. <br />
-						</td>
-					</tr>
-					<tr>
-						<td><!-- GUI Button -->
-						<table cellspacing="0" cellpadding="0" border="0" class="button"
-							width="50" onMouseOver="this.className='button_over'"
-							onMouseOut="this.className='button'" align="right"
-							style="margin-top: 6px;"
-							onClick="window.open(window.location.href.replace('Login', '<%=PentahoSystem.getSystemSetting("documentation-url",
-							"docs/community_user_guide.pdf")%>'), '_blank');">
-							<tr>
-								<td width="7" height="27" class="button_left"><img
-									src="/pentaho-style/images/login/spacer.png" width="7"
-									height="27" /><br />
-								</td>
-								<td>
-								<td class="button_middle" width="100%">Download PDF</td>
-								<td width="7" height="27" class="button_right"><img
-									src="/pentaho-style/images/login/spacer.png" width="7"
-									height="27" /><br />
-								</td>
-							</tr>
-						</table>
-						<!-- End button --></td>
-					</tr>
-				</table>
-				</td>
-			</tr>
-		</table>
+		
 		<!--End Enterprise Boxes --> <!--End Second Box Row --></td>
 	</tr>
 	<!--Begin Footer -->

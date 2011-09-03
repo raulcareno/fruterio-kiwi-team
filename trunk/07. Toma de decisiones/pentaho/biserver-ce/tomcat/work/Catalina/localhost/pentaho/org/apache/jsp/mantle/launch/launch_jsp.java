@@ -147,7 +147,7 @@ public final class launch_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("}\r\n");
       out.write("\r\n");
       out.write(".ql_container {\r\n");
-      out.write("  width: 620px;\r\n");
+      out.write("  //width: 620px;\r\n");
       out.write("  margin-bottom: 50px;\r\n");
       out.write("}\r\n");
       out.write("\r\n");
@@ -156,10 +156,11 @@ public final class launch_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  height: 147px;\r\n");
       out.write("  vertical-align: top;\r\n");
       out.write("  padding-top: 25px;\r\n");
+      out.write("  display:none;\r\n");
       out.write("}\r\n");
       out.write("\r\n");
       out.write(".ql_icon_bar_middle {\r\n");
-      out.write("  background-image:\r\n");
+      out.write("  //background-image:\r\n");
       out.write("    url(images/ql_icon_bar_middle.png);\r\n");
       out.write("  background-repeat: repeat-x;\r\n");
       out.write("  width: 100%;\r\n");
@@ -171,6 +172,7 @@ public final class launch_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  height: 147px;\r\n");
       out.write("  vertical-align: top;\r\n");
       out.write("  padding-top: 25px;\r\n");
+      out.write("  display:none;\r\n");
       out.write("}\r\n");
       out.write("\r\n");
       out.write(".ql_spacer {\r\n");
@@ -249,6 +251,7 @@ public final class launch_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  padding: 0px;\r\n");
       out.write("  spacing: 0px;\r\n");
       out.write("  height: 56px;\r\n");
+      out.write("   margin: 0 auto;\r\n");
       out.write("}\r\n");
       out.write("\r\n");
       out.write(".btn_left {\r\n");
@@ -441,27 +444,27 @@ public final class launch_jsp extends org.apache.jasper.runtime.HttpJspBase
   Map<String, ButtonInfo> buttonOverlays = new HashMap<String, ButtonInfo>();
 
   List<String> buttonIds = new ArrayList<String>();
-  buttonIds.add("launch_new_report"); //$NON-NLS-1$
+  //buttonIds.add("launch_new_report"); //$NON-NLS-1$
   buttonIds.add("launch_new_analysis"); //$NON-NLS-1$
-  buttonIds.add("manage_content"); //$NON-NLS-1$
+  //buttonIds.add("manage_content"); //$NON-NLS-1$
 
-  ButtonInfo newReportButton = new ButtonInfo();
-  newReportButton.buttonCommand = "openWAQR()"; //$NON-NLS-1$
-  newReportButton.buttonLabel = Messages.getString( "UI.PUC.LAUNCH.NEW_REPORT" ); //$NON-NLS-1$
-  newReportButton.buttonImage = "images/btn_ql_newreport.png"; //$NON-NLS-1$
-  buttonOverlays.put(buttonIds.get(0), newReportButton);
+  //ButtonInfo newReportButton = new ButtonInfo();
+  //newReportButton.buttonCommand = "openWAQR()"; //$NON-NLS-1$
+  //newReportButton.buttonLabel = "Nuevo Reporte"; //$NON-NLS-1$
+  //newReportButton.buttonImage = "images/btn_ql_newreport.png"; //$NON-NLS-1$
+  //buttonOverlays.put(buttonIds.get(0), newReportButton);
 	
   ButtonInfo newAnalysisButton = new ButtonInfo();
   newAnalysisButton.buttonCommand = "openAnalysis()"; //$NON-NLS-1$
-  newAnalysisButton.buttonLabel = Messages.getString( "UI.PUC.LAUNCH.NEW_ANALYSIS" ); //$NON-NLS-1$
+  newAnalysisButton.buttonLabel = "Nuevo Análisis"; //$NON-NLS-1$
   newAnalysisButton.buttonImage = "images/btn_ql_newanalysis.png"; //$NON-NLS-1$
-  buttonOverlays.put(buttonIds.get(1), newAnalysisButton);
+  buttonOverlays.put(buttonIds.get(0), newAnalysisButton);
 	
-  ButtonInfo launchContentButton = new ButtonInfo();
-  launchContentButton.buttonCommand = "openManage()"; //$NON-NLS-1$
-  launchContentButton.buttonLabel = Messages.getString( "UI.PUC.LAUNCH.MANAGE_CONTENT" ); //$NON-NLS-1$
-  launchContentButton.buttonImage = "images/btn_ql_manage.png"; //$NON-NLS-1$
-  buttonOverlays.put(buttonIds.get(2), launchContentButton);
+  //ButtonInfo launchContentButton = new ButtonInfo();
+  //launchContentButton.buttonCommand = "openManage()"; //$NON-NLS-1$
+  //launchContentButton.buttonLabel = "Administrar </br> Contenido"; //$NON-NLS-1$
+  //launchContentButton.buttonImage = "images/btn_ql_manage.png"; //$NON-NLS-1$
+  //buttonOverlays.put(buttonIds.get(2), launchContentButton);
 
   IPluginManager pluginManager = PentahoSystem.get(IPluginManager.class, PentahoHttpSessionHelper.getPentahoSession(request)); 
   if (pluginManager != null) {
